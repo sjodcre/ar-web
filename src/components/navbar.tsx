@@ -5,12 +5,14 @@ import { Menu, X, ChevronDown, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { SearchDialog } from "./search-dialog"
+import { Link } from "react-router-dom"
+
 
 const navItems = {
   Learn: [
-    { title: "Blockchain, Arweave and AO 101", href: "/learn/#foundations" },
-    { title: "Atomic Assets", href: "/learn/#atomic-assets" },
-    { title: "Social Impact", href: "/learn/#social-impact" },
+    { title: "Blockchain, Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" },
+    { title: "Atomic Assets", href: "/learn/atomic-assets" },
+    { title: "Social Impact", href: "/learn/social-impact" },
   ],
   Developers: [
     { title: "Get Started", href: "#" },
@@ -44,9 +46,12 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-transparent bg-clip-text">
+              {/* <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-transparent bg-clip-text">
                 AO
-              </span>
+              </span> */}
+              <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-transparent bg-clip-text">
+                Arweave AO
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
@@ -62,9 +67,12 @@ export function Navbar() {
                   <DropdownMenuContent className="bg-black/90 border border-white/10">
                     {items.map((item) => (
                       <DropdownMenuItem key={item.title} className="text-white hover:bg-white/10 cursor-pointer">
-                        <a href={item.href} className="w-full">
+                        {/* <a href={item.href} className="w-full">
                           {item.title}
-                        </a>
+                        </a> */}
+                         <Link to={item.href} className="w-full">
+                          {item.title}
+                        </Link>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>

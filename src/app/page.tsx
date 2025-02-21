@@ -1,9 +1,9 @@
-import { Navbar } from "@/components/navbar"
+// import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 export default function Home() {
     return (
         <main className="min-h-screen bg-black text-white">
-            <Navbar />
+            {/* <Navbar /> */}
             {/* Hero Section */}
             <div className="relative overflow-hidden">
                 {/* Gradient decorations */}
