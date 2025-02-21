@@ -1,15 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { SearchDialog } from "./search-dialog"
 
 const navItems = {
   Learn: [
-    { title: "Documentation", href: "#" },
-    { title: "Tutorials", href: "#" },
-    { title: "Guides", href: "#" },
+    { title: "Blockchain, Arweave and AO 101", href: "/learn/#foundations" },
+    { title: "Atomic Assets", href: "/learn/#atomic-assets" },
+    { title: "Social Impact", href: "/learn/#social-impact" },
   ],
   Developers: [
     { title: "Get Started", href: "#" },
@@ -35,6 +36,7 @@ const navItems = {
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
@@ -68,9 +70,17 @@ export function Navbar() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               ))}
+              <Button className="bg-black ml-2" onClick={() => setShowSearch(true)}>
+                <Search className="h-5 w-5 mr-2" />
+                Search
+              </Button>
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <Button className="bg-black" onClick={() => setShowSearch(true)}>
+              <Search className="h-5 w-5 mr-2" />
+              Search
+            </Button>
             <Button size="icon" onClick={() => setIsOpen(!isOpen)} className="bg-black">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -97,6 +107,8 @@ export function Navbar() {
           </div>
         </div>
       )}
+
+      <SearchDialog open={showSearch} onOpenChange={setShowSearch} />
     </nav>
   )
 }
