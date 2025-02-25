@@ -10,29 +10,29 @@ import { Link } from "react-router-dom"
 
 const navItems = {
   Learn: [
-    { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" },
+    { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
     { title: "Atomic Assets", href: "/learn/atomic-assets" },
     { title: "Social Impact", href: "/learn/social-impact" },
   ],
   Developers: [
-    { title: "Get Started", href: "#" },
-    { title: "SDK", href: "#" },
-    { title: "API Reference", href: "#" },
+    { title: "Get Started", href: "#", isDeveloped: false },
+    { title: "SDK", href: "#", isDeveloped: false },
+    { title: "API Reference", href: "#", isDeveloped: false },
   ],
   Solutions: [
-    { title: "Enterprise", href: "#" },
-    { title: "Startups", href: "#" },
-    { title: "Use Cases", href: "#" },
+    { title: "Enterprise", href: "#", isDeveloped: false },
+    { title: "Startups", href: "#", isDeveloped: false },
+    { title: "Use Cases", href: "#", isDeveloped: false },
   ],
   Network: [
-    { title: "Overview", href: "#" },
-    { title: "Statistics", href: "#" },
-    { title: "Explorer", href: "#" },
+    { title: "Overview", href: "#", isDeveloped: false },
+    { title: "Statistics", href: "#", isDeveloped: false },
+    { title: "Explorer", href: "#", isDeveloped: false },
   ],
   Community: [
-    { title: "News", href: "#" },
-    { title: "Events", href: "#" },
-    { title: "Community Resource Hub", href: "#" },
+    { title: "News", href: "/community/news", isDeveloped: true },
+    { title: "Events", href: "#", isDeveloped: false },
+    { title: "Community Resource Hub", href: "#", isDeveloped: false },
   ],
 }
 
@@ -46,9 +46,6 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              {/* <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-transparent bg-clip-text">
-                AO
-              </span> */}
               <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-transparent bg-clip-text">
                 Arweave AO
               </Link>
@@ -66,11 +63,8 @@ export function Navbar() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-black/90 border border-white/10">
                     {items.map((item) => (
-                      <DropdownMenuItem key={item.title} className="text-white hover:bg-white/10 cursor-pointer">
-                        {/* <a href={item.href} className="w-full">
-                          {item.title}
-                        </a> */}
-                         <Link to={item.href} className="w-full">
+                      <DropdownMenuItem key={item.title} className={`text-white hover:bg-white/10 cursor-pointer ${item.isDeveloped ? '' : 'text-red-500'}`}>
+                        <Link to={item.href} className="w-full">
                           {item.title}
                         </Link>
                       </DropdownMenuItem>
@@ -105,7 +99,7 @@ export function Navbar() {
                   <a
                     key={item.title}
                     href={item.href}
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/10 rounded-md ml-2"
+                    className={`block px-4 py-2 text-sm ${item.isDeveloped ? 'text-gray-300' : 'text-red-500'} hover:bg-white/10 rounded-md ml-2`}
                   >
                     {item.title}
                   </a>
@@ -120,4 +114,3 @@ export function Navbar() {
     </nav>
   )
 }
-

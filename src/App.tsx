@@ -6,6 +6,7 @@ import AtomicAssets from './app/learn/atomic-assets'
 import SocialImpact from './app/learn/social-impact'
 import { Navbar } from "@/components/navbar"
 import Chatbot from "@/components/chatbot"; // Import chatbot
+import News from './app/community/news'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/learn/blockchain-arweave-ao101" element={<BlockchainArweaveAO101 />} />
           <Route path="/learn/atomic-assets" element={<AtomicAssets />} />
           <Route path="/learn/social-impact" element={<SocialImpact />} />
+          <Route path="/community/news" element={<News />} />
         </Routes>
       </div>
       <Chatbot />
