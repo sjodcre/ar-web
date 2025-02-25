@@ -8,7 +8,7 @@ export default function Learn() {
             <ul className="space-y-4">
                 <li>
                     <Link to="/learn/blockchain-arweave-ao101" className="text-blue-400 hover:underline">
-                        Blockchain, Arweave and AO 101
+                        Arweave and AO 101
                     </Link>
                 </li>
                 <li>
