@@ -1,12 +1,14 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './app/page'
 import Learn from './app/learn'
-import BlockchainArweaveAO101 from './app/learn/blockchain-arweave-ao101'
+import BlockchainArweaveAO101 from './app/learn/arweave-ao-101/blockchain-arweave-ao101'
 import AtomicAssets from './app/learn/atomic-assets'
 import SocialImpact from './app/learn/social-impact'
 import { Navbar } from "@/components/navbar"
 import Chatbot from "@/components/chatbot"; // Import chatbot
 import News from './app/community/news'
+import AOComputerTokenomics from './app/learn/tokenomics/ao'
+import ArweaveTokenomics from './app/learn/tokenomics/arweave'
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/learn/atomic-assets" element={<AtomicAssets />} />
           <Route path="/learn/social-impact" element={<SocialImpact />} />
           <Route path="/community/news" element={<News />} />
+          <Route path="/learn/tokenomics/arweave" element={<ArweaveTokenomics />} />
+          <Route path="/learn/tokenomics/ao" element={<AOComputerTokenomics />} />
         </Routes>
       </div>
       <Chatbot />

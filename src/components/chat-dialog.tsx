@@ -7,7 +7,7 @@ interface ChatDialogProps {
 
 export default function ChatDialog({ onClose }: ChatDialogProps) {
     const [query, setQuery] = useState("");
-    const [response, setResponse] = useState("");
+    // const [response, setResponse] = useState("");
     const [isVisible, setIsVisible] = useState(false);
     const [typedMessage, setTypedMessage] = useState(""); // Typing effect for welcome message
     const [typedResponse, setTypedResponse] = useState(""); // Typing effect for AI response

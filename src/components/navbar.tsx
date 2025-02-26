@@ -13,10 +13,23 @@ const navItems = {
     { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
     { title: "Atomic Assets", href: "/learn/atomic-assets" },
     { title: "Social Impact", href: "/learn/social-impact" },
+    { title: "Whitepapers", href: "/learn/whitepapers", isDeveloped: true, subItems: [
+      { title: "Arweave Whitepaper", href: "https://www.arweave.org/yellow-paper.pdf" },
+      { title: "AO Whitepaper", href: "https://5z7leszqicjtb6bjtij34ipnwjcwk3owtp7szjirboxmwudpd2tq.arweave.net/7n6ySzBAkzD4KZoTviHtskVlbdab_yylEQuuy1BvHqc" },
+    ] },
+    { title: "Tokenomics", href: "/learn/tokenomics", isDeveloped: true, subItems: [
+      { title: "Arweave Tokenomics", href: "/learn/tokenomics/arweave" },
+      { title: "AO Tokenomics", href: "/learn/tokenomics/ao" },
+    ] },
   ],
   Developers: [
     { title: "Get Started", href: "#", isDeveloped: false },
-    { title: "SDK", href: "#", isDeveloped: false },
+    { title: "Cookbook", href: "#", isDeveloped: true, subItems: [
+        { title: "Arweave", href: "https://cookbook.arweave.dev/" },
+        { title: "AO", href: "https://cookbook_ao.g8way.io/" },
+      ] 
+    },
+    { title: "School of Dum Dum", href: "https://github.com/ArweaveOasis/Arweave-Academy?tab=readme-ov-file", isDeveloped: true},
     { title: "API Reference", href: "#", isDeveloped: false },
   ],
   Solutions: [
@@ -63,10 +76,21 @@ export function Navbar() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-black/90 border border-white/10">
                     {items.map((item) => (
-                      <DropdownMenuItem key={item.title} className={`text-white hover:bg-white/10 cursor-pointer ${item.isDeveloped ? '' : 'text-red-500'}`}>
-                        <Link to={item.href} className="w-full">
-                          {item.title}
-                        </Link>
+                      <DropdownMenuItem key={item.title} className={`text-white hover:bg-white/10 ${item.isDeveloped ? '' : 'text-red-500'}`}>
+                        {item.subItems ? (
+                          <span className="w-full cursor-default">{item.title}</span>
+                        ) : (
+                          <Link to={item.href} className="w-full">
+                            {item.title}
+                          </Link>
+                        )}
+                        {item.subItems && item.subItems.map(subItem => (
+                          <DropdownMenuItem key={subItem.title} className="text-gray-300 hover:bg-white/10 cursor-pointer">
+                            <Link to={subItem.href} className="w-full pl-4">
+                              {subItem.title}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
