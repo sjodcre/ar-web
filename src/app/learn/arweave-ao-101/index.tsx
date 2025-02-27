@@ -97,7 +97,7 @@ With its <b>hyper-parallel structure</b>, AO has the potential to redefine decen
             ]
         },
         {
-            title: "Why Arweave? Why AO?",
+            title: "Why Arweave? Why AO? (Not Done)",
             subtopics: [
                 {
                     title: "Introduction to Arweave",
@@ -231,7 +231,7 @@ With its <b>hyper-parallel structure</b>, AO has the potential to redefine decen
 
             {/* Main Content */}
             <div className="flex-1 flex flex-col items-center p-6">
-                <h1 className="text-3xl font-bold mb-6">Blockchain, Arweave, and AO 101</h1>
+                {/* <h1 className="text-3xl font-bold mb-6">Blockchain, Arweave, and AO 101</h1> */}
                 <button
                     onClick={() => setShowLongVersion((prev) => !prev)}
                     className={`mb-4 p-2 rounded hover:bg-gray-700 transition ${!showLongVersion ? "text-blue-400" : ""}`}

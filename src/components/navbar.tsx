@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 const navItems = {
   Learn: [
     { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
-    { title: "Atomic Assets", href: "/learn/atomic-assets" },
+    { title: "Intro to Atomic Assets", href: "/learn/atomic-asset", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact" },
     { title: "Whitepapers", href: "/learn/whitepapers", isDeveloped: true, subItems: [
       { title: "Arweave Whitepaper", href: "https://www.arweave.org/yellow-paper.pdf" },
