@@ -14,6 +14,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/communitylabs/, ''),
       },
+      '/api/arweavehub': {
+        target: 'https://arweavehub.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/arweavehub/, ''),
+      },
     },
   },
   resolve: {

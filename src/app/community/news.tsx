@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ArweaveBanner from "@/components/arweave-banner";
 
 type NewsCategory = "ALL" | "CLABS" | "AR.IO";
 
@@ -24,11 +25,11 @@ export default function News() {
                 // console.log("data", response.data);
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(response.data, "text/html");
-                console.log("doc", doc);
+                // console.log("doc", doc);
                 // console.log(doc.documentElement.outerHTML)
 
                 const articles = doc.querySelectorAll(".blog_item"); // Adjust if needed
-                console.log("articles", articles);
+                // console.log("articles", articles);
                 // Assuming each blog post is wrapped in <article>
 
                 const extractedNews: NewsItem[] = Array.from(articles).map((article) => {
@@ -46,7 +47,7 @@ export default function News() {
                         link = href.startsWith("http") ? href : `https://www.communitylabs.com${href}`;
                     }
 
-                    console.log("link", link);
+                    // console.log("link", link);
 
 
                     return {
@@ -71,6 +72,8 @@ export default function News() {
     return (
         <div className="min-h-screen bg-black">
             <main className="container mx-auto px-4 py-8">
+                {/* Arweave Banner */}
+                <ArweaveBanner />
                 {/* Categories */}
                 <div className="flex flex-wrap gap-4 mb-8">
                     {categories.map((category) => (
