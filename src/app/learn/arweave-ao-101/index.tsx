@@ -212,7 +212,7 @@ export default function BlockchainArweaveAO101() {
         });
     };
 
-    const currentTopic = topics[selectedTopicIndex].subtopics[selectedSubtopicIndex];
+    // const currentTopic = topics[selectedTopicIndex].subtopics[selectedSubtopicIndex];
 
     const goToNextSubtopic = () => {
         if (selectedSubtopicIndex < topics[selectedTopicIndex].subtopics.length - 1) {
