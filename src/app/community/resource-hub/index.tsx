@@ -7,7 +7,7 @@ import {
   Github,
   TextIcon as Telegram,
   DiscIcon as Discord,
-  Globe,
+  // Globe,
   ArrowUpRight,
   ExternalLink,
   Database,
@@ -483,7 +483,7 @@ interface YouTubeChannelProps {
   theme?: "cyan" | "indigo"
 }
 
-const YouTubeChannel: FC<YouTubeChannelProps> = ({ name, description, subscribers, link, theme = "cyan" }) => {
+const YouTubeChannel: FC<YouTubeChannelProps> = ({ name, description, subscribers, link }) => {
   return (
     <div className="border-t border-gray-800 pt-4">
       <h3 className="font-semibold text-lg text-red-400">
@@ -532,32 +532,32 @@ const DiscordChannel: FC<DiscordChannelProps> = ({ name, description, link }) =>
 }
 
 // Component for Telegram channels
-interface TelegramChannelProps {
-  name: string
-  description: string
-  members: string
-  theme?: "cyan" | "indigo"
-}
+// interface TelegramChannelProps {
+//   name: string
+//   description: string
+//   members: string
+//   theme?: "cyan" | "indigo"
+// }
 
-const TelegramChannel: FC<TelegramChannelProps> = ({ name, description, members, theme = "cyan" }) => {
-  return (
-    <div className="border-t border-gray-800 pt-4">
-      <h3 className={`font-semibold text-lg ${theme === "cyan" ? "text-cyan-300" : "text-indigo-300"}`}>{name}</h3>
-      <p className="text-gray-400 mt-1">{description}</p>
-      <div className="mt-2 flex items-center justify-between">
-        <span className="text-sm text-gray-500">{members} members</span>
-        <a
-          href="#"
-          className={`${theme === "cyan" ? "text-cyan-300 hover:text-cyan-200" : "text-indigo-300 hover:text-indigo-200"} inline-flex items-center text-sm font-medium`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Join
-          <ArrowUpRight className="ml-1 h-3 w-3" />
-        </a>
-      </div>
-    </div>
-  )
-}
+// const TelegramChannel: FC<TelegramChannelProps> = ({ name, description, members, theme = "cyan" }) => {
+//   return (
+//     <div className="border-t border-gray-800 pt-4">
+//       <h3 className={`font-semibold text-lg ${theme === "cyan" ? "text-cyan-300" : "text-indigo-300"}`}>{name}</h3>
+//       <p className="text-gray-400 mt-1">{description}</p>
+//       <div className="mt-2 flex items-center justify-between">
+//         <span className="text-sm text-gray-500">{members} members</span>
+//         <a
+//           href="#"
+//           className={`${theme === "cyan" ? "text-cyan-300 hover:text-cyan-200" : "text-indigo-300 hover:text-indigo-200"} inline-flex items-center text-sm font-medium`}
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Join
+//           <ArrowUpRight className="ml-1 h-3 w-3" />
+//         </a>
+//       </div>
+//     </div>
+//   )
+// }
 
 export default CommunityPage
