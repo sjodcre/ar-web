@@ -10,6 +10,7 @@ import News from './app/community/news'
 import AOComputerTokenomics from './app/learn/tokenomics/ao'
 import ArweaveTokenomics from './app/learn/tokenomics/arweave'
 import AtomicAsset from './app/learn/atomic-asset'
+import CommunityPage from './app/community/resource-hub'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/learn/tokenomics/arweave" element={<ArweaveTokenomics />} />
           <Route path="/learn/tokenomics/ao" element={<AOComputerTokenomics />} />
           <Route path = "/learn/atomic-asset" element={<AtomicAsset />} />
+          <Route path = "/community/resource-hub" element = {<CommunityPage />} />
         </Routes>
       </div>
       <Chatbot />

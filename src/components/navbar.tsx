@@ -45,7 +45,7 @@ const navItems = {
   Community: [
     { title: "News", href: "/community/news", isDeveloped: true },
     { title: "Events", href: "#", isDeveloped: false },
-    { title: "Community Resource Hub", href: "#", isDeveloped: false },
+    { title: "Community Resource Hub", href: "/community/resource-hub", isDeveloped: true },
   ],
 }
 
