@@ -7,15 +7,14 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { SearchDialog } from "./search-dialog"
 import { Link } from "react-router-dom"
 
-
 const navItems = {
   Learn: [
     { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
     { title: "Intro to Atomic Assets", href: "/learn/atomic-asset", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact" },
     { title: "Whitepapers", href: "/learn/whitepapers", isDeveloped: true, subItems: [
-      { title: "Arweave Whitepaper", href: "https://www.arweave.org/yellow-paper.pdf" },
-      { title: "AO Whitepaper", href: "https://5z7leszqicjtb6bjtij34ipnwjcwk3owtp7szjirboxmwudpd2tq.arweave.net/7n6ySzBAkzD4KZoTviHtskVlbdab_yylEQuuy1BvHqc" },
+      { title: "Arweave Whitepaper", href: "https://www.arweave.org/yellow-paper.pdf", openInNewTab: true },
+      { title: "AO Whitepaper", href: "https://5z7leszqicjtb6bjtij34ipnwjcwk3owtp7szjirboxmwudpd2tq.arweave.net/7n6ySzBAkzD4KZoTviHtskVlbdab_yylEQuuy1BvHqc", openInNewTab: true },
     ] },
     { title: "Tokenomics", href: "/learn/tokenomics", isDeveloped: true, subItems: [
       { title: "Arweave Tokenomics", href: "/learn/tokenomics/arweave" },
@@ -25,11 +24,11 @@ const navItems = {
   Developers: [
     { title: "Get Started", href: "#", isDeveloped: false },
     { title: "Cookbook", href: "#", isDeveloped: true, subItems: [
-        { title: "Arweave", href: "https://cookbook.arweave.dev/" },
-        { title: "AO", href: "https://cookbook_ao.g8way.io/" },
+        { title: "Arweave", href: "https://cookbook.arweave.dev/", openInNewTab: true },
+        { title: "AO", href: "https://cookbook_ao.g8way.io/", openInNewTab: true },
       ] 
     },
-    { title: "School of Dum Dum", href: "https://github.com/ArweaveOasis/Arweave-Academy?tab=readme-ov-file", isDeveloped: true},
+    { title: "School of Dum Dum", href: "https://github.com/ArweaveOasis/Arweave-Academy?tab=readme-ov-file", isDeveloped: true, openInNewTab: true },
     { title: "API Reference", href: "#", isDeveloped: false },
   ],
   Solutions: [
@@ -80,15 +79,28 @@ export function Navbar() {
                         {item.subItems ? (
                           <span className="w-full cursor-default">{item.title}</span>
                         ) : (
-                          <Link to={item.href} className="w-full">
-                            {item.title}
-                          </Link>
+                          item.openInNewTab ? (
+                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="w-full">
+                              {item.title}
+                            </a>
+                          ) : (
+                            <Link to={item.href} className="w-full">
+                              {item.title}
+                            </Link>
+                          )
                         )}
                         {item.subItems && item.subItems.map(subItem => (
                           <DropdownMenuItem key={subItem.title} className="text-gray-300 hover:bg-white/10 cursor-pointer">
+                            {subItem.openInNewTab ? (
+                            <a href={subItem.href} target="_blank" rel="noopener noreferrer" className="w-full">
+                              {subItem.title}
+                            </a>
+                          ) : (
                             <Link to={subItem.href} className="w-full pl-4">
                               {subItem.title}
                             </Link>
+                          )}
+                            
                           </DropdownMenuItem>
                         ))}
                       </DropdownMenuItem>
@@ -123,6 +135,8 @@ export function Navbar() {
                   <a
                     key={item.title}
                     href={item.href}
+                    target={item.openInNewTab ? "_blank" : undefined}
+                    rel={item.openInNewTab ? "noopener noreferrer" : undefined}
                     className={`block px-4 py-2 text-sm ${item.isDeveloped ? 'text-gray-300' : 'text-red-500'} hover:bg-white/10 rounded-md ml-2`}
                   >
                     {item.title}
