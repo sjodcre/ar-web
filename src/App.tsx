@@ -11,6 +11,7 @@ import AOComputerTokenomics from './app/learn/tokenomics/ao'
 import ArweaveTokenomics from './app/learn/tokenomics/arweave'
 import AtomicAsset from './app/learn/atomic-asset'
 import CommunityPage from './app/community/resource-hub'
+import WarningBanner from './components/warning-banner'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <HashRouter>
       <Navbar />
       <div className="pt-16">
+      <WarningBanner />
 
         <Routes>
           <Route path="/" element={<Home />} />
