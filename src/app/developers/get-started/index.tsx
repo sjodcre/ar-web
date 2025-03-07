@@ -11,15 +11,22 @@ const topics = [
     {
         title: "Get Started",
         subtopics: [
-            { title: "Introduction to Arweave", path: "arweave/introduction" },
-            { title: "The Permaweb and Its Applications", path: "arweave/permaweb" },
-            { title: "Scalability and Technical Innovations", path: "arweave/scalability" },
+            { title: "Quick Start", path: "quick-start" },
             {
-                title: "Advanced Topics in Arweave", // New subtopic
-                path: "arweave/advanced-topics",
+                title: "Installation",
+                path: "#",
                 subtopics: [
-                    { title: "Placeholder Subtopic 1", path: "arweave/advanced-topics/placeholder1" },
-                    { title: "Placeholder Subtopic 2", path: "arweave/advanced-topics/placeholder2" },
+                    { title: "Local Arweave", path: "installation/arweave" },
+                    { title: "Setting up AOS", path: "installation/aos" },
+                ],
+            },
+            { title: "Deploy your first app!", path: "deploy" },
+            {
+                title: "Wallets", // New subtopic
+                path: "developers/wallets",
+                subtopics: [
+                    { title: "Creating your wallet", path: "wallets/create-wallet" },
+                    { title: "Funding your wallet", path: "wallets/funding-wallet" },
                 ],
             },
         ],
@@ -46,6 +53,7 @@ const GetStarted: React.FC = () => {
     const [markdownContent, setMarkdownContent] = useState("");
     const [selectedTopicIndex, setSelectedTopicIndex] = useState(0);
     const [selectedSubtopicIndex, setSelectedSubtopicIndex] = useState(0);
+    const [selectedSubSubtopicIndex, setSelectedSubSubtopicIndex] = useState<number | null>(null);
     const [openSubSubtopics, setOpenSubSubtopics] = useState<{ [key: string]: boolean }>({});
     const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({
         [topics[0].title]: true,
@@ -53,11 +61,21 @@ const GetStarted: React.FC = () => {
         [topics[2].title]: false,
     });
 
+    // const currentSubtopic = topics[selectedTopicIndex].subtopics[selectedSubtopicIndex];
+    // const contentPath = `/src/content/developers/${currentSubtopic.path}`;
+    const currentSubtopic = topics[selectedTopicIndex].subtopics[selectedSubtopicIndex];
+    const currentSubSubtopic = selectedSubSubtopicIndex !== null ? currentSubtopic.subtopics?.[selectedSubSubtopicIndex] : null;
+    const contentPath = currentSubSubtopic
+        ? `/src/content/developers/${currentSubSubtopic.path}`
+        : `/src/content/developers/${currentSubtopic.path}`;
+
+
     useEffect(() => {
-        fetch("/src/content/developers/get-started.md")
+        console.log("content paht", contentPath)
+        fetch(`${contentPath}.md`)
             .then((res) => res.text())
             .then(setMarkdownContent);
-    }, []);
+    }, [selectedTopicIndex, selectedSubtopicIndex, selectedSubSubtopicIndex]);
 
     // Copy Code Function
     const copyToClipboard = (code: string) => {
@@ -99,48 +117,62 @@ const GetStarted: React.FC = () => {
             <aside className="hidden md:block w-64 bg-black p-4 border-r border-gray-700">
                 <h2 className="text-lg font-bold mb-4">Topics</h2>
                 <ul className="space-y-2">
-    {topics.map((topic, topicIndex) => (
-        <li key={topicIndex} className="border-b border-gray-700 pb-2">
-            {/* Main Topic */}
-            <button
-                onClick={() => toggleSection(topic.title)}
-                className="flex items-center justify-between w-full p-3 bg-gray-900 rounded hover:bg-gray-800 transition font-bold text-white"
-            >
-                <span>{topic.title}</span>
-                {openSections[topic.title] ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-            </button>
-
-            {/* Subtopics */}
-            {openSections[topic.title] && (
-                <ul className="pl-4 mt-2 space-y-1 border-l-2 border-gray-700">
-                    {topic.subtopics.map((section, index) => (
-                        <li key={index}>
+                    {topics.map((topic, topicIndex) => (
+                        <li key={topicIndex} className="border-b border-gray-700 pb-2">
+                            {/* Main Topic */}
                             <button
-                                onClick={() => {
-                                    selectTopic(topicIndex);
-                                    setSelectedSubtopicIndex(index);
-                                    if (section.subtopics && section.subtopics.length > 0) {
-                                        toggleSubSubtopic(section.title);
-                                    }
-                                }}
-                                className="flex items-center justify-between w-full p-2 text-gray-400 hover:text-white bg-gray-800 rounded transition pl-4"
+                                onClick={() => toggleSection(topic.title)}
+                                className="flex items-center justify-between w-full p-3 bg-gray-900 rounded hover:bg-gray-800 transition font-bold text-white"
                             >
-                                {section.title}
-                                {section.subtopics && section.subtopics.length > 0 && (
-                                    openSubSubtopics[section.title] ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />
-                                )}
+                                <span>{topic.title}</span>
+                                {openSections[topic.title] ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                             </button>
 
-                            {/* Sub-Subtopics */}
-                            {section.subtopics && section.subtopics.length > 0 && openSubSubtopics[section.title] && (
-                                <ul className="pl-6 mt-1 space-y-1 border-l border-gray-700">
-                                    {section.subtopics.map((subSection, subIndex) => (
-                                        <li key={subIndex}>
+                            {/* Subtopics */}
+                            {openSections[topic.title] && (
+                                <ul className="pl-4 mt-2 space-y-1 border-l-2 border-gray-700">
+                                    {topic.subtopics.map((section, index) => (
+                                        <li key={index}>
                                             <button
-                                                className="block p-2 text-gray-500 hover:text-white pl-6"
+                                                onClick={() => {
+                                                    selectTopic(topicIndex);
+                                                    setSelectedSubtopicIndex(index);
+                                                    setSelectedSubSubtopicIndex(null); // Reset sub-subtopic selection
+                                                    if (section.subtopics && section.subtopics.length > 0) {
+                                                        toggleSubSubtopic(section.title);
+                                                    }
+                                                }}
+                                                className="flex items-center justify-between w-full p-2 text-gray-400 hover:text-white bg-gray-800 rounded transition pl-4"
                                             >
-                                                {subSection.title}
+                                                {section.title}
+                                                {section.subtopics && section.subtopics.length > 0 && (
+                                                    openSubSubtopics[section.title] ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />
+                                                )}
                                             </button>
+
+                                            {/* Sub-Subtopics */}
+                                            {section.subtopics && section.subtopics.length > 0 && openSubSubtopics[section.title] && (
+                                                <ul className="pl-6 mt-1 space-y-1 border-l border-gray-700">
+                                                    {section.subtopics.map((subSection, subIndex) => (
+                                                        <li key={subIndex}>
+                                                            {/* <button
+                                                                className="block p-2 text-gray-500 hover:text-white pl-6"
+                                                            >
+                                                                {subSection.title}
+                                                            </button> */}
+                                                            <button
+                                                                onClick={() => {
+                                                                    setSelectedSubSubtopicIndex(subIndex);
+                                                                }}
+                                                                className={`block p-2 text-gray-500 hover:text-white pl-6 ${selectedSubSubtopicIndex === subIndex ? "text-white font-bold" : ""
+                                                                    }`}
+                                                            >
+                                                                {subSection.title}
+                                                            </button>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
@@ -148,15 +180,11 @@ const GetStarted: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-            )}
-        </li>
-    ))}
-</ul>
 
             </aside>
 
             <div className="flex-1 flex flex-col items-center p-6">
-                <h1 className="text-3xl font-bold mb-6 text-center">📖 Documentation</h1>
+                {/* <h1 className="text-3xl font-bold mb-6 text-center">📖 Documentation</h1> */}
                 <div className="markdown p-6 bg-gray-900/80 border border-gray-700 shadow-lg rounded-lg w-full text-justify">
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
