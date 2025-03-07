@@ -12,6 +12,9 @@ import ArweaveTokenomics from './app/learn/tokenomics/arweave'
 import AtomicAsset from './app/learn/atomic-asset'
 import CommunityPage from './app/community/resource-hub'
 import WarningBanner from './components/warning-banner'
+import GetStarted from './app/developers/get-started'
+import { Toaster } from "@/components/ui/sonner"
+
 
 
 function App() {
@@ -32,8 +35,11 @@ function App() {
           <Route path="/learn/tokenomics/ao" element={<AOComputerTokenomics />} />
           <Route path = "/learn/atomic-asset" element={<AtomicAsset />} />
           <Route path = "/community/resource-hub" element = {<CommunityPage />} />
+          <Route path = "/developers/get-started" element = {<GetStarted />} />
         </Routes>
       </div>
+      <Toaster />
+
       <Chatbot />
     </HashRouter>
   )

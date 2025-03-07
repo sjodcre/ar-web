@@ -119,14 +119,14 @@ const AOComputerTokenomics: React.FC = () => {
       </button>
 
       {/* Content Container */}
-      <div className="markdown text-lg p-6 bg-black border border-gray-800 rounded-md w-full max-w-3xl text-justify">
+      <div className="markdown text-lg p-6 bg-black border border-gray-800 rounded-md w-full text-justify">
         <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
           {showLongVersion ? longContent : shortContent}
         </ReactMarkdown>
       </div>
       {/* Video Explanation Section */}
       {showLongVersion &&(
-        <div className="w-full max-w-3xl mt-6">
+        <div className="w-full mt-6">
         <p className="mb-4"> For a more in-depth understanding of Arweave's tokenomics, consider watching the following video: </p>
           <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
             <iframe

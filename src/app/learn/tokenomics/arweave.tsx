@@ -101,7 +101,7 @@ const ArweaveTokenomics: React.FC = () => {
       </button>
 
       {/* Content Container */}
-      <div className="markdown text-lg p-6 bg-black border border-gray-800 rounded-md w-full max-w-3xl text-justify">
+      <div className="markdown text-lg p-6 bg-black border border-gray-800 rounded-md w-full text-justify">
         <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
           {showLongVersion ? longContent : shortContent}
         </ReactMarkdown>

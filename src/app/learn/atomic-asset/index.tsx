@@ -284,7 +284,7 @@ const [longContent, setLongContent] = useState("");
                         </button>
                     </div>
                 </div> */}
-                <div className="p-4 rounded-md w-full max-w-3xl">
+                <div className="p-4 rounded-md w-full">
                     <h2 className="text-2xl font-semibold mb-4">{currentSubtopic.title}</h2>
                     <div className="markdown text-justify">
                         <ReactMarkdown

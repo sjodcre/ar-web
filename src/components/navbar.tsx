@@ -12,6 +12,7 @@ const navItems = {
     { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
     { title: "Intro to Atomic Assets", href: "/learn/atomic-asset", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact" },
+    { title: "Storage Fee Structure", href: "learn/fee-structure"},
     { title: "Whitepapers", href: "/learn/whitepapers", isDeveloped: true, subItems: [
       { title: "Arweave Whitepaper", href: "https://www.arweave.org/yellow-paper.pdf", openInNewTab: true },
       { title: "AO Whitepaper", href: "https://5z7leszqicjtb6bjtij34ipnwjcwk3owtp7szjirboxmwudpd2tq.arweave.net/7n6ySzBAkzD4KZoTviHtskVlbdab_yylEQuuy1BvHqc", openInNewTab: true },
@@ -22,7 +23,7 @@ const navItems = {
     ] },
   ],
   Developers: [
-    { title: "Get Started", href: "#", isDeveloped: false },
+    { title: "Get Started", href: "/developers/get-started", isDeveloped: true },
     { title: "Cookbook", href: "#", isDeveloped: true, subItems: [
         { title: "Arweave", href: "https://cookbook.arweave.dev/", openInNewTab: true },
         { title: "AO", href: "https://cookbook_ao.g8way.io/", openInNewTab: true },

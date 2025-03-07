@@ -23,11 +23,11 @@ const topics = [
         ],
     },
     {
-        title: "Why Arweave? Why AO? (Not Done)",
+        title: "Why Arweave? Why AO? 🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems",
         subtopics: [
-            { title: "Introduction to Arweave", path: "why-arweave-ao/introduction" },
-            { title: "The Permaweb and Its Applications", path: "why-arweave-ao/permaweb" },
-            { title: "Scalability and Technical Innovations", path: "why-arweave-ao/scalability" },
+            { title: "Comparing Web2 Full Stack Applications", path: "why-arweave-ao/web2" },
+            { title: "Comparing Web3 Full Stack Applications", path: "why-arweave-ao/web3" },
+            { title: "How Applications Built on Arweave + AO differ", path: "why-arweave-ao/applications" },
         ],
     },
 ];
@@ -149,12 +149,28 @@ export default function BlockchainArweaveAO101() {
                     {/* TL;DR */}
                     {showLongVersion ? "TL;DR" : "Full Version"}
                 </button>
-                <div className="p-4 rounded-md w-full max-w-3xl">
+                <div className="p-4 rounded-md w-full">
                     <h2 className="text-2xl font-semibold mb-4">{currentSubtopic.title}</h2>
                     <div className="markdown text-justify">
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
+                            components={{
+                                table: ({ children }) => (
+                                    <table className="w-full border-collapse border border-gray-700 text-white my-4">
+                                      {children}
+                                    </table>
+                                  ),
+                                  th: ({ children }) => (
+                                    <th className="border border-gray-600 bg-gray-800 px-4 py-2 text-left font-semibold">
+                                      {children}
+                                    </th>
+                                  ),
+                                  td: ({ children }) => (
+                                    <td className="border border-gray-600 px-4 py-2">
+                                      {children}
+                                    </td>
+                                  )}}
                         >
                             {showLongVersion ? longContent : shortContent}
                         </ReactMarkdown>
