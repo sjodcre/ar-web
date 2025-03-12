@@ -25,26 +25,26 @@ const topics = [
                 title: "Wallets", // New subtopic
                 path: "developers/wallets",
                 subtopics: [
-                    { title: "Creating your wallet", path: "wallets/create-wallet" },
-                    { title: "Funding your wallet", path: "wallets/funding-wallet" },
+                    { title: "Creating your wallet", path: "wallets/wander/create-wallet" },
+                    { title: "Funding your wallet", path: "wallets/wander/fund-wallet" },
                 ],
             },
         ],
     },
     {
-        title: "AO 101",
+        title: "TBD",
         subtopics: [
-            { title: "Introduction to AO", path: "ao/introduction" },
-            { title: "AO’s Core Architecture: How It Works", path: "ao/core-architecture" },
-            { title: "AO’s Scalability and Parallel Processing", path: "ao/scalability" },
+            { title: "TBD", path: "ao/introduction" },
+            { title: "TBD", path: "ao/core-architecture" },
+            { title: "TBD", path: "ao/scalability" },
         ],
     },
     {
-        title: "Why Arweave? Why AO? 🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems",
+        title: "TBD",
         subtopics: [
-            { title: "Comparing Web2 Full Stack Applications", path: "why-arweave-ao/web2" },
-            { title: "Comparing Web3 Full Stack Applications", path: "why-arweave-ao/web3" },
-            { title: "How Applications Built on Arweave + AO differ", path: "why-arweave-ao/applications" },
+            { title: "TBD", path: "why-arweave-ao/web2" },
+            { title: "TBD", path: "why-arweave-ao/web3" },
+            { title: "TBD", path: "why-arweave-ao/applications" },
         ],
     },
 ];

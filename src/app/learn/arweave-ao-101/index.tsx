@@ -23,7 +23,7 @@ const topics = [
         ],
     },
     {
-        title: "Why Arweave? Why AO? 🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems",
+        title: "🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems",
         subtopics: [
             { title: "Comparing Web2 Full Stack Applications", path: "why-arweave-ao/web2" },
             { title: "Comparing Web3 Full Stack Applications", path: "why-arweave-ao/web3" },

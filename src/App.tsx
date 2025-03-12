@@ -36,6 +36,7 @@ function App() {
           <Route path = "/learn/atomic-asset" element={<AtomicAsset />} />
           <Route path = "/community/resource-hub" element = {<CommunityPage />} />
           <Route path = "/developers/get-started" element = {<GetStarted />} />
+          {/* <Route paath = "/developers/wallets" */}
         </Routes>
       </div>
       <Toaster />
