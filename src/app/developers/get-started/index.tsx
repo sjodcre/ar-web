@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from "@/components/Sidebar";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
-const topics = [
+export const topics = [
     {
         title: "Get Started", path: "get-started",
         subtopics: [

@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { SearchDialog } from "./search-dialog"
 import { Link } from "react-router-dom"
+import SearchFn from "@/components/Search";
+
 
 const navItems = {
   Learn: [
-    { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
+    { title: "Arweave and AO 101", href: "/learn/arweave-ao-101" , isDeveloped: true},
     { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact" },
     { title: "Storage Fee Structure", href: "learn/fee-structure"},
@@ -109,10 +111,11 @@ export function Navbar() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               ))}
-              <Button className="bg-black ml-2" onClick={() => setShowSearch(true)}>
+              {/* <Button className="bg-black ml-2" onClick={() => setShowSearch(true)}>
                 <Search className="h-5 w-5 mr-2" />
                 Search
-              </Button>
+              </Button> */}
+              <SearchFn/>
             </div>
           </div>
           <div className="md:hidden flex items-center gap-2">

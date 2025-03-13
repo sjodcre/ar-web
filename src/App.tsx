@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './app/page'
 import Learn from './app/learn'
-import BlockchainArweaveAO101 from './app/learn/arweave-ao-101'
+import ArweaveAO101 from './app/learn/arweave-ao-101'
 import SocialImpact from './app/learn/social-impact'
 import { Navbar } from "@/components/navbar"
 import Chatbot from "@/components/chatbot"; // Import chatbot
@@ -34,10 +34,10 @@ function App() {
           <Route path="/developers/:page" element={<GetStarted />} />
           <Route path="/developers/:page/:subpage" element={<GetStarted />} />
           <Route path="/developers/:page/:subpage/:subsubpage" element={<GetStarted />} />
-          <Route path="/learn/blockchain-arweave-ao101" element={<BlockchainArweaveAO101 />} />
-          <Route path="/learn/blockchain-arweave-ao101/:page" element={<BlockchainArweaveAO101 />} />
-          <Route path="/learn/blockchain-arweave-ao101/:page/:subpage" element={<BlockchainArweaveAO101 />} />
-          <Route path="/learn/blockchain-arweave-ao101/:page/:subpage/:subsubpage" element={<BlockchainArweaveAO101 />} />
+          <Route path="/learn/arweave-ao-101" element={<ArweaveAO101 />} />
+          <Route path="/learn/arweave-ao-101/:page" element={<ArweaveAO101 />} />
+          <Route path="/learn/arweave-ao-101/:page/:subpage" element={<ArweaveAO101 />} />
+          <Route path="/learn/arweave-ao-101/:page/:subpage/:subsubpage" element={<ArweaveAO101 />} />
           <Route path="/learn/atomic-assets" element={<AtomicAssets />} />
           <Route path="/learn/atomic-assets/:page" element={<AtomicAssets />} />
           <Route path="/learn/atomic-assets/:page/:subpage" element={<AtomicAssets />} />

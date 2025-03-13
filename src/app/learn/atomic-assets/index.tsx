@@ -15,7 +15,7 @@ interface Topic {
     subtopics: Subtopic[];
 }
 
-const topics: Topic[]= [
+export const topics: Topic[]= [
     {
         title: "Atomic Assets", path: "introduction",
         subtopics: [

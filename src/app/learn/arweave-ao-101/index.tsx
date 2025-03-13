@@ -15,7 +15,7 @@ interface Topic {
     subtopics: Subtopic[];
 }
 
-const topics: Topic[] = [
+export const topics: Topic[] = [
     {
         title: "Arweave 101", path: "arweave",
         subtopics: [
@@ -42,21 +42,21 @@ const topics: Topic[] = [
     },
 ];
 
-export default function BlockchainArweaveAO101() {
+export default function ArweaveAO101() {
 
     const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (!page) {
-            navigate("/learn/blockchain-arweave-ao101/arweave/introduction", { replace: true });
+            navigate("/learn/arweave-ao-101/arweave/introduction", { replace: true });
         }
     }, [page]);
 
-    let markdownFilePath = "learn/blockchain-arweave-ao101/arweave/introduction"; // Default page
-    if (page) markdownFilePath = `learn/blockchain-arweave-ao101/${page}`;
-    if (subpage) markdownFilePath = `learn/blockchain-arweave-ao101/${page}/${subpage}`;
-    if (subsubpage) markdownFilePath = `learn/blockchain-arweave-ao101/${page}/${subpage}/${subsubpage}`;
+    let markdownFilePath = "learn/arweave-ao-101/arweave/introduction"; // Default page
+    if (page) markdownFilePath = `learn/arweave-ao-101/${page}`;
+    if (subpage) markdownFilePath = `learn/arweave-ao-101/${page}/${subpage}`;
+    if (subsubpage) markdownFilePath = `learn/arweave-ao-101/${page}/${subpage}/${subsubpage}`;
 
     console.log("Markdown File Path:", markdownFilePath); // Debugging
 
@@ -88,53 +88,53 @@ export default function BlockchainArweaveAO101() {
             if (subsubtopicIndex !== -1 && currentSubtopic.subtopics) {
                 // Inside a sub-subtopic
                 if (subsubtopicIndex > 0) {
-                    prevPath = `/learn/blockchain-arweave-ao101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex - 1].path}`;
+                    prevPath = `/learn/arweave-ao-101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex - 1].path}`;
                     prevTitle = currentSubtopic.subtopics[subsubtopicIndex - 1].title;
                 } else if (subtopicIndex > 0) {
-                    prevPath = `/learn/blockchain-arweave-ao101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`;
+                    prevPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`;
                     prevTitle = currentTopic.subtopics[subtopicIndex - 1].title;
                 } else if (topicIndex > 0) {
                     const prevTopic = topics[topicIndex - 1];
                     prevPath = prevTopic.subtopics
-                        ? `/learn/blockchain-arweave-ao101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-                        : `/learn/blockchain-arweave-ao101/${prevTopic.path}`;
+                        ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
+                        : `/learn/arweave-ao-101/${prevTopic.path}`;
                     prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title;
                 }
 
                 if (subsubtopicIndex < currentSubtopic.subtopics.length - 1) {
-                    nextPath = `/learn/blockchain-arweave-ao101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex + 1].path}`;
+                    nextPath = `/learn/arweave-ao-101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex + 1].path}`;
                     nextTitle = currentSubtopic.subtopics[subsubtopicIndex + 1].title;
                 } else if (subtopicIndex < currentTopic.subtopics.length - 1) {
-                    nextPath = `/learn/blockchain-arweave-ao101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`;
+                    nextPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`;
                     nextTitle = currentTopic.subtopics[subtopicIndex + 1].title;
                 } else if (topicIndex < topics.length - 1) {
                     const nextTopic = topics[topicIndex + 1];
                     nextPath = nextTopic.subtopics
-                        ? `/learn/blockchain-arweave-ao101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-                        : `/learn/blockchain-arweave-ao101/${nextTopic.path}`;
+                        ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
+                        : `/learn/arweave-ao-101/${nextTopic.path}`;
                     nextTitle = nextTopic.subtopics[0].title;
                 }
             } else {
                 // Inside a subtopic
                 if (subtopicIndex > 0) {
-                    prevPath = `/learn/blockchain-arweave-ao101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`;
+                    prevPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`;
                     prevTitle = currentTopic.subtopics[subtopicIndex - 1].title;
                 } else if (topicIndex > 0) {
                     const prevTopic = topics[topicIndex - 1];
                     prevPath = prevTopic.subtopics
-                        ? `/learn/blockchain-arweave-ao101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-                        : `/learn/blockchain-arweave-ao101/${prevTopic.path}`;
+                        ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
+                        : `/learn/arweave-ao-101/${prevTopic.path}`;
                     prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title;
                 }
 
                 if (subtopicIndex < currentTopic.subtopics.length - 1) {
-                    nextPath = `/learn/blockchain-arweave-ao101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`;
+                    nextPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`;
                     nextTitle = currentTopic.subtopics[subtopicIndex + 1].title;
                 } else if (topicIndex < topics.length - 1) {
                     const nextTopic = topics[topicIndex + 1];
                     nextPath = nextTopic.subtopics
-                        ? `/learn/blockchain-arweave-ao101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-                        : `/learn/blockchain-arweave-ao101/${nextTopic.path}`;
+                        ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
+                        : `/learn/arweave-ao-101/${nextTopic.path}`;
                     nextTitle = nextTopic.subtopics[0].title;
                 }
             }
@@ -143,16 +143,16 @@ export default function BlockchainArweaveAO101() {
             if (topicIndex > 0) {
                 const prevTopic = topics[topicIndex - 1];
                 prevPath = prevTopic.subtopics
-                    ? `/learn/blockchain-arweave-ao101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-                    : `/learn/blockchain-arweave-ao101/${prevTopic.path}`;
+                    ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
+                    : `/learn/arweave-ao-101/${prevTopic.path}`;
                 prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title;
             }
 
             if (topicIndex < topics.length - 1) {
                 const nextTopic = topics[topicIndex + 1];
                 nextPath = nextTopic.subtopics
-                    ? `/learn/blockchain-arweave-ao101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-                    : `/learn/blockchain-arweave-ao101/${nextTopic.path}`;
+                    ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
+                    : `/learn/arweave-ao-101/${nextTopic.path}`;
                 nextTitle = nextTopic.subtopics[0].title;
             }
         }
@@ -160,7 +160,7 @@ export default function BlockchainArweaveAO101() {
 
     return (
         <main className="min-h-screen bg-black text-white flex">
-            <Sidebar section="learn/blockchain-arweave-ao101" topics={topics} />
+            <Sidebar section="learn/arweave-ao-101" topics={topics} />
             <div className="flex-1 flex flex-col items-center p-6">
                 <button
                     onClick={() => setShowLongVersion((prev) => !prev)}
