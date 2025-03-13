@@ -10,7 +10,7 @@ import { Link } from "react-router-dom"
 const navItems = {
   Learn: [
     { title: "Arweave and AO 101", href: "/learn/blockchain-arweave-ao101" , isDeveloped: true},
-    { title: "Intro to Atomic Assets", href: "/learn/atomic-asset", isDeveloped: true },
+    { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact" },
     { title: "Storage Fee Structure", href: "learn/fee-structure"},
     { title: "Whitepapers", href: "/learn/whitepapers", isDeveloped: true, subItems: [
