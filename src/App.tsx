@@ -35,9 +35,16 @@ function App() {
           <Route path="/learn/tokenomics/ao" element={<AOComputerTokenomics />} />
           <Route path = "/learn/atomic-asset" element={<AtomicAsset />} />
           <Route path = "/community/resource-hub" element = {<CommunityPage />} />
-          <Route path = "/developers/get-started" element = {<GetStarted />} />
-          {/* <Route paath = "/developers/wallets" */}
-        </Routes>
+          {/* <Route path = "/developers/get-started" element = {<GetStarted />} /> */}
+          {/* <Route path="/developers/:topic/:subtopic/:subsubtopic?" element={<GetStarted />} /> */}
+          {/* <Route path="/developers/*" element={<GetStarted />} /> */}
+          <Route path="/developers/:page" element={<GetStarted />} />
+        <Route path="/developers/:page/:subpage" element={<GetStarted />} />
+        <Route path="/developers/:page/:subpage/:subsubpage" element={<GetStarted />} />
+          
+          {/* <Route path="*" element={<h1 className="text-white text-center">404 Not Found</h1>} /> */}
+
+          </Routes>
       </div>
       <Toaster />
 
