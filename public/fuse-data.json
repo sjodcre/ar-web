@@ -1,0 +1,5072 @@
+[
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "# 🚀 Quick Start Guide: Arweave + AO Development"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Welcome to the **Arweave + AO Quick Start Guide**! This guide will help you get up and running as quickly as possible with Arweave’s **permanent storage** and AO’s **decentralized compute**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "---"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "## 🏦 Step 1: Create and Fund Your Wallet"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "To interact with Arweave and AO, you need an **Arweave-compatible wallet**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "### 🔹 **1.1 Creating a Wallet**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "If you don’t have a wallet yet, follow our **[Wallet Creation Guide](./wallet-setup.md)** for step-by-step instructions on setting up a Wander Wallet."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "### 🔹 **1.2 Funding Your Wallet**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Once you have a wallet, you'll need **AR tokens** to pay for transactions. Learn how to acquire and transfer AR tokens in our **[Funding Guide](./fund-wallet.md)**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<!-- **⚠️ Note:**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "For local development and testing, you can use **ArLocal** to simulate the Arweave network without spending real AR tokens. Refer to our **[Local Arweave Setup Guide](./local-arweave-setup.md)** for detailed instructions. -->"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "## 🛠 Step 2: Set Up Your Development Environment"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Now that you have your wallet ready, it’s time to set up your development environment for **building on Arweave and AO**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "---"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "### 🔹 **2.1 Local Arweave Setup (For Testing)**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./local-arweave-setup.md)** to create a local testing environment."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "✅ **No AR tokens required**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "✅ **Instant transactions**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "✅ **Simulates Arweave’s network locally**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Once set up, you can start ArLocal using:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "npx arlocal"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "### 🔹 **2.2 Setting Up BetterIdea (For AO Development)**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "BetterIdea is a **web-based IDE** designed for developing and testing **AO processes** (decentralized applications on AO).  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### ✅ **Why BetterIdea?**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "- **No local setup required**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "- **Write, test, and deploy AO processes quickly**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "- **Built-in AO messaging system**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🔧 **Step 1: Access BetterIdea**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Go to the official BetterIdea website:  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "🔗 [BetterIdea IDE](https://betteridea.dev/)"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🛠 **Step 2: Connect Your Wallet**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "1. Click on **“Connect Wallet”**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "2. Select **Wander Wallet** or another Arweave-compatible wallet  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "3. Approve the connection  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🚀 **Step 3: Create Your First AO Process**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "1. Click **\"New Project\"** and select **AO Process**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "2. Choose a **project name** and click **Create**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "3. You’ll see a Lua script template  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 📜 **Step 4: Write and Deploy AO Code**  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Below is a **basic AO message handler** that simply **responds to a received message**:  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```lua"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Handlers.add("
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"Ping-Handler\","
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"Ping\","
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    function(msg)"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        msg.reply({ Data = \"Pong! AO received your message.\" })"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    end"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": ")"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🚀 Step 5: Communicating with the AO Process  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Now that our AO process is deployed, let's send a message to it using **AO’s CLI tool** to test the `\"Ping-Handler\"`."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "---"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 📡 **Step 5.1: Test Your AO Process via BetterIdea CLI**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "1. **Open the BetterIdea Web IDE Terminal**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "   - In BetterIdea, locate the **CLI Terminal** at the bottom."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "2. **Send a Test Message to Your Process**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "   - Use the following command:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "   ```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "   Send({"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    Target = [[PROCESS_ID]],"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "\tAction = [[Ping]],"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "\tData = [[yo]]"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    })"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    ```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    - Replace PROCESS_ID with your actual **deployed AO Process ID.**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "3. **Expected Output**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    - If everything is set up correctly, you should see a response:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    ```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    New Message From z8H...gz4: Data = Pong! AO received yo"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    ```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🚀 Step 6: Setting Up a Vite React TypeScript Project"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "To interact with **AO and Arweave**, we need a frontend application. **Vite** is a fast build tool for creating modern web applications, and we’ll use it to set up our **React + TypeScript** project."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 📌 6.1 Install Vite and Create a New Project"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Run the following command in your terminal:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "pnpm create vite@latest my-ao-app --template react-ts"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Navigate into the project folder:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "cd my-ao-app"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Then install dependencies:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "pnpm install"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Start the development server:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "pnpm dev"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Your Vite app should now be running at [http://localhost:5173](http://localhost:5173) 🎉."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<!-- #### 🔧 6.2 Project Configuration"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Modify your `\"tsconfig.json\"` to ensure **strict type-checking** and enable compatibility with **AO libraries**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```ts"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "{"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  \"compilerOptions\": {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"strict\": true,"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"moduleResolution\": \"node\","
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"esModuleInterop\": true,"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    \"skipLibCheck\": true"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  }"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "``` -->"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 📦 6.2 Installing Dependencies"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Install required packages for interacting with AO:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```sh"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "pnpm add @permaweb/aoconnect"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "This package allows us to **communicate with AO processes**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🚀 Step 6.3: Sending a Dry-Run Message to an AO Process"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Now that our **Vite React TypeScript** project is set up, let's send a **dry-run message** to an AO Process."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "A **dry-run** allows us to **test AO messaging without requiring a wallet signature**, making development and debugging much faster."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "📡 Send a Dry-Run Message to an AO Process"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "We’ll create a React component that sends a **test message** to an AO Process and displays the response."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "#### 🔹 Create `src/components/AOMessage.tsx`"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```ts"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "import React, { useState } from \"react\";"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "import { dryrun } from \"@permaweb/aoconnect\";"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "const AOMessage = () => {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  const [response, setResponse] = useState<string | null>(null);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  const [loading, setLoading] = useState(false);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  const processId = \"YOUR_PROCESS_ID\"; // Replace with actual AO Process ID"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  const sendMessage = async () => {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    setLoading(true);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    try {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      const res = await dryrun({"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        process: processId,"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        tags: [{ name: \"Action\", value: \"Ping\" }],"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        data: \"abc123\","
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      });"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      console.log(\"AO Response:\", res);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      setResponse(JSON.stringify(res.Messages[0].Data, null, 2)); // Store only the first message from the response"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    } catch (error) {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      console.error(\"Error sending dry-run message:\", error);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      setResponse(\"Failed to communicate with AO Process.\");"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    }"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    setLoading(false);"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  };"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  return ("
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    <div className=\"p-4 bg-gray-900 border border-gray-700 rounded-lg text-white text-center\">"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      <h2 className=\"text-lg font-bold mb-2\">AO Messaging Test</h2>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      <p className=\"text-gray-400\">Click the button to send a dry-run message.</p>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      <button"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        className=\"mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md\""
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        onClick={sendMessage}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        disabled={loading}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      >"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        {loading ? \"Sending...\" : \"Send Message\"}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      </button>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      {response && ("
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        <pre className=\"mt-4 p-2 bg-gray-800 text-green-400 rounded-md text-left text-sm whitespace-pre-wrap\">"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "          {response}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "        </pre>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      )}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    </div>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  );"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "};"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "export default AOMessage;"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "🔧 Integrating AO Messaging into the Main App"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "To use our new **AOMessage** component, update `src/App.tsx`:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```ts"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "import React from \"react\";"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "import AOMessage from \"./components/AOMessage\";"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "function App() {"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  return ("
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    <div className=\"min-h-screen flex flex-col items-center justify-center bg-black text-white p-6\">"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      <h1 className=\"text-3xl font-bold mb-6\">🚀 AO Dry-Run Messaging</h1>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "      <AOMessage />"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    </div>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "  );"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "}"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "export default App;"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "✅ Expected Output"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "After clicking **\"Send Message\"**, you should see the AO Process reply in the UI:"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<!-- <img src=\"./dryrun-output.png\" alt=\"dryrun-output\" width=\"120\"/> -->"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<img src=\"./dryrun-output.png\" alt=\"dryrun-output\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "This confirms that our frontend **successfully communicates with AO** 🎉."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "**Note**: The `dryrun` function is particularly useful for scenarios where immediate feedback is desired without the overhead of permanent storage on the Arweave network."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "🎉 Congratulations!"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "You've successfully completed the Quick Start Guide for Arweave + AO Development. This journey has equipped you with the foundational tools and knowledge to explore the vast possibilities within the Arweave and AO ecosystems.​"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "Welcome to the rabbit hole—dive deep, experiment, and innovate! 🐇🕳️"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "If you're eager to take your skills further, check out our **[Deploy Your First App](./deploy-your-first-app.md)** page for more advanced guidance and projects to tackle!"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "## 🛠️ Additional Resources"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "🔗 **[@permaweb/aoconnect on npm](https://www.npmjs.com/package/@permaweb/aoconnect)** - Official package to communicate with AO processes.  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "🔗 **[AO Cookbook: Dry-Run Messages](https://cookbook_ao.g8way.io/guides/aoconnect/dryrun.html)** - Step-by-step guide on sending messages via dry-run."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "# 🛠️ Setting Up Local Arweave with ArLocal"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🔹 What is ArLocal?"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "ArLocal is a tool that allows developers to quickly set up a **local Arweave gateway** for testing transactions in a **simulated environment**. This enables you to interact with Arweave without spending AR tokens, making development and testing easier."
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **No AR tokens required**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **Transactions are instant**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **Easily simulate the Arweave network locally**"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🚀 Installation & Setup"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "### 1️⃣ Prerequisites"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Ensure you have **Node.js** and **npm** or **yarn** installed on your machine."
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Check if Node.js is installed:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "node -v"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Check if npm is installed:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npm -v"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "If Node.js is not installed, download it from [nodejs.org](https://nodejs.org/)."
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "### 2️⃣ Installing ArLocal"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "#### 📌 Option 1: Running ArLocal with npx"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Run ArLocal directly without installation:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npx arlocal"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "By default, this will start an Arweave gateway on **port 1984**."
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "You can specify a different port:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npx arlocal 8080"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "To run without logs:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npx arlocal --hidelogs"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "#### 📌 Option 2: Installing as a Dev Dependency"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "For persistent usage, install ArLocal as a **dev dependency** in your project:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npm install arlocal --save-dev"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "# or"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "yarn add arlocal -D"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Then, create a script in your `package.json`:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```json"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "\"scripts\": {"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  \"start:arlocal\": \"arlocal\""
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "}"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Now, you can start ArLocal with:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npm run start:arlocal"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🔄 Using ArLocal in a Node.js Script"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "You can integrate ArLocal into your **Node.js** test environment programmatically:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```ts"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "import ArLocal from \"arlocal\";"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "(async () => {"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const arLocal = new ArLocal(); // Create an instance"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arLocal.start(); // Start local Arweave instance"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  console.log(\"ArLocal is running on http://localhost:1984\");"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  // Run your tests here..."
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arLocal.stop(); // Stop ArLocal after testing"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "})();"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "### 🌟 Configuration Options"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "| Option       | Description                        |"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "|-------------|------------------------------------|"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "| `port`      | Port to use (default: 1984)       |"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "| `showLogs`  | Show logs in the terminal         |"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "| `dbPath`    | Directory for temporary database  |"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "| `persist`   | Persist data between restarts     |"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Example:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```ts"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "const arLocal = new ArLocal(1985, true, \"./arlocal_db\", true);"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🔬 Example: Posting a Transaction to ArLocal"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "To post a transaction, install **Arweave.js**:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```sh"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "npm install arweave --save-dev"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "# or"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "yarn add arweave -D"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "Then, create a test script:"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```ts"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "import ArLocal from \"arlocal\";"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "import Arweave from \"arweave\";"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "(async () => {"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const arLocal = new ArLocal();"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arLocal.start();"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const arweave = Arweave.init({"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "    host: \"localhost\","
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "    port: 1984,"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "    protocol: \"http\","
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  });"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const wallet = await arweave.wallets.generate();"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const address = await arweave.wallets.getAddress(wallet);"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  // Airdrop AR tokens to the wallet (for local use)"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arweave.api.get(`mint/${address}/1000000000000000`);"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  // Create a transaction"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  const transaction = await arweave.createTransaction("
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "    { data: \"Hello ArLocal!\" },"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "    wallet"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  );"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arweave.transactions.sign(transaction, wallet);"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arweave.transactions.post(transaction);"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  console.log(\"Transaction successfully posted!\");"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "  await arLocal.stop(); // Stop ArLocal after testing"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "})();"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "```"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🔗 Additional Resources"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "- 📖 [ArLocal Documentation](https://github.com/textury/arlocal)"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "- 🌐 [Arweave.org](https://arweave.org/)"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "- 🔥 [Arweave Developer Guide](https://cookbook.arweave.dev/)"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "---"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "## 🎯 Summary"
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **ArLocal provides a local Arweave testing environment**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **Quickly test transactions without spending AR tokens**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **Run with npx or install as a dependency**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "✅ **Use Arweave.js to interact with the local instance**  "
+  },
+  {
+    "title": "Local Arweave",
+    "path": "/developers/get-started/installation/arweave",
+    "content": "🚀 **Now you're ready to build & test Arweave applications locally!** 🔥"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "# 📦 Setting Up AOS (AO Operating System)"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "AOS (AO Operating System) is the command-line interface (CLI) and runtime environment for **AO: The Hyper Parallel Computer**. It allows developers to build and interact with AO processes (similar to smart contracts) and leverage AO’s decentralized compute model."
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🚀 1. Prerequisites"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "Before installing **AOS**, ensure you have the following dependencies installed:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- [NodeJS](https://nodejs.org/) **v20+**  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- [Yarn](https://yarnpkg.com/) (for development purposes)  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- [Docker](https://www.docker.com/) (for advanced development)  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🔧 2. Installing AOS"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "To install **AOS**, run the following command:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "npm i -g https://get_ao.g8way.io && aos"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "🔹 **Note:**  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "After running `aos` for the first time, it installs itself on your machine.  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "Next time, you can simply run:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🛠️ 3. Setting Up AOS for Development"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "If you want to build AOS from source or modify it, follow these steps:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "git clone https://github.com/permaweb/aos.git"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "cd aos"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn build"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn start"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## ⚡ 4. Running AOS Processes"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "In AOS, **Processes** are like smart contracts that execute code. You can create and interact with these processes using the CLI."
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "### **4.1 Creating a New Process**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "To create a new AO Process:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos new myProcess"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "### **4.2 Running a Process**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "Once a process is created, you can start interacting with it by running:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos myProcess"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🔥 5. Using AOS Command-Line Flags"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "AOS supports various flags to customize how a process runs:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| **Flag**                | **Description** |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "|-------------------------|---------------|"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--relay [Relay URL]`   | Enables payment processing via HyperBEAM relay |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--cron [Interval]`     | Executes the process at specified intervals (e.g., `10-minutes`, `5-hours`, `10-blocks`) |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--get-blueprints [dir]` | Loads predefined **Lua scripts** (blueprints) into the process |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--load [luaFile]`      | Loads a Lua script from a local file |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--sqlite`              | Uses SQLite module for local storage within AOS |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "| `--tag-name [name]` `--tag-value [value]` | Adds metadata tags to the process |"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "Example usage:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos myProcess --cron 5-minutes --load ./script.lua"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 📜 6. Deploying a Process with Boot Scripts"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "AOS allows you to **auto-run Lua scripts** when a process starts. You can do this by setting the `On-Boot` tag."
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "#### **Using a local script:**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos boottest --tag-name=\"On-Boot\" --tag-value=\"Data\" --data=./startup.lua"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "#### **Using a stored script from Arweave:**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "aos boottest --tag-name=\"On-Boot\" --tag-value=\"arweavetxid\""
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🏗️ 7. Advanced AOS Development"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "### **7.1 Setting Up AOS for Advanced Development**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "For custom module development, run:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "curl -L https://install_ao.g8way.io | bash"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "Then follow the installation instructions."
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "### **7.2 Building the AOS WASM Module**"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "If you're modifying the AOS runtime, you may need to rebuild the WebAssembly (WASM) module:"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```sh"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "cd process"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "docker run -v .:/src p3rmaw3b/aos-sqlite:0.0.0 emcc-lua"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn test"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "yarn deploy-sqlite"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "```"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "After deploying, copy the **module ID** and update your `package.json` or `README.md`."
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "## 🔗 8. Useful Links & Documentation"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- 📖 [AO Compute Documentation](https://cookbook_ao.g8way.io/)  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- 🔗 [AOS GitHub Repository](https://github.com/permaweb/aos)  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "- 💡 [Understanding AO Compute](https://arweave.org/)  "
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "---"
+  },
+  {
+    "title": "Setting up AOS",
+    "path": "/developers/get-started/installation/aos",
+    "content": "### 🎉 Now you are ready to run **AOS** and start building decentralized applications using **AO: The Hyper Parallel Computer!** 🚀"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "# 🚀 Quick App Development and Deployment with Arweave & AO"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "## 1. Integrating AO's Messaging Unit into Your Application"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "If you plan to deploy your application on platforms like Vercel or others, minimal configuration changes are needed. The primary adjustment involves integrating AO's Messaging Unit, which serves as both middleware and backend, with the database managed within AO."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "### 1.1 Installing Necessary Packages"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "To communicate with AO's Messaging Unit, you'll need the `@permaweb/aoconnect` package. Install it using your preferred package manager:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```bash"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "# Using npm"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "npm install @permaweb/aoconnect"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "# Using yarn"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "yarn add @permaweb/aoconnect"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "### 1.2 Sending a Dry-Run Message to AO's Messaging Unit"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "A dry-run allows you to send a message to an AO process without requiring a wallet signature, making it ideal for testing purposes."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```javascript"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "import { dryrun } from '@permaweb/aoconnect';"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "async function sendDryRunMessage() {"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  const result = await dryrun({"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    process: 'PROCESS_ID', // Replace with your AO process ID"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    data: '', // Message payload"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    tags: [{ name: 'Action', value: 'Balance' }], // Example tag"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    anchor: '1234', // Optional anchor"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    // Additional optional fields: Id, Owner, etc."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  });"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  console.log(result.Messages[0]);"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "}"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "sendDryRunMessage();"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "In this example:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "- **process**: The unique identifier of the AO process you're targeting."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "- **data**: The message content or payload."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "- **tags**: Metadata associated with the message."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "- **anchor**: An optional field for anchoring the message."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "For more details, refer to the [AO Messaging Guide](https://cookbook_ao.g8way.io/tutorials/begin/messaging.html)."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "## 2. Deploying Your dApp onto Arweave"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "To deploy your dApp on Arweave, specific configurations are necessary, especially concerning the routing system."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "### 2.1 Configuring Next.js for Arweave Deployment"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "When deploying a Next.js application to Arweave, consider the following adjustments:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "1. **Export the Application as Static HTML**: Arweave serves static content, so you'll need to export your Next.js app accordingly."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "2. **Update `next.config.js`**: Ensure your configuration supports static exports."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```javascript"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "// next.config.js"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "module.exports = {"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  output: 'export', // Outputs a Single-Page Application (SPA)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  distDir: './out', // Output directory"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "};"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "3. **Build and Export**:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```bash"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "npm run build"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "npm run export"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "This process generates static files in the `out` directory, ready for deployment on Arweave."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "For a practical example, refer to the [Arweave Next.js Template](https://arweave-nextjs.arweave.dev/)."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "### 2.2 Configuring Vite for Arweave Deployment"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "For Vite applications, the following configurations are recommended:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "1. **Update `vite.config.js`**: Adjust the base path to ensure correct asset loading."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```javascript"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "// vite.config.js"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "import { defineConfig } from 'vite';"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "import react from '@vitejs/plugin-react';"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "export default defineConfig({"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  plugins: [react()],"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  base: '', // Ensures relative paths"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "});"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "2. **Modify `package.json`**: Add a deploy script using Bundlr for deployment."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```json"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "// package.json"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "{"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  \"scripts\": {"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    \"dev\": \"vite\","
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    \"build\": \"vite build\","
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    \"preview\": \"vite preview\","
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "    \"deploy\": \"yarn build && bundlr upload-dir dist --index-file index.html\""
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "  }"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "}"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "3. **Deploy Using Bundlr**:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```bash"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "yarn deploy"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "This script builds your application and uploads the `dist` directory to Arweave using Bundlr."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "For a detailed walkthrough, check out this [guide on deploying React frontends to Arweave](https://mirror.xyz/dhaiwat.eth/NV--7dv8CO0NCcFCvRjDCxBe3VuxdB2_KggwFEfLGRc)."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy",
+    "content": "By following these steps, you can seamlessly integrate AO's Messaging Unit into your application and deploy your dApp onto Arweave. For comprehensive documentation and advanced configurations, visit the [AO Cookbook](https://cookbook_ao.g8way.io/) and [Arweave Developer Docs](https://arweave.org/developers)."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "# 🔑 Creating a Wallet with Wander"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "Wander is a popular Arweave-compatible wallet that allows you to interact with **decentralized applications (dApps)** and manage digital assets on the **Arweave and AO networks**. Follow this guide to set up your **Wander wallet**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "## 🛠 Step 1: Install the Wander Browser Extension"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "1. **Go to the Chrome Web Store**  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "   - Visit the official Wander extension page:  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "     👉 [Wander Extension](https://chrome.google.com/webstore/detail/wander/einnioafmpimabjcddiinlhmijaionap)  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "2. **Add Wander to Chrome**  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "   - Click **\"Add to Chrome\"** and confirm any installation prompts.  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "   - Once installed, the Wander icon will appear in your browser toolbar."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "## 🔧 Step 2: Create a New Wallet"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "1. Click on the **Wander** extension icon in your browser toolbar."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "2. Select **\"Create a New Wallet\"**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "3. Set a **strong password** that will be used to unlock your wallet."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "## 🔑 Step 3: Backup Your Seed Phrase"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "1. Wander will generate a **12-word seed phrase**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "2. **Write it down** and store it in a **secure location**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "3. **DO NOT** share this phrase with anyone. It is the only way to recover your wallet."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "4. **Confirm the seed phrase** by entering it in the correct order."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "## 🚀 Step 4: Access and Manage Your Wallet"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "Once setup is complete, you will be redirected to the **Wander Dashboard**, where you can:"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "- View **wallet balance**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "- Manage **digital assets**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "- Connect to **Arweave & AO dApps**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "## 📚 Additional Resources"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "🔗 [Wander Official Website](https://www.wander.app/)  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "🔗 [Wander Chrome Extension](https://chrome.google.com/webstore/detail/wander/einnioafmpimabjcddiinlhmijaionap)  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "🔗 [Wander Help Center](https://www.wander.app/help)  "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "🎉 **Congratulations!** You’ve successfully"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "# 💰 Funding Your Wander Wallet"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "To interact with the Arweave and AO ecosystems using your Wander wallet, you'll need to acquire **AR tokens**. Here's a step-by-step guide to help you fund your wallet."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "## 🛒 Step 1: Purchase AR Tokens"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "**AR tokens** are the native cryptocurrency of the Arweave network. You can purchase them through various cryptocurrency exchanges. Here's how:"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "1. **Choose a Cryptocurrency Exchange**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "Select a reputable exchange that supports AR token trading. Some popular exchanges include:"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "     <!-- - [Binance](https://www.binance.com/)"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "     - [Gate.io](https://www.gate.io/)"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "     - [KuCoin](https://www.kucoin.com/) -->"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "| Exchange  | Logo |"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "|-----------|------|"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "| [Binance](https://www.binance.com/)  | <a href=\"https://www.binance.com/\" target=\"_blank\"><img src=\"./binance.png\" alt=\"Binance\" width=\"120\"/></a> |"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "| [Gate.io](https://www.gate.io/)      | <a href=\"https://www.gate.io/\" target=\"_blank\"><img src=\"./gateio_black.png\" alt=\"Gate.io\" width=\"120\"/></a> |"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "| [KuCoin](https://www.kucoin.com/)    | <a href=\"https://www.kucoin.com/\" target=\"_blank\"><img src=\"./kucoin_2.svg\" alt=\"KuCoin\" width=\"120\"/></a> |"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "2. **Create an Account**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Sign up on the chosen exchange and complete any necessary verification processes."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "3. **Deposit Funds**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Add funds to your exchange account using your preferred payment method (e.g., bank transfer, credit card)."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "4. **Purchase AR Tokens**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Navigate to the trading section and buy the desired amount of AR tokens."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "## 🏦 Step 2: Transfer AR Tokens to Your Wander Wallet"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "After purchasing AR tokens, transfer them to your Wander wallet:"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "1. **Open Your Wander Wallet**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Launch the Wander extension or mobile app."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "2. **Copy Your Wallet Address**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Locate and copy your unique wallet address. This is typically found under the \"Receive\" section."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "3. **Initiate the Transfer**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - In your exchange account, go to the withdrawal section."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Paste your Wander wallet address."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Enter the amount of AR tokens to transfer."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Confirm the transaction."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "4. **Wait for Confirmation**  "
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "   - Blockchain transactions may take some time. Once confirmed, your AR tokens will appear in your Wander wallet."
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "## 💡 Additional Resources"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "For more detailed instructions and support, refer to Wander's official help articles:"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "- [How to receive Arweave and AO assets](https://www.wander.app/help/browser-extension-how-to-receive-arweave-and-ao-assets)"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "- [How to buy AR tokens with fiat currency](https://www.wander.app/help/browser-extension-how-to-buy-ar-tokens-with-a-fiat-currency)"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "---"
+  },
+  {
+    "title": "Funding your wallet",
+    "path": "/developers/get-started/wallets/fund-wallet",
+    "content": "**Note:** Ensure you're sending AR tokens to the correct wallet address. Transactions on the blockchain are irreversible."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "In the evolving landscape of **digital ownership and decentralized storage**, Atomic Assets emerge as a **groundbreaking solution**. Built on **Arweave**, they integrate **data, metadata, and licensing** into a **single immutable identifier**."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "## **🔹 Understanding Atomic Assets**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "An **Atomic Asset** is a **digital package** that consolidates:"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Core content** (images, videos, documents)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Metadata** (descriptions, traits, ownership records)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Licensing agreements** (defining usage rights)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "Unlike **traditional NFTs**, which often rely on **off-chain storage**, Atomic Assets ensure:"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "✅ **Permanent on-chain storage**  "
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "✅ **Immutable & tamper-proof data**  "
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "✅ **Always accessible**  "
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "## **🔹 Fractional Ownership & Tradeability**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "Atomic Assets support **fractional ownership**, allowing:"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Multiple users to own portions** of a single asset."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Seamless buying, selling, and trading** within the asset itself."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **No reliance on third-party platforms** for ownership validation."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "## **🔹 Universal Data License (UDL) Integration**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "Atomic Assets utilize the **Universal Data License (UDL)**:"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Clear usage rights** (derivation, commercial use, modifications)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Monetization features** (royalties, licensing fees)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- **Legal protection** for digital creators."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "## **🔹 Conclusion**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "Atomic Assets **redefine digital content ownership** by ensuring **permanence, fractional ownership, and clear licensing**. As **NFTs evolve**, Atomic Assets stand as the **next-generation standard** for **secure and immutable digital assets**."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- [Tradeable Atomic Asset](https://atomic-assets.arweave.dev/)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- [Arweave Paves the Way for Creators](https://medium.com/@perma_dao/arweave-paves-the-way-for-creators-atomic-assets-are-the-right-nfts-5c82adaeab0d)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- [Atomic Assets: Why They Exist](https://www.linkedin.com/pulse/atomic-assets-why-exist-what-how-work-communitylabs1)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-long",
+    "content": "- [Universal Data License](https://2hsfyi4t5fiqdcanybdez4e4admrjeqghts22viz7uuo3d5k2nna.arweave.net/0eRcI5PpUQGIDcBGTPCcANkUkgY85a1VGf0o7Y-q01o/#/en/Universal-Data-License-How-to-use-it)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "Atomic Assets represent a **significant advancement in digital assets**, addressing the **limitations of traditional NFTs** by:"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- **Ensuring complete on-chain storage** (permanent and tamper-proof)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- **Facilitating fractional ownership** (multiple owners can hold stakes)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- **Integrating clear licensing frameworks** (Universal Data License)."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "As the digital landscape evolves, Atomic Assets provide a **reliable foundation** for creators seeking **permanence, security, and clear ownership**."
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- [Tradeable Atomic Asset](https://atomic-assets.arweave.dev/)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- [Arweave Paves the Way for Creators](https://medium.com/@perma_dao/arweave-paves-the-way-for-creators-atomic-assets-are-the-right-nfts-5c82adaeab0d)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- [Atomic Assets: Why They Exist](https://www.linkedin.com/pulse/atomic-assets-why-exist-what-how-work-communitylabs1)"
+  },
+  {
+    "title": "What are Atomic Assets?",
+    "path": "/learn/atomic-assets/introduction/introduction-atomic-assets-short",
+    "content": "- [Universal Data License](https://2hsfyi4t5fiqdcanybdez4e4admrjeqghts22viz7uuo3d5k2nna.arweave.net/0eRcI5PpUQGIDcBGTPCcANkUkgY85a1VGf0o7Y-q01o/#/en/Universal-Data-License-How-to-use-it)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "The **Universal Data License (UDL)** offers **creators full control** over **usage, licensing, and monetization** of digital assets."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "## **🔹 Key Features of the UDL**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "### **1️⃣ Customizable Licensing Terms**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- Creators define **commercial use**, **modifications**, and **distribution rights**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- Licensing information is **stored immutably on-chain**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "### **2️⃣ Monetization Flexibility**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- **One-time purchases**  "
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- **Subscription-based access**  "
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- **Pay-per-use models**  "
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "### **3️⃣ AI-Specific Permissions**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- Decide if **content can be used** for **AI training** or **data models**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "## **🔹 How the UDL Works**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "1. **Attach a UDL license** to digital assets."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "2. **Define licensing terms** within metadata."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "3. **Deploy assets permanently on Arweave**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "## **🔹 Conclusion**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "The **UDL empowers creators** by **providing legal clarity, monetization options, and full control** over digital content."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- [Introducing the UDL](https://mirror.xyz/0x64eA438bd2784F2C52a9095Ec0F6158f847182d9/AjNBmiD4A4Sw-ouV9YtCO6RCq0uXXcGwVJMB5cdfbhE)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- [Universal Data License Version 0.2](https://orgsxgbx4x37hfuoidzzzuixdwsi57e2eetei2ew6mzwqkxikhoa.arweave.net/dE0rmDfl9_OWjkDznNEXHaSO_JohJkRolvMzaCroUdw)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- [Tradeable Atomic Asset](https://atomic-assets.arweave.dev/)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-long",
+    "content": "- [Universal Data License: How to use it](https://2hsfyi4t5fiqdcanybdez4e4admrjeqghts22viz7uuo3d5k2nna.arweave.net/0eRcI5PpUQGIDcBGTPCcANkUkgY85a1VGf0o7Y-q01o/#/en/Universal-Data-License-How-to-use-it)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "The **Universal Data License (UDL)** is a **standardized framework** that enables **content creators** to:"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- **Define usage terms** (commercial use, modifications, derivative works)."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- **Monetize digital assets** via **one-time fees, subscriptions, or pay-per-access models**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- **Store licensing terms on-chain**, ensuring **immutability & transparency**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "By leveraging **decentralized storage on Arweave**, the **UDL ensures long-term protection** for **creators & their intellectual property**."
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- [Introducing the UDL](https://mirror.xyz/0x64eA438bd2784F2C52a9095Ec0F6158f847182d9/AjNBmiD4A4Sw-ouV9YtCO6RCq0uXXcGwVJMB5cdfbhE)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- [Universal Data License Version 0.2](https://orgsxgbx4x37hfuoidzzzuixdwsi57e2eetei2ew6mzwqkxikhoa.arweave.net/dE0rmDfl9_OWjkDznNEXHaSO_JohJkRolvMzaCroUdw)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- [Tradeable Atomic Asset](https://atomic-assets.arweave.dev/)"
+  },
+  {
+    "title": "UDL in Depth",
+    "path": "/learn/atomic-assets/introduction/udl-in-depth-short",
+    "content": "- [Universal Data License: How to use it](https://2hsfyi4t5fiqdcanybdez4e4admrjeqghts22viz7uuo3d5k2nna.arweave.net/0eRcI5PpUQGIDcBGTPCcANkUkgY85a1VGf0o7Y-q01o/#/en/Universal-Data-License-How-to-use-it)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "UCM BazAR is a **decentralized compute platform** built on **Arweave** that enables **massively parallel computations**.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "Unlike **traditional cloud computing**, UCM BazAR provides:"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **Scalability without limits**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **No central point of failure**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **True decentralized hosting of applications**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "## **🔹 Core Components of UCM BazAR**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "### **1️⃣ Scheduler Units (SUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Task managers that assign jobs to computing nodes."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Ensure efficient distribution of processing power."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "### **2️⃣ Compute Units (CUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Execute computing tasks."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Return results securely."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "### **3️⃣ Messenger Units (MUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Handle communication between different processes."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- Ensure seamless coordination between computing nodes."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "## **🔹 Benefits of UCM BazAR**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "✅ **Infinite scalability** → Computation scales as demand grows.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "✅ **Permanent storage** → All computations & results are stored immutably.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "✅ **Fully decentralized** → No central authority controls the system.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "## **🔹 Real-World Applications**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **AI and Machine Learning** → Train complex models in a decentralized environment.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **Decentralized Finance (DeFi)** → Enable autonomous financial computations.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- **Web3 Social Media** → Fully decentralized social networks with no central control.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "## **🔹 Conclusion**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "UCM BazAR is the **next major evolution in decentralized computing**, providing an **infinitely scalable, censorship-resistant infrastructure**."
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- [An Introduction to AO on Arweave](https://mirror.xyz/jonnyringo.eth/O4brlNpgarwI8jn_e73pIFuUEdNCs7vs9l1vtcWWQLo)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- [Arweave and AO: Building On-Chain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-long",
+    "content": "- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "UCM BazAR is a **decentralized hyper-parallel compute layer** built on **Arweave**.  "
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "It consists of **three main components**:"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **Scheduler Units (SUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **Compute Units (CUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **Messenger Units (MUs)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "UCM BazAR operates like a **Virtual Private Server (VPS) on Arweave** but **scales infinitely**, making it ideal for:"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **AI & machine learning**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **Decentralized applications (dApps)**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- **Validator nodes & social media networks**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- [An Introduction to AO on Arweave](https://mirror.xyz/jonnyringo.eth/O4brlNpgarwI8jn_e73pIFuUEdNCs7vs9l1vtcWWQLo)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- [Arweave and AO: Building On-Chain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "What is UCM BazAR?",
+    "path": "/learn/atomic-assets/ucm-bazar/introduction-bazar-short",
+    "content": "- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "The **Funding Wallet** in UCM BazAR is designed to **handle decentralized transactions seamlessly**."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "## **🔹 Key Features**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "### **1️⃣ Secure Fund Storage**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- Digital assets are **permanently stored** on Arweave."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- Transactions are **transparent & immutable**."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "### **2️⃣ Automatic Computation Funding**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- Computation fees are **paid dynamically** without user intervention."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- Supports **microtransactions for on-chain execution**."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "### **3️⃣ Multi-Asset Support**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- Users can fund computations using **AR tokens, stablecoins, or other assets**."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "## **🔹 Why It Matters**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- **Removes reliance on centralized financial systems.**  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- **Enables autonomous on-chain execution.**  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- **Ensures sustainable funding for decentralized computing.**  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "## **🔹 Conclusion**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "The **Funding Wallet** makes UCM BazAR a **fully self-sustaining, decentralized computing ecosystem**."
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-long",
+    "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "UCM BazAR utilizes a **Funding Wallet System** to manage decentralized transactions.  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- **Secure fund storage** → Transactions remain safe.  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- **Automatic computation funding** → No manual intervention needed.  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- **Supports multiple assets** → AR, stablecoins, and other crypto.  "
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "Funding Wallet",
+    "path": "/learn/atomic-assets/ucm-bazar/funding-wallet-short",
+    "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "UCM BazAR provides a **fully decentralized infrastructure** for **creating & managing Atomic Assets**."
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "## **🔹 Why Atomic Assets?**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "✅ **Permanence** → Stored on Arweave forever.  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "✅ **Tamper-proof** → Immutable metadata & ownership.  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "✅ **Decentralized trading** → No need for centralized platforms.  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "## **🔹 Steps to Create an Atomic Asset**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "### **1️⃣ Upload Your Content**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- Store images, videos, or files **permanently on Arweave**."
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "### **2️⃣ Define Metadata & Ownership**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- Use **Universal Data License (UDL)** to specify usage rights."
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "### **3️⃣ Enable Trading & Fractional Ownership**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- Atomic Assets can be **split into multiple ownership stakes**."
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "## **🔹 The Future of Digital Ownership**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "Atomic Assets ensure **truly decentralized, user-controlled content**, redefining **NFTs & digital asset management**."
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-long",
+    "content": "- [Arweave and AO: Building On-Chain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "UCM BazAR enables **users to create their own Atomic Assets**, allowing:"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- **Permanent storage of digital assets**  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- **Immutable, tamper-proof NFTs**  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- **Decentralized marketplaces for asset trading**  "
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "## **🔹 Sources**"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "Creating Your Own Atomic Assets",
+    "path": "/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets-short",
+    "content": "- [Arweave and AO: Building On-Chain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "Arweave is a groundbreaking **decentralized storage protocol** designed to provide **permanent data storage solutions**. "
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "Unlike traditional storage systems that require recurring payments and are susceptible to data loss or censorship, Arweave offers a unique **\"pay once, store forever\"** model. This approach ensures that **data remains immutable and perpetually accessible**, revolutionizing how information is preserved in the digital age."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "## **How Arweave Works**"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "At the core of Arweave's architecture is the **blockweave**, an innovative data structure that differentiates it from conventional blockchains:"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- Traditional blockchains form a linear sequence."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- Arweave's **blockweave links each block to both the previous block and a randomly selected earlier block**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- This enhances **data redundancy** and plays a key role in the network’s **Proof of Access (PoA)** consensus mechanism."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "## **Economic Model**"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "When users upload data, they **pay a one-time fee in AR tokens**:"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- A portion is allocated to a **storage endowment**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- The endowment generates **returns to compensate miners**, ensuring **data remains available indefinitely**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- This eliminates **recurring storage fees**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "## **Decentralization & Developer Support**"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "Arweave fosters a **community-driven ecosystem** where developers can build:"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- **Fully decentralized applications (dApps)**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- **Gateways** that provide seamless access to stored data."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- **GraphQL APIs** for efficient data querying."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- **SmartWeave**—a platform for decentralized smart contracts."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- [What is Arweave](https://arweave.org/)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-long",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "Arweave is a decentralized protocol designed for **permanent data storage**, allowing users to preserve information indefinitely with a single, one-time fee. "
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "Secured by a network of **miners rewarded with AR tokens**, Arweave ensures data is replicated and remains accessible through a **sustainable endowment model**. "
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "This approach supports the **permaweb**—a collection of permanent web pages and applications **free from centralized control**, fostering a space where **history and culture are preserved**, and **free speech is upheld**. "
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "Developers are empowered to create **fully decentralized applications** on the permaweb, contributing to a more **resilient and open internet**."
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "- [What is Arweave](https://arweave.org/)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "Introduction to Arweave",
+    "path": "/learn/arweave-ao-101/arweave/introduction-short",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "The **permaweb** is a revolutionary concept **built on top of Arweave**, creating a **decentralized and immutable web**. "
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "Unlike the **traditional internet**, which is **vulnerable to data loss**, the permaweb ensures that once information is uploaded, it **is stored forever**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "## **Why Is This Important?**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- The traditional web relies on **centralized servers**, meaning data can be **lost if a server shuts down**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- The permaweb distributes content **across a global network of nodes**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- This ensures applications **remain available forever**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "## **What Can Be Built on the Permaweb?**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "Beyond static files, developers can create **full-fledged decentralized applications (dApps)** that:"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **Are immutable** (cannot be altered)."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **Run independently** without requiring maintenance."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **Operate without centralized oversight**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "## **Key Technologies**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **Gateways** → Act as access points for retrieving and displaying stored data."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **GraphQL APIs** → Enable users to efficiently query stored data."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **SmartWeave** → Arweave’s **smart contract** system."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- **Profit-Sharing Communities (PSCs)** → Allow developers to distribute revenue and governance to users."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- [What is the Permaweb](https://arweave.org/)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-long",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "The **permaweb** is a **permanent, decentralized web** built on Arweave. It **eliminates broken links and missing content**, ensuring that data and applications remain **permanently accessible**."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "Beyond simple **file storage**, the permaweb hosts **full-fledged decentralized applications** that:"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- **Run autonomously**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- **Are immutable (cannot be changed)**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- **Require no ongoing maintenance from developers**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "## **Key Technologies**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- **Gateways** → Provide access to stored data."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- **GraphQL APIs** → Enable efficient querying."
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- [What is the Permaweb](https://arweave.org/)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "The Permaweb and Its Applications",
+    "path": "/learn/arweave-ao-101/arweave/permaweb-short",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "<!-- # **Scalability and Technical Innovations in Arweave** -->"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "One of the biggest challenges in **blockchain-based storage solutions** is **scalability**. Arweave tackles this challenge through **unique innovations** that allow it to scale indefinitely."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "## **1. Uniform Data Storage Model**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "Unlike **contract-based storage systems** that require complex verification, Arweave applies a **single set of rules**:"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **\"Pay once, store forever\"** → Eliminates the need for constant payment models."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **All transactions follow the same storage principles**, reducing processing complexity."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "## **2. Transaction Bundling**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "Instead of processing transactions individually, Arweave allows:"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **Multiple transactions to be combined into a single bundle**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **Faster processing** and lower computational costs."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "This process is governed by the **Arweave Network Standard -104**, ensuring efficiency."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "## **3. Recursive Bundling for Infinite Scaling**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "When too many transactions are submitted, **recursive bundling** is used:"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **Bundles are combined into larger bundles before submission**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- This allows an **unlimited number of transactions** in a single Arweave operation."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- Enables **theoretical infinite scalability**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "## **4. Long-Term Sustainability**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "Arweave’s **storage model assumes costs will decrease over time**, making it:"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **Cost-effective at scale**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- **More efficient than traditional cloud storage solutions**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- [How Arweave Scales: Storing All the Data on the Web](https://arweave.org/)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-long",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "Arweave achieves **scalability** through several key innovations:"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- **Transaction bundling** → Multiple transactions are combined into a single block, improving efficiency."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- **Blockweave structure** → Uses a **Proof of Access (PoA) consensus** to ensure redundancy."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- **Recursive bundling** → Transactions can be **bundled within bundles**, enabling **theoretical infinite scalability**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "These innovations make Arweave a **robust solution for decentralized, permanent data storage**."
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- [How Arweave Scales: Storing All the Data on the Web](https://arweave.org/)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- [Intro to Arweave](https://arweavehub.com/primer)"
+  },
+  {
+    "title": "Scalability and Technical Innovations",
+    "path": "/learn/arweave-ao-101/arweave/scalability-short",
+    "content": "- [Arweave for Newbies: How It Works and Why It Exists](https://x.com/onlyarweave/status/1805983704549929286)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "AO is a **decentralized compute platform** built on Arweave that introduces a **revolutionary way to process and execute computations at scale**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "Unlike traditional **cloud or blockchain systems**, which have **limited processing power**, AO uses **hyper-parallel computing**, allowing **unlimited simultaneous tasks**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "## **Core Architecture**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "AO consists of **three main components**:"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "### **1. Scheduler Units (SUs)**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Manage and assign tasks dynamically."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Ensure computations are efficiently distributed."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "### **2. Compute Units (CUs)**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Execute tasks **in parallel**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Support complex applications such as **AI models, validator nodes, and dApps**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "### **3. Messenger Units (MUs)**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Handle **asynchronous message passing** between processes."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- Enable **scalable and decentralized communication**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "## **Why AO Matters**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "AO enables **fully decentralized computation** that:"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Scales infinitely** based on demand."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Runs efficiently without centralized control**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Integrates with Arweave for permanent data storage**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "## **Use Cases**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "AO is particularly well-suited for:"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Artificial Intelligence (AI)** → Train and run AI models in a decentralized environment."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Decentralized Finance (DeFi)** → Supports on-chain validation and smart contract execution."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- **Onchain Applications** → Enables **high-performance decentralized apps**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- [An Introduction to AO on Arweave](https://mirror.xyz/jonnyringo.eth/O4brlNpgarwI8jn_e73pIFuUEdNCs7vs9l1vtcWWQLo)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-long",
+    "content": "- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "AO is a **decentralized hyper-parallel compute** layer built on **Arweave**."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "## **Key Components**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **Scheduler Units (SUs)** → Assign tasks efficiently."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **Compute Units (CUs)** → Execute tasks in parallel."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **Messenger Units (MUs)** → Handle communication between processes."
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "AO functions like a **VPS on Arweave** but **scales infinitely**, supporting:"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **AI applications**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **dApps**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- **Validator nodes**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- [An Introduction to AO on Arweave](https://mirror.xyz/jonnyringo.eth/O4brlNpgarwI8jn_e73pIFuUEdNCs7vs9l1vtcWWQLo)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "Introduction to AO",
+    "path": "/learn/arweave-ao-101/ao/introduction-short",
+    "content": "- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "AO operates on a **decentralized computing model** consisting of three major components: **Messages, Processes, and the AO Grid**. These allow AO to execute computations in a **highly scalable and efficient manner**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "## **1. Messages and Processes**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "AO is built around **two core elements**:"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- **Messages** → Data packets that instruct the system on **what tasks to execute**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- **Processes** → Independent computing units that **handle execution**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "AO introduces a **Holographic State model**, eliminating the need for **shared global state**. Instead of maintaining an entire network-wide state, AO **computes state on demand**, improving efficiency."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "## **2. The AO Grid: Three Core Units**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "AO’s infrastructure consists of **three primary unit types**:"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "### **Messenger Units (MUs)**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Handle **message routing** between processes."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Ensure **secure and efficient communication**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "### **Scheduler Units (SUs)**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Order messages and assign them an **epoch and nonce**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Store messages permanently on **Arweave**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "### **Compute Units (CUs)**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Execute computational tasks."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- Retrieve necessary data and return computed results."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "## **3. Why AO is Different**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- **Horizontally scalable** → New units can be added dynamically."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- **No shared state** → Processes compute on demand."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- **Perfect for AI & onchain applications** → Eliminates bottlenecks seen in traditional blockchain models."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-long",
+    "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "AO’s **message-passing model** allows Processes to execute code **without requiring shared state**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "## **Key Components**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- **Messenger Units (MUs)** → Handle message routing."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- **Scheduler Units (SUs)** → Order and store messages on Arweave."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- **Compute Units (CUs)** → Execute computational tasks."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "By leveraging these components, AO can **scale infinitely**, making it ideal for **onchain applications, AI, and decentralized computing**."
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "AO’s Core Architecture: How It Works",
+    "path": "/learn/arweave-ao-101/ao/core-architecture-short",
+    "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "One of AO’s defining features is its ability to **scale infinitely through parallel execution**. Unlike traditional blockchain systems that rely on **sequential execution**, AO enables **modular and on-demand computation**."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "## **1. Hyper-Parallel Computing**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "AO functions as a **distributed supercomputer**, running **countless computations simultaneously**."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- **No global state** → Each process retrieves only the data it needs."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- **On-demand computation** → Reduces unnecessary resource consumption."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "## **2. Recursive Message Processing**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "AO messages follow a structured workflow:"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "1. **Messenger Unit (MU)** → Receives and authenticates messages."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "2. **Scheduler Unit (SU)** → Orders messages and stores them permanently on Arweave."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "3. **Compute Unit (CU)** → Processes messages and executes logic."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "This ensures **high throughput** while maintaining **decentralized security**."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "## **3. The Future of AO**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "With its **hyper-parallel design**, AO is well-suited for:"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- **Web3 & Smart Contracts** → Runs complex smart contracts efficiently."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- **Decentralized AI** → Handles AI training & model execution."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- **Onchain Virtual Worlds** → Powers interactive, persistent metaverse environments."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-long",
+    "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "AO achieves **infinite scalability** by executing tasks **in parallel**."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "## **Key Scalability Innovations**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- **Modular, on-demand computation** → No shared global state."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- **Recursive Message Processing** → Ensures high throughput."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- **Dynamic Compute Expansion** → More Compute Units (CUs) can be added as needed."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "This makes AO **ideal for Web3, AI, and high-performance onchain applications**."
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "## **Sources**"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
+  },
+  {
+    "title": "AO’s Scalability and Parallel Processing",
+    "path": "/learn/arweave-ao-101/ao/scalability-short",
+    "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "## 🚀 How is Arweave + AO Different from Traditional Full-Stack Applications?"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| Feature            | Traditional Full-Stack Apps | Arweave + AO The Computer |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "|--------------------|--------------------------|---------------------------|"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| **Storage**       | Relies on centralized databases (SQL, NoSQL, Firebase, AWS, etc.) | Uses Arweave’s **permanent** decentralized storage with a \"pay once, store forever\" model |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| **Compute**       | Uses centralized servers (AWS, DigitalOcean, Vercel, etc.) | AO provides **decentralized, parallelized execution** for smart contracts & compute tasks |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| **Data Ownership** | Controlled by corporations, prone to censorship | **Immutable & permissionless**, controlled by users |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| **Scalability**   | Limited by server infrastructure | **Infinite scalability** with decentralized compute units |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "| **Security**      | Server hacks and data loss risks | **Trustless & censorship-resistant**, no single point of failure |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "### 🔥 **Key Differences**"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "- **No servers:** You don’t need AWS, Firebase, or Vercel. Everything is **on-chain**."
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "- **Immutable Storage:** Unlike centralized databases, **Arweave permanently stores** your data."
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-long",
+    "content": "- **Decentralized Compute:** AO acts like a **Web3 CPU**, running decentralized processes in parallel."
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "## 🚀 How is Arweave + AO Different from Traditional Full-Stack Applications?"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| Feature            | Traditional Full-Stack Apps | Arweave + AO The Computer |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "|--------------------|--------------------------|---------------------------|"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| **Storage**       | Relies on centralized databases (SQL, NoSQL, Firebase, AWS, etc.) | Uses Arweave’s **permanent** decentralized storage with a \"pay once, store forever\" model |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| **Compute**       | Uses centralized servers (AWS, DigitalOcean, Vercel, etc.) | AO provides **decentralized, parallelized execution** for smart contracts & compute tasks |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| **Data Ownership** | Controlled by corporations, prone to censorship | **Immutable & permissionless**, controlled by users |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| **Scalability**   | Limited by server infrastructure | **Infinite scalability** with decentralized compute units |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "| **Security**      | Server hacks and data loss risks | **Trustless & censorship-resistant**, no single point of failure |"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "### 🔥 **Key Differences**"
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "- **No servers:** You don’t need AWS, Firebase, or Vercel. Everything is **on-chain**."
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "- **Immutable Storage:** Unlike centralized databases, **Arweave permanently stores** your data."
+  },
+  {
+    "title": "Comparing Web2 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web2-short",
+    "content": "- **Decentralized Compute:** AO acts like a **Web3 CPU**, running decentralized processes in parallel."
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "## ⚡ How is Arweave + AO Different from Other Web3 Ecosystems?"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| Feature            | Ethereum / Solana / Polygon | Arweave + AO The Computer |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "|--------------------|--------------------------|---------------------------|"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| **Storage**       | Uses IPFS/Filecoin (temporary, unreliable) | **Arweave stores data permanently** with no expiration |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| **Smart Contracts** | Runs on Ethereum/Solana (gas fees, limited compute) | **AO provides infinitely scalable compute** with parallel processing |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| **Execution Model** | Sequential transactions (slow, expensive gas fees) | **Parallel execution** for near-instant processing |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| **Scalability**   | L2 solutions required (Optimism, Arbitrum) | **Native horizontal scaling** via AO Compute Units |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "| **Interoperability** | Limited to EVM-based chains | **AO can run smart contracts & dApps for multiple chains** |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "### 🔥 **Why It’s Unique**"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "- **Arweave is the only blockchain with **permanent storage** (others use temporary IPFS).**"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "- **AO brings parallel compute**, removing blockchain limitations like high gas fees."
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-long",
+    "content": "- **Unlike Ethereum, AO scales infinitely without Layer 2 solutions.**"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "## ⚡ How is Arweave + AO Different from Other Web3 Ecosystems?"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| Feature            | Ethereum / Solana / Polygon | Arweave + AO The Computer |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "|--------------------|--------------------------|---------------------------|"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| **Storage**       | Uses IPFS/Filecoin (temporary, unreliable) | **Arweave stores data permanently** with no expiration |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| **Smart Contracts** | Runs on Ethereum/Solana (gas fees, limited compute) | **AO provides infinitely scalable compute** with parallel processing |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| **Execution Model** | Sequential transactions (slow, expensive gas fees) | **Parallel execution** for near-instant processing |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| **Scalability**   | L2 solutions required (Optimism, Arbitrum) | **Native horizontal scaling** via AO Compute Units |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "| **Interoperability** | Limited to EVM-based chains | **AO can run smart contracts & dApps for multiple chains** |"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "### 🔥 **Why It’s Unique**"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "- **Arweave is the only blockchain with **permanent storage** (others use temporary IPFS).**"
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "- **AO brings parallel compute**, removing blockchain limitations like high gas fees."
+  },
+  {
+    "title": "Comparing Web3 Full Stack Applications",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/web3-short",
+    "content": "- **Unlike Ethereum, AO scales infinitely without Layer 2 solutions.**"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "## 🛠️ How Are Applications Built on Arweave + AO Different?  "
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Aspect**            | **Web2 Full-Stack Apps**                          | **Web3 Ecosystems (Ethereum, Solana, IPFS, etc.)**               | **Arweave + AO The Computer**                          |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "|----------------------|------------------------------------------------|-------------------------------------------------|------------------------------------------------|"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Hosting & Backend** | Uses centralized cloud providers (AWS, Firebase, Vercel) | Some decentralized hosting (IPFS, Filecoin) but limited permanence | Fully decentralized hosting & compute (Arweave + AO) |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Storage**          | Databases like PostgreSQL, MongoDB, Firebase (data can be altered/deleted) | Uses IPFS/Filecoin (but requires pinning to keep data accessible) | **Arweave provides permanent, immutable storage** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Compute Execution** | Runs on centralized servers (Node.js, Python, Go, etc.) | Smart contracts execute on-chain (Ethereum/Solana) but limited in scope | **AO enables scalable, parallel, decentralized execution** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Smart Contracts**  | Uses Node.js, Python, Express for API logic | Solidity (Ethereum), Rust (Solana) | **AO uses Lua for execution, SmartWeave for contract logic** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Databases**        | SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Firebase) | Indexed event logs, IPFS/Filecoin for partial data storage | **Databases can be written inside AO (currently SQLite3)** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "| **Frontend & Routing** | Uses Next.js, Vite, traditional SSR/CSR models | Same frameworks, but relies on blockchain nodes for querying | **Same frontend stack (Next.js, Vite, React)**, routing works differently (Arweave gateways instead of servers) |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "---"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "### 🚀 **Key Takeaways**"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "- **Frontend development stays the same** → You still use Next.js, Vite, TailwindCSS, etc."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "- **Routing system differs** → Since Arweave stores content permanently, it uses gateways instead of standard API-based routing."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "- **No backend servers needed** → Instead of Express.js, FastAPI, or Node-based backends, AO acts as the backend & middleware."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "- **AO uses Lua** for execution → If you need complex logic, AO replaces the backend with **Lua-based compute**."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-long",
+    "content": "- **Databases inside AO** → Instead of Firebase/PostgreSQL, you can write **SQLite3 databases inside AO**."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "## 🛠️ How Are Applications Built on Arweave + AO Different?  "
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Aspect**            | **Web2 Full-Stack Apps**                          | **Web3 Ecosystems (Ethereum, Solana, IPFS, etc.)**               | **Arweave + AO The Computer**                          |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "|----------------------|------------------------------------------------|-------------------------------------------------|------------------------------------------------|"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Hosting & Backend** | Uses centralized cloud providers (AWS, Firebase, Vercel) | Some decentralized hosting (IPFS, Filecoin) but limited permanence | Fully decentralized hosting & compute (Arweave + AO) |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Storage**          | Databases like PostgreSQL, MongoDB, Firebase (data can be altered/deleted) | Uses IPFS/Filecoin (but requires pinning to keep data accessible) | **Arweave provides permanent, immutable storage** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Compute Execution** | Runs on centralized servers (Node.js, Python, Go, etc.) | Smart contracts execute on-chain (Ethereum/Solana) but limited in scope | **AO enables scalable, parallel, decentralized execution** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Smart Contracts**  | Uses Node.js, Python, Express for API logic | Solidity (Ethereum), Rust (Solana) | **AO uses Lua for execution, SmartWeave for contract logic** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Databases**        | SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Firebase) | Indexed event logs, IPFS/Filecoin for partial data storage | **Databases can be written inside AO (currently SQLite3)** |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "| **Frontend & Routing** | Uses Next.js, Vite, traditional SSR/CSR models | Same frameworks, but relies on blockchain nodes for querying | **Same frontend stack (Next.js, Vite, React)**, routing works differently (Arweave gateways instead of servers) |"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "---"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "### 🚀 **Key Takeaways**"
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "- **Frontend development stays the same** → You still use Next.js, Vite, TailwindCSS, etc."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "- **Routing system differs** → Since Arweave stores content permanently, it uses gateways instead of standard API-based routing."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "- **No backend servers needed** → Instead of Express.js, FastAPI, or Node-based backends, AO acts as the backend & middleware."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "- **AO uses Lua** for execution → If you need complex logic, AO replaces the backend with **Lua-based compute**."
+  },
+  {
+    "title": "How Applications Built on Arweave + AO differ",
+    "path": "/learn/arweave-ao-101/why-arweave-ao/applications-short",
+    "content": "- **Databases inside AO** → Instead of Firebase/PostgreSQL, you can write **SQLite3 databases inside AO**."
+  }
+]

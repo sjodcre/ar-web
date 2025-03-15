@@ -1,29 +1,56 @@
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
-import { initializeSearchIndex, SearchItem } from "@/lib/search-index";
+import { SearchItem } from "@/lib/search-index";
 import { useNavigate } from "react-router-dom";
 
 const SearchFn = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchItem[]>([]);
-  const [searchData, setSearchData] = useState<SearchItem[]>([]);
+  // const [searchData, setSearchData] = useState<SearchItem[]>([]);
+  const [fuse, setFuse] = useState<Fuse<SearchItem> | null>(null); // ✅ Declare state for Fuse
   const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await initializeSearchIndex();
+  //     setSearchData(data);
+  //     console.log("searchdata", data);
+  //   };
+  //   fetchData();
+  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await initializeSearchIndex();
-      setSearchData(data);
-      console.log("searchdata", data);
+      try {
+        const indexResponse = await fetch("/fuse-index.json");
+        const dataResponse = await fetch("/fuse-data.json");
+  
+        if (!indexResponse.ok || !dataResponse.ok) throw new Error("Missing search index file");
+  
+        const indexJson = await indexResponse.json();
+        const searchDataJson = await dataResponse.json();
+  
+        console.log("✅ Loaded search index from fuse-index.json");
+  
+        const fuseIndex = Fuse.parseIndex<SearchItem>(indexJson);
+        // setSearchData(searchDataJson);
+        setFuse(new Fuse<SearchItem>(searchDataJson, { keys: ["title", "content"], threshold: 0.1 }, fuseIndex));
+      } catch (error) {
+        console.warn("⚠️ Could not load index file. Make sure `generateSearchIndex.ts` has been run.");
+      }
     };
+  
     fetchData();
   }, []);
+  
+  
 
-  const fuse = new Fuse(searchData, {
-    keys: ["title", "content"], // Full-text search
-    threshold: 0.1, // Fuzzy matching
-    includeScore: true,
-    minMatchCharLength: 2, // Only match after 2+ characters
-  });
+  // const fuse = new Fuse(searchData, {
+  //   keys: ["title", "content"], // Full-text search
+  //   threshold: 0.1, // Fuzzy matching
+  //   includeScore: true,
+  //   minMatchCharLength: 2, // Only match after 2+ characters
+  // });
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
