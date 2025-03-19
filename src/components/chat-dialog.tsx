@@ -10,7 +10,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
     // const [response, setResponse] = useState("");
     const [isVisible, setIsVisible] = useState(false);
     const [typedMessage, setTypedMessage] = useState(""); // Typing effect for welcome message
-    const [typedResponse, setTypedResponse] = useState(""); // Typing effect for AI response
+    // const [typedResponse, setTypedResponse] = useState(""); // Typing effect for AI response
     const welcomeMessage = "Welcome to the matrix. Are you the one?";
     const [isLoading, setIsLoading] = useState(false); // Loading state
     const [chatHistory, setChatHistory] = useState<{ role: string; content: string }[]>([]); // Store full chat history
