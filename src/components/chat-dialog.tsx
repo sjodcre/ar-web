@@ -38,16 +38,16 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
     useEffect(() => {
         const fetchChatHistory = async () => {
             if (!sessionId) return; // No session, so show welcome message
-    
+
             try {
-                const response = await fetch("http://localhost:3001/chat-history", { 
+                const response = await fetch("http://localhost:3001/chat-history", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ sessionId }) 
+                    body: JSON.stringify({ sessionId })
                 });
-    
+
                 if (!response.ok) throw new Error("Failed to fetch chat history");
-    
+
                 const data = await response.json();
                 // console.log("Chat history loaded:", data);
                 // console.log("Chat history content:", data.chat); // Log the chat history content
@@ -56,10 +56,10 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
                 console.error("Error loading chat history:", error);
             }
         };
-    
+
         fetchChatHistory();
     }, [sessionId]); // ✅ Only runs once when sessionId is set
-    
+
 
 
     // Typing effect for AI response
@@ -87,7 +87,9 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
     };
 
     const handleSubmit = async () => {
-        if (query.trim() === "") return; // Ignore empty input
+        if (query.trim() === "" || isLoading) return; // ✅ Prevent multiple submissions
+
+        // if (query.trim() === "") return; // Ignore empty input
 
         // setTypedResponse(""); // Clear old response
         setIsLoading(true); // Show loading state
@@ -142,8 +144,11 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
 
     return (
         <div
-            className={`fixed bottom-24 right-6 w-80 bg-gray-900/80 text-white p-4 rounded-lg shadow-2xl border border-blue-400 
-                backdrop-blur-lg transition-all duration-500 transform ${isVisible ? "scale-100 opacity-100" : "scale-50 opacity-0"}`}
+        //     className={`fixed bottom-12 right-12 w-[40rem] h-1/2 bg-gray-900/80 text-white p-4 rounded-lg shadow-2xl border border-blue-400 
+        // backdrop-blur-lg transition-all duration-500 transform ${isVisible ? "scale-100 opacity-100" : "scale-50 opacity-0"}`}
+        className={`fixed bottom-4 left-4 right-4 md:bottom-12 md:right-12 md:left-auto w-full max-w-[40rem] h-[35vh] md:h-[40vh] lg:h-[50vh] 
+            bg-gray-900/80 text-white p-4 rounded-lg shadow-2xl border border-blue-400 flex flex-col
+            backdrop-blur-lg transition-all duration-500 transform ${isVisible ? "scale-100 opacity-100" : "scale-50 opacity-0"}`}
         >
             {/* Header Section */}
             <div className="flex justify-between items-center border-b border-blue-500 pb-2">
@@ -157,32 +162,36 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
             </div>
 
             {/* Chat Display */}
-            {/* <div className="mt-4 h-40 overflow-y-auto p-2 bg-gray-800/70 rounded shadow-inner text-blue-300">
-                {typedMessage && !typedResponse && !isLoading ? <p>{typedMessage}</p> : null}
-                {isLoading ? <p>🤖 Typing...</p> : <p>{typedResponse}</p>}
-            </div> */}
-            <div className="mt-4 h-40 overflow-y-auto p-2 bg-gray-800/70 rounded shadow-inner text-blue-300">
+            {/* <div className="mt-4 h-[75%] overflow-y-auto p-2 bg-gray-800/70 rounded shadow-inner flex flex-col space-y-2"> */}
+            {/* <div className="mt-4 h-[75%] overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2"> */}
+            <div className="flex-grow overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2">
+
                 {!sessionId && typedMessage && !isLoading ? <p>{typedMessage}</p> : null}  {/* ✅ Welcome message */}
 
-                {chatHistory.map((msg, index) => (
+                {/* {chatHistory.map((msg, index) => (
                     <p key={index} className={msg.role === "user" ? "text-blue-400" : "text-green-400"}>
                         {msg.role === "user" ? "👤 You: " : "🤖 AI: "}
                         {msg.content}
                     </p>
+                ))} */}
+                {chatHistory.map((msg, index) => (
+                    <div
+                        key={index}
+                        className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                    >
+                        <div
+                            className={`max-w-[75%] p-3 rounded-lg text-sm ${msg.role === "user"
+                                ? "bg-blue-600 text-white self-end"  // User message
+                                : "bg-gray-700 text-gray-200 self-start"}`} // AI message
+                        >
+                            {msg.content}
+                        </div>
+                    </div>
                 ))}
 
-                {isLoading && <p>🤖 Typing...</p>}
             </div>
             {/* Input Field */}
-            <div className="mt-4 flex items-center">
-                {/* <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Type your question..."
-                    onKeyDown={handleKeyPress} // ✅ Enter to send
-                    className="flex-grow bg-gray-700 text-white p-2 rounded-l focus:outline-none border border-blue-500"
-                /> */}
+            {/* <div className="mt-4 flex items-center">
                 <input
                     type="text"
                     value={query}
@@ -190,6 +199,26 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
                     placeholder="Type your question..."
                     onKeyDown={handleKeyPress}
                     disabled={isLoading} // ✅ Disable while waiting
+                    className="flex-grow bg-gray-700 text-white p-2 rounded-l focus:outline-none border border-blue-500"
+                />
+                <button
+                    onClick={handleSubmit}
+                    className="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700 transition-all shadow-lg border border-blue-400"
+                >
+                    🚀
+                </button>
+            </div> */}
+            {/* <div className="border-t border-gray-600 p-2 flex items-center"> */}
+            {/* <div className="border border-gray-600 p-2 flex items-center bg-gray-800/70 rounded-b-lg"> */}
+            <div className="p-2 flex items-center bg-gray-800/70 border-t border-gray-600">
+
+                <input
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder={isLoading ? "🤖 Typing..." : "Type your question..."} // ✅ Dynamic placeholder
+                    onKeyDown={handleKeyPress}
+                    disabled={isLoading}
                     className="flex-grow bg-gray-700 text-white p-2 rounded-l focus:outline-none border border-blue-500"
                 />
                 <button
