@@ -7,7 +7,7 @@ export default function Learn() {
             <p className="text-gray-400 mb-6">Explore different topics below:</p>
             <ul className="space-y-4">
                 <li>
-                    <Link to="/learn/blockchain-arweave-ao101" className="text-blue-400 hover:underline">
+                    <Link to="/learn/arweave-ao-101" className="text-blue-400 hover:underline">
                         Arweave and AO 101
                     </Link>
                 </li>

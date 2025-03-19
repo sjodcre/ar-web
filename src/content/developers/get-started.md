@@ -1,4 +1,4 @@
-# 🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems
+<!-- # 🌐 Understanding Arweave + AO vs. Traditional Full-Stack & Web3 Ecosystems
 
 ## 🚀 1. How is Arweave + AO Different from Traditional Full-Stack Applications?
 
@@ -69,4 +69,4 @@
 
 ---
 
-**🌍 Welcome to the future of full-stack decentralization with Arweave & AO The Computer! 🚀**
+**🌍 Welcome to the future of full-stack decentralization with Arweave & AO The Computer! 🚀** -->

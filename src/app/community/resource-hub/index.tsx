@@ -2,16 +2,21 @@
 
 import { type FC, useState } from "react"
 import {
-  Twitter,
-  Youtube,
-  Github,
-  TextIcon as Telegram,
-  DiscIcon as Discord,
+  // Twitter,
+  // Youtube,
+  // Github,
+  // TextIcon as Telegram,
+  // DiscIcon as Discord,
   // Globe,
   ArrowUpRight,
   ExternalLink,
   Database,
 } from "lucide-react"
+
+import { FaMedium, FaYoutube, FaDiscord, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
+// import { SiMirror } from 'react-icons/si';
+
 
 const CommunityPage: FC = () => {
   const [activeTab, setActiveTab] = useState<"arweave" | "ao">("ao")
@@ -99,9 +104,9 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-lg">
-                    <Twitter className="h-6 w-6 text-white" />
+                    <FaXTwitter className="h-6 w-6 text-white" />
                   </div>
-                  <h2 className="ml-4 text-2xl font-bold text-white">Twitter</h2>
+                  <h2 className="ml-4 text-2xl font-bold text-white">X</h2>
                 </div>
                 <div className="space-y-6">
                   <TwitterAccount
@@ -130,7 +135,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-red-500 to-red-600 p-3 rounded-lg">
-                    <Youtube className="h-6 w-6 text-white" />
+                    <FaYoutube className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">YouTube</h2>
                 </div>
@@ -150,7 +155,7 @@ const CommunityPage: FC = () => {
                   />
                   <YouTubeChannel
                     name="Weavers"
-                    link="https://www.youtube.com/@ArweaveIndia"
+                    link="https://www.youtube.com/@weavers_org"
                     description="A community of developers & creatives in the Arweave ecosystem."
                     subscribers="140+"
                     theme="indigo"
@@ -162,6 +167,13 @@ const CommunityPage: FC = () => {
                     subscribers="72+"
                     theme="indigo"
                   />
+                  <YouTubeChannel
+                    name="Arweave New York "
+                    link="https://www.youtube.com/@arweaveny"
+                    description="The Arweave New Yorkcommunity, with tutorials and demo codes for Arweave + AO."
+                    subscribers="9+"
+                    theme="indigo"
+                  />
                 </div>
               </div>
             </div>
@@ -171,7 +183,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-3 rounded-lg">
-                    <Discord className="h-6 w-6 text-white" />
+                    <FaDiscord className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">Discord</h2>
                 </div>
@@ -205,7 +217,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-3 rounded-lg">
-                    <Github className="h-6 w-6 text-white" />
+                    <FaGithub className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">GitHub</h2>
                 </div>
@@ -223,28 +235,34 @@ const CommunityPage: FC = () => {
                 </a>
               </div>
             </div>
-            {/* Telegram Section */}
+            {/* Medium Section */}
             <div className="bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-800 hover:shadow-lg hover:shadow-indigo-900/20 transition-all duration-300">
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-blue-400 to-indigo-500 p-3 rounded-lg">
-                    <Telegram className="h-6 w-6 text-white" />
+                    <FaMedium className="h-6 w-6 text-white" />
                   </div>
-                  <h2 className="ml-4 text-2xl font-bold text-white">Telegram</h2>
+                  <h2 className="ml-4 text-2xl font-bold text-white">Medium</h2>
                 </div>
                 <div className="space-y-6">
-                  {/* <TelegramChannel
-                    name="AO Announcements"
-                    description="Official announcements and important updates for AO."
-                    members="120K+"
+                  <MediumChannel
+                    name="PermaDAO"
+                    description="Technical discussions and Ecosystem updates."
                     theme="indigo"
+                    link="https://medium.com/@perma_dao"
                   />
-                  <TelegramChannel
-                    name="AO Developer Chat"
-                    description="Technical discussions and developer support."
-                    members="65K+"
+                  <MediumChannel
+                    name="Weavers Medium Channel"
+                    description="Technical discussions and Ecosystem updates."
                     theme="indigo"
-                  /> */}
+                    link="https://medium.com/@Weavers_Official"
+                  />
+                  <MediumChannel
+                    name="Open Access Supercomputing Foundation"
+                    description="Ecosystem Updates."
+                    theme="indigo"
+                    link="https://mirror.xyz/0x1EE4bE8670E8Bd7E9E2E366F530467030BE4C840"
+                  />
                 </div>
               </div>
             </div>
@@ -260,9 +278,9 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-3 rounded-lg">
-                    <Twitter className="h-6 w-6 text-white" />
+                    <FaXTwitter className="h-6 w-6 text-white" />
                   </div>
-                  <h2 className="ml-4 text-2xl font-bold text-white">Twitter</h2>
+                  <h2 className="ml-4 text-2xl font-bold text-white">X</h2>
                 </div>
                 <div className="space-y-6">
                   <TwitterAccount
@@ -300,7 +318,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-red-500 to-red-600 p-3 rounded-lg">
-                    <Youtube className="h-6 w-6 text-white" />
+                    <FaYoutube className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">YouTube</h2>
                 </div>
@@ -333,6 +351,13 @@ const CommunityPage: FC = () => {
                     subscribers="72+"
                     theme="indigo"
                   />
+                  <YouTubeChannel
+                    name="Arweave New York "
+                    link="https://www.youtube.com/@arweaveny"
+                    description="The Arweave New Yorkcommunity, with tutorials and demo codes for Arweave + AO."
+                    subscribers="9+"
+                    theme="indigo"
+                  />
                 </div>
               </div>
             </div>
@@ -342,7 +367,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-3 rounded-lg">
-                    <Discord className="h-6 w-6 text-white" />
+                    <FaDiscord className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">Discord</h2>
                 </div>
@@ -376,7 +401,7 @@ const CommunityPage: FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-3 rounded-lg">
-                    <Github className="h-6 w-6 text-white" />
+                    <FaGithub className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="ml-4 text-2xl font-bold text-white">GitHub</h2>
                 </div>
@@ -395,28 +420,34 @@ const CommunityPage: FC = () => {
               </div>
             </div>
 
-            {/* Telegram Section */}
+            {/* Medium Section */}
             <div className="bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-800 hover:shadow-lg hover:shadow-indigo-900/20 transition-all duration-300">
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-br from-blue-400 to-indigo-500 p-3 rounded-lg">
-                    <Telegram className="h-6 w-6 text-white" />
+                    <FaMedium className="h-6 w-6 text-white" />
                   </div>
-                  <h2 className="ml-4 text-2xl font-bold text-white">Telegram</h2>
+                  <h2 className="ml-4 text-2xl font-bold text-white">Medium</h2>
                 </div>
                 <div className="space-y-6">
-                  {/* <TelegramChannel
-                    name="AO Announcements"
-                    description="Official announcements and important updates for AO."
-                    members="120K+"
+                <MediumChannel
+                    name="PermaDAO"
+                    description="Technical discussions and Ecosystem updates."
                     theme="indigo"
+                    link="https://medium.com/@perma_dao"
                   />
-                  <TelegramChannel
-                    name="AO Developer Chat"
-                    description="Technical discussions and developer support."
-                    members="65K+"
+                  <MediumChannel
+                    name="Weavers Medium Channel"
+                    description="Technical discussions and Ecosystem updates."
                     theme="indigo"
-                  /> */}
+                    link="https://medium.com/@Weavers_Official"
+                  />
+                  <MediumChannel
+                    name="Open Access Supercomputing Foundation"
+                    description="Ecosystem Updates."
+                    theme="indigo"
+                    link="https://mirror.xyz/0x1EE4bE8670E8Bd7E9E2E366F530467030BE4C840"
+                  />
                 </div>
               </div>
             </div>
@@ -531,33 +562,31 @@ const DiscordChannel: FC<DiscordChannelProps> = ({ name, description, link }) =>
   )
 }
 
-// Component for Telegram channels
-// interface TelegramChannelProps {
-//   name: string
-//   description: string
-//   members: string
-//   theme?: "cyan" | "indigo"
-// }
+// Component for YouTube channels
+interface MediumChannelProps {
+  name: string
+  description: string
+  link: string // Added input for YouTube link
+  theme?: "cyan" | "indigo"
+}
 
-// const TelegramChannel: FC<TelegramChannelProps> = ({ name, description, members, theme = "cyan" }) => {
-//   return (
-//     <div className="border-t border-gray-800 pt-4">
-//       <h3 className={`font-semibold text-lg ${theme === "cyan" ? "text-cyan-300" : "text-indigo-300"}`}>{name}</h3>
-//       <p className="text-gray-400 mt-1">{description}</p>
-//       <div className="mt-2 flex items-center justify-between">
-//         <span className="text-sm text-gray-500">{members} members</span>
-//         <a
-//           href="#"
-//           className={`${theme === "cyan" ? "text-cyan-300 hover:text-cyan-200" : "text-indigo-300 hover:text-indigo-200"} inline-flex items-center text-sm font-medium`}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Join
-//           <ArrowUpRight className="ml-1 h-3 w-3" />
-//         </a>
-//       </div>
-//     </div>
-//   )
+const MediumChannel: FC<MediumChannelProps> = ({ name, description, link }) => {
+  return (
+    <div className="border-t border-gray-800 pt-4">
+      <h3 className="font-semibold text-lg text-red-400">
+        <a 
+          href={link} // Link to the YouTube channel
+          className="text-cyan-400 hover:text-cyan-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {name}
+        </a>
+      </h3>
+      <p className="text-gray-400 mt-1">{description}</p>
+    </div>
+  )
+}
 // }
 
 export default CommunityPage
