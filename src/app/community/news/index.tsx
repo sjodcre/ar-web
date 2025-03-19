@@ -18,49 +18,63 @@ export default function News() {
 
     const categories: NewsCategory[] = ["ALL", "CLABS", "AR.IO"];
 
+    // useEffect(() => {
+    //     const fetchNews = async () => {
+    //         try {
+    //             const response = await axios.get("/api/communitylabs/blog-category/news");
+    //             // console.log("data", response.data);
+    //             const parser = new DOMParser();
+    //             const doc = parser.parseFromString(response.data, "text/html");
+    //             // console.log("doc", doc);
+    //             // console.log(doc.documentElement.outerHTML)
+
+    //             const articles = doc.querySelectorAll(".blog_item"); // Adjust if needed
+    //             // console.log("articles", articles);
+    //             // Assuming each blog post is wrapped in <article>
+
+    //             const extractedNews: NewsItem[] = Array.from(articles).map((article) => {
+    //                 const titleElement = article.querySelector("h2");
+    //                 // const linkElement = article.querySelector("a.blog_title-link");
+    //                 const linkElement = article.querySelector("a");
+
+    //                 const imageElement = article.querySelector("img.blog_image");
+    //                 const dateElement = article.querySelector(".text-size-small.text-weight-semibold.text-inline");
+    //                 const descriptionElement = article.querySelector(".text-size-regular.text-style-2lines");
+
+    //                 let link = linkElement ? linkElement.getAttribute("href") || "#" : "#";
+    //                 if (linkElement) {
+    //                     let href = linkElement.getAttribute("href") || "#";
+    //                     link = href.startsWith("http") ? href : `https://www.communitylabs.com${href}`;
+    //                 }
+
+    //                 // console.log("link", link);
+
+
+    //                 return {
+    //                     title: titleElement ? titleElement.textContent?.trim() : "Untitled",
+    //                     link: link,
+    //                     // link: linkElement ? `https://www.communitylabs.com${linkElement.getAttribute("href")}` : "#",
+    //                     date: dateElement ? dateElement.textContent?.trim() : "Unknown Date",
+    //                     image: imageElement ? imageElement.getAttribute("src") || "/placeholder.svg" : "/placeholder.svg",
+    //                     description: descriptionElement ? descriptionElement.textContent?.trim() : "No description available.",
+    //                 };
+    //             });
+
+    //             setNewsItems(extractedNews);
+    //         } catch (error) {
+    //             console.error("Error fetching news:", error);
+    //         }
+    //     };
+
+    //     fetchNews();
+    // }, []);
+
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await axios.get("/api/communitylabs/blog-category/news");
-                // console.log("data", response.data);
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(response.data, "text/html");
-                // console.log("doc", doc);
-                // console.log(doc.documentElement.outerHTML)
-
-                const articles = doc.querySelectorAll(".blog_item"); // Adjust if needed
-                // console.log("articles", articles);
-                // Assuming each blog post is wrapped in <article>
-
-                const extractedNews: NewsItem[] = Array.from(articles).map((article) => {
-                    const titleElement = article.querySelector("h2");
-                    // const linkElement = article.querySelector("a.blog_title-link");
-                    const linkElement = article.querySelector("a");
-
-                    const imageElement = article.querySelector("img.blog_image");
-                    const dateElement = article.querySelector(".text-size-small.text-weight-semibold.text-inline");
-                    const descriptionElement = article.querySelector(".text-size-regular.text-style-2lines");
-
-                    let link = linkElement ? linkElement.getAttribute("href") || "#" : "#";
-                    if (linkElement) {
-                        let href = linkElement.getAttribute("href") || "#";
-                        link = href.startsWith("http") ? href : `https://www.communitylabs.com${href}`;
-                    }
-
-                    // console.log("link", link);
-
-
-                    return {
-                        title: titleElement ? titleElement.textContent?.trim() : "Untitled",
-                        link: link,
-                        // link: linkElement ? `https://www.communitylabs.com${linkElement.getAttribute("href")}` : "#",
-                        date: dateElement ? dateElement.textContent?.trim() : "Unknown Date",
-                        image: imageElement ? imageElement.getAttribute("src") || "/placeholder.svg" : "/placeholder.svg",
-                        description: descriptionElement ? descriptionElement.textContent?.trim() : "No description available.",
-                    };
-                });
-
-                setNewsItems(extractedNews);
+                // ✅ Fetch from backend instead of scraping in the frontend
+                const response = await axios.get(`http://localhost:3001/api/communitylabs/news`);
+                setNewsItems(response.data.newsItems);
             } catch (error) {
                 console.error("Error fetching news:", error);
             }
