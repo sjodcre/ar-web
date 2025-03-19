@@ -14,6 +14,9 @@ export default function ArweaveBanner() {
     const [highlights, setHighlights] = useState<Highlight[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [publicationDate, setPublicationDate] = useState('')
+    const [autoRotate, setAutoRotate] = useState(true); // ✅ New state to track auto-rotation
+    const [showArrows, setShowArrows] = useState(false); // ✅ Track arrow visibility
+
 
 
     // useEffect(() => {
@@ -69,7 +72,7 @@ export default function ArweaveBanner() {
             try {
                 // ✅ Fetch from backend, NOT from external site directly
                 const response = await axios.get("http://localhost:3001/api/arweavehub/today");
-                
+
                 setPublicationDate(response.data.publicationDate);
                 setHighlights(response.data.highlights);
             } catch (error) {
@@ -80,13 +83,30 @@ export default function ArweaveBanner() {
         fetchHighlights();
     }, []);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % highlights.length);
-        }, 5000); // Rotate every 5 seconds
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % highlights.length);
+    //     }, 5000); // Rotate every 5 seconds
 
-        return () => clearInterval(interval);
-    }, [highlights]);
+    //     return () => clearInterval(interval);
+    // }, [highlights]);
+
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+
+        if (autoRotate) {
+            interval = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % highlights.length);
+            }, 5000);
+        }
+
+        return () => clearInterval(interval); // ✅ Cleanup when component unmounts
+    }, [highlights, autoRotate]);
+
+    const handleDotClick = (index: number) => {
+        setCurrentIndex(index);
+        setAutoRotate(false); // ✅ Stop auto rotation permanently
+    };
 
     if (highlights.length === 0) {
         return null; // or a loading spinner
@@ -95,28 +115,18 @@ export default function ArweaveBanner() {
     const currentHighlight = highlights[currentIndex];
 
     const renderDots = () => (
-        // <div className="flex justify-center mt-2">
-        //     {highlights.map((_, index) => (
-        //         <button
-        //             key={index}
-        //             onClick={() => setCurrentIndex(index)}
-        //             className={`w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-500'
-        //                 }`}
-        //             aria-label={`Go to slide ${index + 1}`}
-        //         />
-        //     ))}
-        // </div>
         <div className="flex justify-center mt-2">
             {highlights.map((_, index) => (
                 <button
                     key={index}
-                    onClick={() => setCurrentIndex(index)}
+                    // onClick={() => setCurrentIndex(index)}
+                    onClick={() => handleDotClick(index)} // ✅ Call function to stop rotation
                     className={`banner-nav-button w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-800'}`}
                 />
             ))}
         </div>
     );
-    
+
     return (
         <>
             <div className="bg-black text-white p-2 rounded mb-4">
@@ -137,7 +147,7 @@ export default function ArweaveBanner() {
 
                 </div>
                 {/* Banner Content */}
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                     <div className="flex-shrink-0 w-1/4 h-64 flex items-center justify-center bg-black">
                         {currentHighlight.media ? (
                             currentHighlight.media.includes('.mp4') ? (
@@ -158,7 +168,63 @@ export default function ArweaveBanner() {
                         </a>
                         {currentHighlight.body && <p className="mt-1">{currentHighlight.body}</p>}
                     </div>
+                </div> */}
+                <div
+                    className="relative flex items-center group" // ✅ Add `group` for hover detection
+                    onMouseEnter={() => setShowArrows(true)} // ✅ Show arrows on hover
+                    onMouseLeave={() => setShowArrows(false)} // ✅ Hide arrows when not hovering
+                >
+                    {/* Left Arrow */}
+                    {currentIndex > 0 && showArrows && (
+                        <button
+                            className="absolute left-0 top-0 h-full w-12 z-10 flex items-center justify-center bg-black/30 text-white opacity-50 hover:opacity-100 transition-opacity"
+                            // className="absolute left-0 z-10 p-2 bg-black/50 text-white rounded-full opacity-50 hover:opacity-100 transition-opacity"
+                            onClick={() => {
+                                setCurrentIndex((prev) => Math.max(prev - 1, 0));
+                                setAutoRotate(false); // ✅ Stop auto-rotation when clicked
+                            }}
+                        >
+                            ◀
+                        </button>
+                    )}
+
+                    <div className="flex-shrink-0 w-1/4 h-64 flex items-center justify-center bg-black">
+                        {currentHighlight.media ? (
+                            currentHighlight.media.includes(".mp4") ? (
+                                <video controls className="w-full h-auto max-h-64">
+                                    <source src={currentHighlight.media} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            ) : (
+                                <img src={currentHighlight.media} alt={currentHighlight.title} className="w-full h-auto max-h-64" />
+                            )
+                        ) : (
+                            <span className="text-gray-500">No media available</span>
+                        )}
+                    </div>
+
+                    <div className="ml-4 w-3/4">
+                        <a href={currentHighlight.link} target="_blank" rel="noopener noreferrer" className="text-lg font-bold">
+                            {currentHighlight.title}
+                        </a>
+                        {currentHighlight.body && <p className="mt-1">{currentHighlight.body}</p>}
+                    </div>
+
+                    {/* Right Arrow */}
+                    {currentIndex < highlights.length - 1 && showArrows && (
+                        <button
+                            className="absolute right-0 top-0 h-full w-12 z-10 flex items-center justify-center bg-black/30 text-white opacity-50 hover:opacity-100 transition-opacity"
+                            // className="absolute right-0 z-10 p-2 bg-black/50 text-white rounded-full opacity-50 hover:opacity-100 transition-opacity"
+                            onClick={() => {
+                                setCurrentIndex((prev) => Math.min(prev + 1, highlights.length - 1));
+                                setAutoRotate(false); // ✅ Stop auto-rotation when clicked
+                            }}
+                        >
+                            ▶
+                        </button>
+                    )}
                 </div>
+
                 {/* Attribution note */}
                 <div className="mt-2 text-sm text-gray-400">
                     Content sourced from <a href="https://arweavehub.com/today" target="_blank" rel="noopener noreferrer" className="underline">Arweave Today</a>.
