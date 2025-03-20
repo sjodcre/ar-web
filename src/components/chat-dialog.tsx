@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRef } from "react";
 import { X } from "lucide-react";
 
 interface ChatDialogProps {
@@ -17,6 +18,12 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
     const [sessionId, setSessionId] = useState<string | null>(
         localStorage.getItem("chatSessionId") || null
     );
+    const chatContainerRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+        }
+    }, [chatHistory]); // ✅ Runs every time chatHistory updates
 
 
 
@@ -164,16 +171,8 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
             {/* Chat Display */}
             {/* <div className="mt-4 h-[75%] overflow-y-auto p-2 bg-gray-800/70 rounded shadow-inner flex flex-col space-y-2"> */}
             {/* <div className="mt-4 h-[75%] overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2"> */}
-            <div className="flex-grow overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2">
-
-                {!sessionId && typedMessage && !isLoading ? <p>{typedMessage}</p> : null}  {/* ✅ Welcome message */}
-
-                {/* {chatHistory.map((msg, index) => (
-                    <p key={index} className={msg.role === "user" ? "text-blue-400" : "text-green-400"}>
-                        {msg.role === "user" ? "👤 You: " : "🤖 AI: "}
-                        {msg.content}
-                    </p>
-                ))} */}
+            {/* <div className="flex-grow overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2">
+                {!sessionId && typedMessage && !isLoading ? <p>{typedMessage}</p> : null} 
                 {chatHistory.map((msg, index) => (
                     <div
                         key={index}
@@ -188,8 +187,18 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
                         </div>
                     </div>
                 ))}
+            </div> */}
+            <div ref={chatContainerRef} className="flex-grow overflow-y-auto bg-gray-800/70 border border-gray-600 rounded-t-lg shadow-inner p-4 flex flex-col space-y-2">
+    {!sessionId && typedMessage && !isLoading ? <p>{typedMessage}</p> : null}
 
+    {chatHistory.map((msg, index) => (
+        <div key={index} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+            <div className={`max-w-[75%] p-3 rounded-lg text-sm ${msg.role === "user" ? "bg-blue-600 text-white self-end" : "bg-gray-700 text-gray-200 self-start"}`}>
+                {msg.content}
             </div>
+        </div>
+    ))}
+</div>
             {/* Input Field */}
             {/* <div className="mt-4 flex items-center">
                 <input
