@@ -153,7 +153,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
         <div
         //     className={`fixed bottom-12 right-12 w-[40rem] h-1/2 bg-gray-900/80 text-white p-4 rounded-lg shadow-2xl border border-blue-400 
         // backdrop-blur-lg transition-all duration-500 transform ${isVisible ? "scale-100 opacity-100" : "scale-50 opacity-0"}`}
-        className={`fixed bottom-4 left-4 right-4 md:bottom-12 md:right-12 md:left-auto w-full max-w-[40rem] h-[35vh] md:h-[40vh] lg:h-[50vh] 
+        className={`z-10 fixed bottom-4 left-4 right-4 md:bottom-12 md:right-12 md:left-auto w-full max-w-[40rem] h-[35vh] md:h-[40vh] lg:h-[50vh] 
             bg-gray-900/80 text-white p-4 rounded-lg shadow-2xl border border-blue-400 flex flex-col
             backdrop-blur-lg transition-all duration-500 transform ${isVisible ? "scale-100 opacity-100" : "scale-50 opacity-0"}`}
         >

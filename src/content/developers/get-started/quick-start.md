@@ -31,7 +31,7 @@ If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./lo
 ✅ **Simulates Arweave’s network locally**
 
 Once set up, you can start ArLocal using:
-```sh
+```sh title="Start Local Arweave Node" description="Launches ArLocal for a local Arweave testing environment with instant transactions."
 npx arlocal
 
 ```
@@ -63,7 +63,7 @@ Go to the official BetterIdea website:
 
 Below is a **basic AO message handler** that simply **responds to a received message**:  
 
-```lua
+```lua title="ping-handler.lua" description="A simple AO message handler that replies with a Pong message when it receives 'Ping'."
 Handlers.add(
     "Ping-Handler",
     "Ping",
@@ -87,21 +87,19 @@ Now that our AO process is deployed, let's send a message to it using **AO’s C
 2. **Send a Test Message to Your Process**
    - Use the following command:
    
-   ```sh
+  ```sh title="Send AO Message" description="Sends a test message to the deployed AO process using BetterIdea's terminal CLI."
    Send({
     Target = [[PROCESS_ID]],
 	Action = [[Ping]],
 	Data = [[yo]]
     })
-
-    ```
+  ```
     - Replace PROCESS_ID with your actual **deployed AO Process ID.**
 
 3. **Expected Output**
     - If everything is set up correctly, you should see a response:
-    ```sh
+    
     New Message From z8H...gz4: Data = Pong! AO received yo
-    ```
 
 #### 🚀 Step 6: Setting Up a Vite React TypeScript Project
 
@@ -111,27 +109,31 @@ To interact with **AO and Arweave**, we need a frontend application. **Vite** is
 
 Run the following command in your terminal:
 
-```sh
+```sh title="Create Vite Project" description="Initializes a new Vite-powered React TypeScript project for AO + Arweave frontend development."
+
 pnpm create vite@latest my-ao-app --template react-ts
 
 ```
 
 Navigate into the project folder:
 
-```sh
+```sh title="Navigate to Project" description="Enter the newly created Vite project directory."
+
 cd my-ao-app
 
 ```
 
 Then install dependencies:
 
-```sh
+```sh title="Install Dependencies" description="Installs all necessary packages for the React + Vite project."
+
 pnpm install
 
 ```
 
 Start the development server:
-```sh
+```sh title="Start Development Server" description="Runs the Vite development server at localhost:5173."
+
 pnpm dev
 
 ```
@@ -157,7 +159,8 @@ Modify your `"tsconfig.json"` to ensure **strict type-checking** and enable comp
 
 Install required packages for interacting with AO:
 
-```sh
+```sh title="Install aoconnect" description="Installs the @permaweb/aoconnect package to enable AO messaging capabilities."
+
 pnpm add @permaweb/aoconnect
 ```
 
@@ -175,7 +178,8 @@ We’ll create a React component that sends a **test message** to an AO Process 
 
 #### 🔹 Create `src/components/AOMessage.tsx`
 
-```ts
+```ts title="AOMessage.tsx" description="React component that sends a dry-run message to an AO process and displays the response."
+
 import React, { useState } from "react";
 import { dryrun } from "@permaweb/aoconnect";
 
@@ -230,7 +234,8 @@ export default AOMessage;
 
 To use our new **AOMessage** component, update `src/App.tsx`:
 
-```ts
+```ts title="App.tsx" description="Main application entry that renders the AOMessage component on the homepage."
+
 import React from "react";
 import AOMessage from "./components/AOMessage";
 
