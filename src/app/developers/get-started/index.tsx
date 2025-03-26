@@ -271,7 +271,7 @@ const GetStarted = () => {
               </div>
 
               {/* Developer Resources */}
-              <div className="mt-8 p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg">
+              {/* <div className="mt-8 p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg">
                 <h3 className="text-lg font-bold mb-4 text-secondary">Developer Resources</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a
@@ -303,7 +303,7 @@ const GetStarted = () => {
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="md:col-span-1">
@@ -311,7 +311,7 @@ const GetStarted = () => {
               <div className="space-y-4 sticky top-4">
                 <PermanenceIndicator status={metadata.status} timestamp={metadata.lastUpdated} confirmations={15} />
 
-                {headings.length > 0 && (
+                {/* {headings.length > 0 && (
                   <div className="rounded-lg border border-secondary/20 overflow-hidden">
                     <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">
                       <h3 className="font-medium text-sm">On This Page</h3>
@@ -331,7 +331,7 @@ const GetStarted = () => {
                       </ul>
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {/* Quick links */}
                 <div className="rounded-lg border border-secondary/20 overflow-hidden">

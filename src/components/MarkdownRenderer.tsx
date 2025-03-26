@@ -161,6 +161,10 @@ import remarkGfm from "remark-gfm"
 import rehypeRaw from "rehype-raw"
 // import { toast } from "sonner"
 import EnhancedCodeBlock from "./test/enhanced-code-block"
+import { Link as RouterLink } from "react-router-dom"
+import { GithubIcon } from "@/icons/GithubIcon"
+import { XIcon } from "@/icons/XIcon"
+
 
 interface MarkdownRendererProps {
   filePath: string
@@ -214,38 +218,38 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }
           if (!inline && match) {
             // Extract language from className
             const language = match[1]
-            
+
             // Check if this is a transaction ID
-            const isTxId = language === "arweave" || language === "txid"
-            
+            // const isTxId = language === "arweave" || language === "txid"
+
             // Get filename from meta if available
             // const meta = node?.data?.meta || ""
             const metaString = node?.position?.start && node.position.end
-  ? markdownContent
-      .slice(node.position.start.offset || 0, node.position.end.offset || 0)
-      .split('\n')[0] // the first line of the code block
-  : ""
+              ? markdownContent
+                .slice(node.position.start.offset || 0, node.position.end.offset || 0)
+                .split('\n')[0] // the first line of the code block
+              : ""
 
-const meta = metaString.split(" ").slice(1).join(" ") // removes ```lang
+            const meta = metaString.split(" ").slice(1).join(" ") // removes ```lang
 
             console.log("match", match)
             console.log("codeText", codeText)
             console.log("meta", meta)
             const titleMatch = /title="([^"]+)"/.exec(meta)
             const title = titleMatch ? titleMatch[1] : undefined
-            
+
             // Get description from meta if available
             const descMatch = /description="([^"]+)"/.exec(meta)
             const description = descMatch ? descMatch[1] : undefined
-            
-            
+
+
             // Check if code is runnable
             const isRunnable = meta?.includes("runnable") || false
-            
+
             // Extract transaction ID if present
             const txIdMatch = /txId="([^"]+)"/.exec(meta)
             const txId = txIdMatch ? txIdMatch[1] : undefined
-            
+
             return (
               <EnhancedCodeBlock
                 code={codeText}
@@ -257,7 +261,7 @@ const meta = metaString.split(" ").slice(1).join(" ") // removes ```lang
               />
             )
           }
-          
+
           // For inline code
           return (
             <code className="bg-card px-1.5 py-0.5 rounded font-mono text-secondary" {...props}>
@@ -280,16 +284,55 @@ const meta = metaString.split(" ").slice(1).join(" ") // removes ```lang
         h3: ({ children }) => <h3 className="text-xl font-bold mt-5 mb-2 font-mono text-secondary/90">{children}</h3>,
         h4: ({ children }) => <h4 className="text-lg font-bold mt-4 mb-2 font-mono text-secondary/80">{children}</h4>,
         p: ({ children }) => <p className="my-4 leading-relaxed">{children}</p>,
-        a: ({ children, href }) => (
-          <a
-            href={href}
-            className="text-secondary hover:text-highlight underline decoration-secondary/30 hover:decoration-highlight/50 transition-colors"
-            target={href?.startsWith("http") ? "_blank" : undefined}
-            rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-          >
-            {children}
-          </a>
-        ),
+        a: ({ children, href }) => {
+          const isExternal = href?.startsWith("http")
+          const isHash = href?.startsWith("#")
+          const isGitHub = href?.includes("github.com")
+          const isX = href?.includes("x.com")
+          const Icon = isGitHub
+            ? GithubIcon
+            : isX
+            ? XIcon
+            : undefined
+
+          const iconEl = Icon ? <Icon className="inline w-5 h-5 mr-2 align-middle" /> : null
+
+          // Internal: Use react-router <Link>
+          if (!isExternal && !isHash && href) {
+            return (
+              <RouterLink
+                to={href.replace(/^\.?\/+/, "/")} // normalize "./path" or "/path" to "/path"
+                className="text-secondary hover:text-highlight underline decoration-secondary/30 hover:decoration-highlight/50 transition-colors"
+              >
+                {iconEl}
+                {children}
+              </RouterLink>
+            )
+          }
+        
+          // Hash or external: Use <a>
+          return (
+            <a
+              href={href}
+              className="text-secondary hover:text-highlight underline decoration-secondary/30 hover:decoration-highlight/50 transition-colors"
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+            >
+              {iconEl}
+              {children}
+            </a>
+          )
+        },
+        // a: ({ children, href }) => (
+        //   <a
+        //     href={href}
+        //     className="text-secondary hover:text-highlight underline decoration-secondary/30 hover:decoration-highlight/50 transition-colors"
+        //     target={href?.startsWith("http") ? "_blank" : undefined}
+        //     rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+        //   >
+        //     {children}
+        //   </a>
+        // ),
         ul: ({ children }) => <ul className="list-disc pl-6 my-4 space-y-2">{children}</ul>,
         ol: ({ children }) => <ol className="list-decimal pl-6 my-4 space-y-2">{children}</ol>,
         blockquote: ({ children }) => (
