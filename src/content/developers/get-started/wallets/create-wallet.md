@@ -51,6 +51,8 @@ Wander is a popular Arweave-compatible wallet that allows you to interact with *
 
 ---
 
+🎉 **Congratulations!** You’ve successfully created your Wander wallet and are now ready to explore the Arweave and AO ecosystems with your new digital assets!
+
 ## 🚀 Step 3: Access and Manage Your Wallet
 
 Once setup is complete, you will be redirected to the **Wander Dashboard**, where you can:
@@ -58,7 +60,7 @@ Once setup is complete, you will be redirected to the **Wander Dashboard**, wher
 - Manage **digital assets**
 - Connect to **Arweave & AO dApps**
 
-<img src="/wander-dashboard.png" alt="wander-dashboard" style="width: 640px; height: auto;"/>
+<img src="/wander-wallet-created.png" alt="wander-wallet-created" style="width: 640px; height: auto "/>
 
 ---
 
@@ -70,4 +72,4 @@ Once setup is complete, you will be redirected to the **Wander Dashboard**, wher
 
 ---
 
-🎉 **Congratulations!** You’ve successfully
+
