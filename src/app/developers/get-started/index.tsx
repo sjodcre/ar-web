@@ -81,7 +81,7 @@
 
 "use client"
 
-import { JSX, useEffect, useState } from "react"
+import { JSX, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
@@ -185,33 +185,33 @@ const getPageMetadata = (page?: string, subpage?: string) => {
 }
 
 // Helper function to extract headings from markdown content
-const extractHeadings = (content: string) => {
-  const headings: { id: string; text: string }[] = []
-  const regex = /^(#{2,3})\s+(.+)$/gm
-  let match
+// const extractHeadings = (content: string) => {
+//   const headings: { id: string; text: string }[] = []
+//   const regex = /^(#{2,3})\s+(.+)$/gm
+//   let match
 
-  while ((match = regex.exec(content)) !== null) {
-    const level = match[1].length
-    const text = match[2].trim()
-    const id = text
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, "")
-      .replace(/\s+/g, "-")
+//   while ((match = regex.exec(content)) !== null) {
+//     const level = match[1].length
+//     const text = match[2].trim()
+//     const id = text
+//       .toLowerCase()
+//       .replace(/[^\w\s-]/g, "")
+//       .replace(/\s+/g, "-")
 
-    // Only include h2 and h3 headings
-    if (level <= 3) {
-      headings.push({ id, text })
-    }
-  }
+//     // Only include h2 and h3 headings
+//     if (level <= 3) {
+//       headings.push({ id, text })
+//     }
+//   }
 
-  return headings
-}
+//   return headings
+// }
 
 const GetStarted = () => {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const navigate = useNavigate()
-  const [markdownContent, setMarkdownContent] = useState<string>("")
-  const [headings, setHeadings] = useState<{ id: string; text: string }[]>([])
+  // const [markdownContent, setMarkdownContent] = useState<string>("")
+  // const [headings, setHeadings] = useState<{ id: string; text: string }[]>([])
 
   useEffect(() => {
     if (page === "get-started" && !subpage) {
@@ -225,19 +225,19 @@ const GetStarted = () => {
   if (subsubpage) markdownFilePath = `developers/${page}/${subpage}/${subsubpage}`
 
   // Fetch markdown content to extract headings
-  useEffect(() => {
-    fetch(`/src/content/${markdownFilePath}.md`)
-      .then((res) => res.text())
-      .then((content) => {
-        setMarkdownContent(content)
-        setHeadings(extractHeadings(content))
-      })
-      .catch((err) => {
-        console.error("Error loading markdown:", err)
-        setMarkdownContent("# Error loading content")
-        setHeadings([])
-      })
-  }, [markdownFilePath])
+  // useEffect(() => {
+  //   fetch(`/src/content/${markdownFilePath}.md`)
+  //     .then((res) => res.text())
+  //     .then((content) => {
+  //       setMarkdownContent(content)
+  //       setHeadings(extractHeadings(content))
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error loading markdown:", err)
+  //       setMarkdownContent("# Error loading content")
+  //       setHeadings([])
+  //     })
+  // }, [markdownFilePath])
 
   // Get metadata for current page
   const metadata = getPageMetadata(page, subpage)

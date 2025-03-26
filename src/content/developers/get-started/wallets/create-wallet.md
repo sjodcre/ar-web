@@ -16,29 +16,49 @@ Wander is a popular Arweave-compatible wallet that allows you to interact with *
 
 ---
 
-## 🔧 Step 2: Create a New Wallet
+## 🔧 Step 2: Create a New Account/Wallet
 
 1. Click on the **Wander** extension icon in your browser toolbar.
-2. Select **"Create a New Wallet"**.
-3. Set a **strong password** that will be used to unlock your wallet.
+2. Select **"Create a new account"**.
+<img src="/wander-create-new-account.png" alt="wander-create-new-account" style="width: 640px; height: auto;"/>
+3. Name you account.
+<img src="/wander-step-1-name-account.png" alt="wander-step-1-name-account" style="width: 640px; height: auto;"/>
+
+4. Wander will generate a **12-word seed phrase**.
+5. **Write it down** and store it in a **secure location**.
+6. **DO NOT** share this phrase with anyone. It is the only way to recover your wallet.
+<img src="/wander-step-2-store-keys.png" alt="wander-step-2-store-keys" style="width: 640px; height: auto;"/>
+
+7. **Confirm the seed phrase** by entering it in the correct order.
+8. Set a **strong password** that will be used to unlock your wallet.
+<img src="/wander-create-password.png" alt="wander-create-password" style="width: 640px; height: auto;"/>
+9. Follow the rest of the prompts.
+10. Congratulations! Your account is finally created!
+<img src="/wander-account-created.png" alt="wander-account-created" style="width: 640px; height: auto;"/>
+
+<!-- 
+2. Select **"Accounts"**.
+<img src="/wander-accounts-button.png" alt="wander-accounts-button" style="width: 640px; height: auto;"/>
+
+3. Select **"Add An Account."**
+<img src="/wander-add-an-account.png" alt="wander-add-an-account" style="width: 640px; height: auto;"/>
+
+4. Select **"Generate Wallet."**
+<img src="/wander-generate-wallet.png" alt="wander-generate-wallet" style="width: 640px; height: auto;"/>
+
+5. Set a **strong password** that will be used to unlock your wallet.
+ -->
 
 ---
 
-## 🔑 Step 3: Backup Your Seed Phrase
-
-1. Wander will generate a **12-word seed phrase**.
-2. **Write it down** and store it in a **secure location**.
-3. **DO NOT** share this phrase with anyone. It is the only way to recover your wallet.
-4. **Confirm the seed phrase** by entering it in the correct order.
-
----
-
-## 🚀 Step 4: Access and Manage Your Wallet
+## 🚀 Step 3: Access and Manage Your Wallet
 
 Once setup is complete, you will be redirected to the **Wander Dashboard**, where you can:
 - View **wallet balance**
 - Manage **digital assets**
 - Connect to **Arweave & AO dApps**
+
+<img src="/wander-dashboard.png" alt="wander-dashboard" style="width: 640px; height: auto;"/>
 
 ---
 
