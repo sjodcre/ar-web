@@ -18,7 +18,7 @@ interface SearchItem {
 
 export const fetchMarkdownContent = async (filePath, title) => {
   try {
-    const fullPath = path.join("src/content", `${filePath}.md`);
+    const fullPath = path.join("/content", `${filePath}.md`);
     console.log("fullpath", fullPath)
     const content = await fs.readFile(fullPath, "utf-8");
     

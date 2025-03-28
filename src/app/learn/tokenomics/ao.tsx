@@ -9,11 +9,11 @@ const AOComputerTokenomics: React.FC = () => {
   const [showLongVersion, setShowLongVersion] = useState(true);
 
   useEffect(() => {
-    fetch('/src/content/learn/tokenomics/ao-short.md')
+    fetch('/content/learn/tokenomics/ao-short.md')
       .then(res => res.text())
       .then(setShortContent);
     
-    fetch('/src/content/learn/tokenomics/ao-long.md')
+    fetch('/content/learn/tokenomics/ao-long.md')
       .then(res => res.text())
       .then(setLongContent);
   }, []);

@@ -13,7 +13,7 @@ export interface SearchItem {
 
   const fetchMarkdownContent = async (filePath: string, title: string): Promise<SearchItem[]> => {
     try {
-      const response = await fetch(`/src/content/${filePath}.md`);
+      const response = await fetch(`/content/${filePath}.md`);
       if (!response.ok) return [];
   
       const text = await response.text();

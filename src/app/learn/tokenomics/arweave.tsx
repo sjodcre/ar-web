@@ -9,11 +9,11 @@ const ArweaveTokenomics: React.FC = () => {
   const [showLongVersion, setShowLongVersion] = useState(true);
 
   useEffect(() => {
-    fetch('/src/content/learn/tokenomics/arweave-short.md')
+    fetch('/content/learn/tokenomics/arweave-short.md')
       .then(res => res.text())
       .then(setShortContent);
     
-    fetch('/src/content/learn/tokenomics/arweave-long.md')
+    fetch('/content/learn/tokenomics/arweave-long.md')
       .then(res => res.text())
       .then(setLongContent);
   }, []);

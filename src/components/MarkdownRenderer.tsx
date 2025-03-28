@@ -184,11 +184,11 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }
       fileToFetch = `${filePath}.md` // Default if no variant is specified
     }
 
-    fetch(`/src/content/${fileToFetch}`)
+    fetch(`/content/${fileToFetch}`)
       .then((res) => {
         if (!res.ok) {
           console.warn(`File not found: ${fileToFetch}, trying fallback: ${filePath}.md`)
-          return fetch(`/src/content/${filePath}.md`).then((fallbackRes) => {
+          return fetch(`/content/${filePath}.md`).then((fallbackRes) => {
             if (!fallbackRes.ok) throw new Error("Fallback file not found")
             return fallbackRes.text()
           })
