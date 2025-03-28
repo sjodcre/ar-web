@@ -17,7 +17,17 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "## 🏦 Step 1: Create and Fund Your Wallet"
+    "content": "<details>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<!-- <summary><h2> 🏦 Step 1: Create and Fund Your Wallet</h2></summary> -->"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<summary><span class=\"text-2xl font-bold text-secondary\">🏦 Step 1: Create and Fund Your Wallet (Optional if Done)</span></summary>"
   },
   {
     "title": "Quick Start",
@@ -32,7 +42,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "If you don’t have a wallet yet, follow our **[Wallet Creation Guide](./wallet-setup.md)** for step-by-step instructions on setting up a Wander Wallet."
+    "content": "If you don’t have a wallet yet, follow our **[Wallet Creation Guide](./developers/get-started/wallets/create-wallet)** for step-by-step instructions on setting up a Wander Wallet."
   },
   {
     "title": "Quick Start",
@@ -42,7 +52,12 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "Once you have a wallet, you'll need **AR tokens** to pay for transactions. Learn how to acquire and transfer AR tokens in our **[Funding Guide](./fund-wallet.md)**."
+    "content": "Once you have a wallet, you'll need **AR tokens** to pay for transactions. Learn how to acquire and transfer AR tokens in our **[Funding Guide](./developers/get-started/wallets/fund-wallet)**."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "</details>"
   },
   {
     "title": "Quick Start",
@@ -72,12 +87,22 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "### 🔹 **2.1 Local Arweave Setup (For Testing)**  "
+    "content": "<details>"
   },
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./local-arweave-setup.md)** to create a local testing environment."
+    "content": "<summary><span class=\"text-xl font-bold text-secondary/90\">🔹 2.1 Local Arweave Setup (Optional For Testing)</span></summary>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<!-- ### 🔹 **2.1 Local Arweave Setup (For Testing)**   -->"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./developers/get-started/installation/arweave)** to create a local testing environment."
   },
   {
     "title": "Quick Start",
@@ -102,7 +127,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Start Local Arweave Node\" description=\"Launches ArLocal for a local Arweave testing environment with instant transactions.\""
   },
   {
     "title": "Quick Start",
@@ -113,6 +138,11 @@
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
     "content": "```"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "</details>"
   },
   {
     "title": "Quick Start",
@@ -147,17 +177,37 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
+    "content": "> 💡 **Want to explore BetterIdea further?**"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "> -  [BetterIdea GitHub](https://github.com/betteridea-dev) – Source code and development tools  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "> -  [BetterIdea on X (Previously Twitter)](https://x.com/betteridea_dev) – Updates, news, and community  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "> - 🌐 [BetterIdea Website](https://betteridea.dev/) – Official site and IDE access"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
     "content": "#### 🔧 **Step 1: Access BetterIdea**  "
   },
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "Go to the official BetterIdea website:  "
+    "content": "Go to the BetterIdea web IDE:  "
   },
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "🔗 [BetterIdea IDE](https://betteridea.dev/)"
+    "content": "🔗 [BetterIdea IDE](https://ide.betteridea.dev/)"
   },
   {
     "title": "Quick Start",
@@ -173,6 +223,11 @@
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
     "content": "2. Select **Wander Wallet** or another Arweave-compatible wallet  "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<img src=\"/betteridea-login.png\" alt=\"betteridea-login\" style=\"width: 640px; height: auto;\"/>"
   },
   {
     "title": "Quick Start",
@@ -197,6 +252,11 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
+    "content": "<img src=\"/betteridea-create-project.png\" alt=\"betteridea-create-project\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
     "content": "3. You’ll see a Lua script template  "
   },
   {
@@ -212,7 +272,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```lua"
+    "content": "```lua title=\"ping-handler.lua\" description=\"A simple AO message handler that replies with a Pong message when it receives 'Ping'.\""
   },
   {
     "title": "Quick Start",
@@ -257,6 +317,16 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
+    "content": "Run the code after you finished pasting/typing it into the block."
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<img src=\"/betteridea-run-code.png\" alt=\"betteridea-run-code\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
     "content": "#### 🚀 Step 5: Communicating with the AO Process  "
   },
   {
@@ -297,7 +367,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "   ```sh"
+    "content": "  ```sh title=\"Send AO Message\" description=\"Sends a test message to the deployed AO process using BetterIdea's terminal CLI.\""
   },
   {
     "title": "Quick Start",
@@ -327,12 +397,22 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "    ```"
+    "content": "  ```"
   },
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "    - Replace PROCESS_ID with your actual **deployed AO Process ID.**"
+    "content": "  - Paste into the terminal: "
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "<img src=\"/betteridea-terminal-paste.png\" alt=\"betteridea-terminal-paste\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Quick Start",
+    "path": "/developers/get-started/quick-start",
+    "content": "    - Replace PROCESS_ID with your actual **deployed AO Process ID** which can be found at the bottom right of the IDE"
   },
   {
     "title": "Quick Start",
@@ -347,17 +427,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "    ```sh"
-  },
-  {
-    "title": "Quick Start",
-    "path": "/developers/get-started/quick-start",
-    "content": "    New Message From z8H...gz4: Data = Pong! AO received yo"
-  },
-  {
-    "title": "Quick Start",
-    "path": "/developers/get-started/quick-start",
-    "content": "    ```"
+    "content": "   `New Message From z8H...gz4: Data = Pong! AO received yo`"
   },
   {
     "title": "Quick Start",
@@ -382,7 +452,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Create Vite Project\" description=\"Initializes a new Vite-powered React TypeScript project for AO + Arweave frontend development.\""
   },
   {
     "title": "Quick Start",
@@ -402,7 +472,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Navigate to Project\" description=\"Enter the newly created Vite project directory.\""
   },
   {
     "title": "Quick Start",
@@ -422,7 +492,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Install Dependencies\" description=\"Installs all necessary packages for the React + Vite project.\""
   },
   {
     "title": "Quick Start",
@@ -442,7 +512,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Start Development Server\" description=\"Runs the Vite development server at localhost:5173.\""
   },
   {
     "title": "Quick Start",
@@ -532,7 +602,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```sh"
+    "content": "```sh title=\"Install aoconnect\" description=\"Installs the @permaweb/aoconnect package to enable AO messaging capabilities.\""
   },
   {
     "title": "Quick Start",
@@ -582,7 +652,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```ts"
+    "content": "```ts title=\"AOMessage.tsx\" description=\"React component that sends a dry-run message to an AO process and displays the response.\""
   },
   {
     "title": "Quick Start",
@@ -812,7 +882,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "```ts"
+    "content": "```ts title=\"App.tsx\" description=\"Main application entry that renders the AOMessage component on the homepage.\""
   },
   {
     "title": "Quick Start",
@@ -892,7 +962,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "<img src=\"./dryrun-output.png\" alt=\"dryrun-output\" style=\"width: 640px; height: auto;\"/>"
+    "content": "<img src=\"/dryrun-output.png\" alt=\"dryrun-output\" style=\"width: 640px; height: auto;\"/>"
   },
   {
     "title": "Quick Start",
@@ -922,7 +992,7 @@
   {
     "title": "Quick Start",
     "path": "/developers/get-started/quick-start",
-    "content": "If you're eager to take your skills further, check out our **[Deploy Your First App](./deploy-your-first-app.md)** page for more advanced guidance and projects to tackle!"
+    "content": "If you're eager to take your skills further, check out our **[Deploy Your First App](./developers/get-started/deploy-first-app)** page for more advanced guidance and projects to tackle!"
   },
   {
     "title": "Quick Start",
@@ -2031,438 +2101,438 @@
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "# 🚀 Quick App Development and Deployment with Arweave & AO"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "# 🚀 Deploy Your AO + React App to Arweave with ArLink"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "## 1. Integrating AO's Messaging Unit into Your Application"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "You’ve built your app — now it’s time to **go live** on the **permaweb** using [Arweave](https://www.arweave.org) and **ArLink**."
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "If you plan to deploy your application on platforms like Vercel or others, minimal configuration changes are needed. The primary adjustment involves integrating AO's Messaging Unit, which serves as both middleware and backend, with the database managed within AO."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "### 1.1 Installing Necessary Packages"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "To communicate with AO's Messaging Unit, you'll need the `@permaweb/aoconnect` package. Install it using your preferred package manager:"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```bash"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "# Using npm"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "npm install @permaweb/aoconnect"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "# Using yarn"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "yarn add @permaweb/aoconnect"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "### 1.2 Sending a Dry-Run Message to AO's Messaging Unit"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "A dry-run allows you to send a message to an AO process without requiring a wallet signature, making it ideal for testing purposes."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```javascript"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "import { dryrun } from '@permaweb/aoconnect';"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "async function sendDryRunMessage() {"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  const result = await dryrun({"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    process: 'PROCESS_ID', // Replace with your AO process ID"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    data: '', // Message payload"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    tags: [{ name: 'Action', value: 'Balance' }], // Example tag"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    anchor: '1234', // Optional anchor"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    // Additional optional fields: Id, Owner, etc."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  });"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  console.log(result.Messages[0]);"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "}"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "sendDryRunMessage();"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "In this example:"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "- **process**: The unique identifier of the AO process you're targeting."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "- **data**: The message content or payload."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "- **tags**: Metadata associated with the message."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "- **anchor**: An optional field for anchoring the message."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "For more details, refer to the [AO Messaging Guide](https://cookbook_ao.g8way.io/tutorials/begin/messaging.html)."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
+    "path": "/developers/get-started/deploy-first-app",
     "content": "---"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "## 2. Deploying Your dApp onto Arweave"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "## 🌐 Did You Know?"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "To deploy your dApp on Arweave, specific configurations are necessary, especially concerning the routing system."
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "**Arweave** isn't just for storing images or files; it can also host your **entire application permanently**. However, specific configurations are necessary to ensure your app works correctly on the permaweb."
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "### 2.1 Configuring Next.js for Arweave Deployment"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "### Why Are These Settings Essential?"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "When deploying a Next.js application to Arweave, consider the following adjustments:"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Arweave operates as a decentralized storage network without traditional server-side routing. This means client-side routing configurations (e.g. `HashRouter`) are crucial. Without them, users may encounter broken links or refresh errors."
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "1. **Export the Application as Static HTML**: Arweave serves static content, so you'll need to export your Next.js app accordingly."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "2. **Update `next.config.js`**: Ensure your configuration supports static exports."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```javascript"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "// next.config.js"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "module.exports = {"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  output: 'export', // Outputs a Single-Page Application (SPA)"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  distDir: './out', // Output directory"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "};"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "3. **Build and Export**:"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```bash"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "npm run build"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "npm run export"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "This process generates static files in the `out` directory, ready for deployment on Arweave."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "For a practical example, refer to the [Arweave Next.js Template](https://arweave-nextjs.arweave.dev/)."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
+    "path": "/developers/get-started/deploy-first-app",
     "content": "---"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "### 2.2 Configuring Vite for Arweave Deployment"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "## ⚠️ Important: Wallet Must Have AR Tokens"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "For Vite applications, the following configurations are recommended:"
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "To deploy your app, your wallet **must contain AR tokens**. These are used to pay for storage. Without AR tokens, deployment **will fail**."
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "1. **Update `vite.config.js`**: Adjust the base path to ensure correct asset loading."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```javascript"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "// vite.config.js"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "import { defineConfig } from 'vite';"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "import react from '@vitejs/plugin-react';"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "export default defineConfig({"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  plugins: [react()],"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  base: '', // Ensures relative paths"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "});"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "2. **Modify `package.json`**: Add a deploy script using Bundlr for deployment."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```json"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "// package.json"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "{"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  \"scripts\": {"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    \"dev\": \"vite\","
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    \"build\": \"vite build\","
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    \"preview\": \"vite preview\","
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "    \"deploy\": \"yarn build && bundlr upload-dir dist --index-file index.html\""
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "  }"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "}"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "3. **Deploy Using Bundlr**:"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```bash"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "yarn deploy"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "```"
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "This script builds your application and uploads the `dist` directory to Arweave using Bundlr."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "For a detailed walkthrough, check out this [guide on deploying React frontends to Arweave](https://mirror.xyz/dhaiwat.eth/NV--7dv8CO0NCcFCvRjDCxBe3VuxdB2_KggwFEfLGRc)."
-  },
-  {
-    "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
+    "path": "/developers/get-started/deploy-first-app",
     "content": "---"
   },
   {
     "title": "Deploy your first app!",
-    "path": "/developers/get-started/deploy",
-    "content": "By following these steps, you can seamlessly integrate AO's Messaging Unit into your application and deploy your dApp onto Arweave. For comprehensive documentation and advanced configurations, visit the [AO Cookbook](https://cookbook_ao.g8way.io/) and [Arweave Developer Docs](https://arweave.org/developers)."
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "## 🚀 Deployment Options"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "You can deploy your app in **two ways**:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<details open>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<summary><span class=\"text-xl font-bold text-secondary\">🌐 Option 1: Use the ArLink Web Interface</span></summary>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "You can deploy via the **no-code UI** at:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "🔗 [https://arlink.ar.io](https://arlink.ar.io)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "> 💡 **Feels like Vercel!**  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "> If you're used to deploying apps with Vercel, this will feel right at home — simple, clean, and developer-friendly."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "For a step-by-step guide, follow the official ArLink docs:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "📘 [Quickstart Guide](https://arlink.gitbook.io/arlink-docs/getting-started/quickstart)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "All you need is:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "- A wallet (like ArConnect)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "- A little AR for storage 💸"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "</details>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<details>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<summary><span class=\"text-xl font-bold text-secondary\">🧱 Option 2: Local CLI + ArNS (Advanced)</span></summary>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "This method uses **ArNS** (Arweave Name System), a decentralized naming system for Arweave."
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "🔗 Learn more: [https://ar.io/arns](https://ar.io/arns)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "### 🔧 Step 1: Install `permaweb-deploy`"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Install globally:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```sh"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "npm install -g permaweb-deploy"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "### 🔐 Step 2: Setup Wallet for Deployment"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "1. Open the **Wander Wallet** browser extension  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "2. Select **\"Accounts\"**.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<img src=\"/wander-accounts-button.png\" alt=\"wander-accounts-button\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "3. Click which wallet account you want to use to deploy your application.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "4. Click **Export Keyfile**.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<img src=\"/wander-export-keyfile.png\" alt=\"wander-export-keyfile\" style=\"width: 640px; height: auto;\"/>  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "5. Key in your password.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "6. Rename the file to `wallet.json`  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "7. Move it into `.secrets/wallet.json`"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "🚫 **DO NOT COMMIT THIS FILE** — add `.secrets/` to your `.gitignore`"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "### 📝 Step 3: Copy the Deployment Script"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Copy `deploy.sh` into your project under `scripts/`:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "<pre><code class=\"language-sh\" title=\"scripts/deploy.sh\" description=\"Shell script to deploy your dist/ folder to Arweave using ArNS and permaweb-deploy.\">"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "# Check if dist directory exists"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "if [ ! -d \"dist\" ]; then"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "  echo \"dist directory does not exist. Please build the project first\""
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "  exit 1"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "fi"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "if [ -z \"$UNDERNAME\" ]; then"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "  UNDERNAME=\"arweb\""
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "  echo \"UNDERNAME is not set. Setting it to arweb\""
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "fi"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "DEPLOY_KEY=$(base64 -i ./.secrets/wallet.json) npx permaweb-deploy --ant-process YOUR_ANT_PROCESS --undername $UNDERNAME"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "</code></pre>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "To obtain your ArNS name, visit the ArNS dashboard, which would be the Process ID of the asset. You will need to either rent or buy an ArNS name.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Update the `--ant-process` value in the script to your ArNS name:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "--ant-process=YOUR_ANT_PROCESS"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Update the `--undername` value in the script to your desired ArNS name (this can be anything you choose):"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "--undername=your-name.ar"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "### 🚀 Step 4: Deploy with ArNS"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```sh"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "sh scripts/deploy.sh"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "You’ll get a live URL like:"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "https://your-name.ar"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "```"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "</details>"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "## 🌍 Optional: Custom Domain"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "You can link a custom domain to your Arweave deployment using TXT records.  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "Read more: [ArLink Docs – Custom Domains](https://arlink.dev/docs/custom-domains)"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "---"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "## 🧭 What's Next?"
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "- ✅ Monitor usage via AO logging  "
+  },
+  {
+    "title": "Deploy your first app!",
+    "path": "/developers/get-started/deploy-first-app",
+    "content": "- ✅ Share your live link on [AO Discord](https://discord.gg/arweave)"
   },
   {
     "title": "Creating your wallet",
@@ -2522,7 +2592,7 @@
   {
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
-    "content": "## 🔧 Step 2: Create a New Wallet"
+    "content": "## 🔧 Step 2: Create a New Account/Wallet"
   },
   {
     "title": "Creating your wallet",
@@ -2532,12 +2602,117 @@
   {
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
-    "content": "2. Select **\"Create a New Wallet\"**."
+    "content": "2. Select **\"Create a new account\"**."
   },
   {
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
-    "content": "3. Set a **strong password** that will be used to unlock your wallet."
+    "content": "<img src=\"/wander-create-new-account.png\" alt=\"wander-create-new-account\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "3. Name you account."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-step-1-name-account.png\" alt=\"wander-step-1-name-account\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "4. Wander will generate a **12-word seed phrase**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "5. **Write it down** and store it in a **secure location**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "6. **DO NOT** share this phrase with anyone. It is the only way to recover your wallet."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-step-2-store-keys.png\" alt=\"wander-step-2-store-keys\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "7. **Confirm the seed phrase** by entering it in the correct order."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "8. Set a **strong password** that will be used to unlock your wallet."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-create-password.png\" alt=\"wander-create-password\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "9. Follow the rest of the prompts."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "10. Congratulations! Your account is finally created!"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-account-created.png\" alt=\"wander-account-created\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<!-- "
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "2. Select **\"Accounts\"**."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-accounts-button.png\" alt=\"wander-accounts-button\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "3. Select **\"Add An Account.\"**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-add-an-account.png\" alt=\"wander-add-an-account\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "4. Select **\"Generate Wallet.\"**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-generate-wallet.png\" alt=\"wander-generate-wallet\" style=\"width: 640px; height: auto;\"/>"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "5. Set a **strong password** that will be used to unlock your wallet."
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": " -->"
   },
   {
     "title": "Creating your wallet",
@@ -2547,37 +2722,12 @@
   {
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
-    "content": "## 🔑 Step 3: Backup Your Seed Phrase"
+    "content": "🎉 **Congratulations!** You’ve successfully created your Wander wallet and are now ready to explore the Arweave and AO ecosystems with your new digital assets!"
   },
   {
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
-    "content": "1. Wander will generate a **12-word seed phrase**."
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "2. **Write it down** and store it in a **secure location**."
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "3. **DO NOT** share this phrase with anyone. It is the only way to recover your wallet."
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "4. **Confirm the seed phrase** by entering it in the correct order."
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "---"
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "## 🚀 Step 4: Access and Manage Your Wallet"
+    "content": "## 🚀 Step 3: Access and Manage Your Wallet"
   },
   {
     "title": "Creating your wallet",
@@ -2598,6 +2748,11 @@
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
     "content": "- Connect to **Arweave & AO dApps**"
+  },
+  {
+    "title": "Creating your wallet",
+    "path": "/developers/get-started/wallets/create-wallet",
+    "content": "<img src=\"/wander-wallet-created.png\" alt=\"wander-wallet-created\" style=\"width: 640px; height: auto \"/>"
   },
   {
     "title": "Creating your wallet",
@@ -2628,11 +2783,6 @@
     "title": "Creating your wallet",
     "path": "/developers/get-started/wallets/create-wallet",
     "content": "---"
-  },
-  {
-    "title": "Creating your wallet",
-    "path": "/developers/get-started/wallets/create-wallet",
-    "content": "🎉 **Congratulations!** You’ve successfully"
   },
   {
     "title": "Funding your wallet",
@@ -4345,327 +4495,327 @@
     "content": "- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "AO operates on a **decentralized computing model** consisting of three major components: **Messages, Processes, and the AO Grid**. These allow AO to execute computations in a **highly scalable and efficient manner**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "## **1. Messages and Processes**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "AO is built around **two core elements**:"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- **Messages** → Data packets that instruct the system on **what tasks to execute**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- **Processes** → Independent computing units that **handle execution**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "AO introduces a **Holographic State model**, eliminating the need for **shared global state**. Instead of maintaining an entire network-wide state, AO **computes state on demand**, improving efficiency."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "## **2. The AO Grid: Three Core Units**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "AO’s infrastructure consists of **three primary unit types**:"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "### **Messenger Units (MUs)**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Handle **message routing** between processes."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Ensure **secure and efficient communication**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "### **Scheduler Units (SUs)**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Order messages and assign them an **epoch and nonce**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Store messages permanently on **Arweave**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "### **Compute Units (CUs)**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Execute computational tasks."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- Retrieve necessary data and return computed results."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "## **3. Why AO is Different**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- **Horizontally scalable** → New units can be added dynamically."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- **No shared state** → Processes compute on demand."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- **Perfect for AI & onchain applications** → Eliminates bottlenecks seen in traditional blockchain models."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "## **Sources**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-long",
     "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "AO’s **message-passing model** allows Processes to execute code **without requiring shared state**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "## **Key Components**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- **Messenger Units (MUs)** → Handle message routing."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- **Scheduler Units (SUs)** → Order and store messages on Arweave."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- **Compute Units (CUs)** → Execute computational tasks."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "By leveraging these components, AO can **scale infinitely**, making it ideal for **onchain applications, AI, and decentralized computing**."
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "## **Sources**"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
   },
   {
-    "title": "AO’s Core Architecture: How It Works",
+    "title": "AO's Core Architecture: How It Works",
     "path": "/learn/arweave-ao-101/ao/core-architecture-short",
     "content": "- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "One of AO’s defining features is its ability to **scale infinitely through parallel execution**. Unlike traditional blockchain systems that rely on **sequential execution**, AO enables **modular and on-demand computation**."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "## **1. Hyper-Parallel Computing**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "AO functions as a **distributed supercomputer**, running **countless computations simultaneously**."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- **No global state** → Each process retrieves only the data it needs."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- **On-demand computation** → Reduces unnecessary resource consumption."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "## **2. Recursive Message Processing**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "AO messages follow a structured workflow:"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "1. **Messenger Unit (MU)** → Receives and authenticates messages."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "2. **Scheduler Unit (SU)** → Orders messages and stores them permanently on Arweave."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "3. **Compute Unit (CU)** → Processes messages and executes logic."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "This ensures **high throughput** while maintaining **decentralized security**."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "## **3. The Future of AO**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "With its **hyper-parallel design**, AO is well-suited for:"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- **Web3 & Smart Contracts** → Runs complex smart contracts efficiently."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- **Decentralized AI** → Handles AI training & model execution."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- **Onchain Virtual Worlds** → Powers interactive, persistent metaverse environments."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "## **Sources**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-long",
     "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "AO achieves **infinite scalability** by executing tasks **in parallel**."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "## **Key Scalability Innovations**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- **Modular, on-demand computation** → No shared global state."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- **Recursive Message Processing** → Ensures high throughput."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- **Dynamic Compute Expansion** → More Compute Units (CUs) can be added as needed."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "This makes AO **ideal for Web3, AI, and high-performance onchain applications**."
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "## **Sources**"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- [How AO Messaging Works](https://cookbook_ao.g8way.io/concepts/how-it-works.html)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)"
   },
   {
-    "title": "AO’s Scalability and Parallel Processing",
+    "title": "AO's Scalability and Parallel Processing",
     "path": "/learn/arweave-ao-101/ao/scalability-short",
     "content": "- [Arweave and AO: Building Onchain Worlds](https://x.com/onlyarweave/status/1866971929179197847)"
   },

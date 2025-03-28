@@ -295,7 +295,7 @@ You've successfully completed the Quick Start Guide for Arweave + AO Development
 
 Welcome to the rabbit hole—dive deep, experiment, and innovate! 🐇🕳️
 
-If you're eager to take your skills further, check out our **[Deploy Your First App](./developers/get-started/deploy-your-first-app)** page for more advanced guidance and projects to tackle!
+If you're eager to take your skills further, check out our **[Deploy Your First App](./developers/get-started/deploy-first-app)** page for more advanced guidance and projects to tackle!
 
 ## 🛠️ Additional Resources
 

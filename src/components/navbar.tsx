@@ -7,13 +7,14 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { SearchDialog } from "./search-dialog"
 import { Link, useLocation } from "react-router-dom"
 import SearchFn from "@/components/Search"
+import { NavItem } from "@/types"
 
-const navItems = {
+const navItems: Record<string, NavItem[]> = {
   Learn: [
     { title: "Arweave and AO 101", href: "/learn/arweave-ao-101", isDeveloped: true },
     { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
-    { title: "Social Impact", href: "/learn/social-impact" },
-    { title: "Storage Fee Structure", href: "learn/fee-structure" },
+    { title: "Social Impact", href: "/learn/social-impact", isDeveloped: false },
+    { title: "Storage Fee Structure", href: "learn/fee-structure", isDeveloped: false },
     {
       title: "Whitepapers",
       href: "/learn/whitepapers",
@@ -103,14 +104,12 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {Object.entries(navItems).map(([category, items]) => (
-                // <DropdownMenu key={category}>
                 <DropdownMenu
                   key={category}
                   open={openMenu === category}
                   onOpenChange={(open) => setOpenMenu(open ? category : null)}
                 >
                   <DropdownMenuTrigger asChild>
-                    {/* <Button className="bg-transparent hover:bg-secondary/10 text-foreground cursor-pointer border border-transparent hover:border-secondary/30 transition-all relative group"> */}
                     <Button
                       className="dropdown-trigger border border-transparent bg-transparent text-foreground transition-all relative group cursor-pointer
                hover:border-secondary/30
@@ -125,7 +124,9 @@ export function Navbar() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-card/95 backdrop-blur-md border border-secondary/20 rounded-md shadow-lg shadow-secondary/10">
-                    {items.map((item) => (
+                    {items
+                    .filter((item) => item.isDeveloped !== false)
+                    .map((item) => (
                       <DropdownMenuItem
                         key={item.title}
                         className={`text-foreground group relative dropdown-menu-item cursor-pointer ${item.isDeveloped ? "" : "text-destructive"}`}
@@ -134,11 +135,9 @@ export function Navbar() {
                           <span
                             className="w-full cursor-default text-muted-foreground relative z-10 group-hover:text-muted-foreground"
                           >
-                            {/* <span className="w-full cursor-default relative z-10 group-hover:text-secondary transition-colors"> */}
                             {item.title}
                             <span className="absolute inset-0 rounded-sm -z-10 transition-colors"></span>
 
-                            {/* <span className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 rounded-sm -z-10 transition-colors"></span> */}
                           </span>
                         ) : item.openInNewTab ? (
                           <a

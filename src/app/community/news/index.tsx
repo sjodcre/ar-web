@@ -174,7 +174,9 @@ export default function News() {
       setIsLoading(true)
       try {
         // Fetch from backend instead of scraping in the frontend
-        const response = await axios.get(`http://localhost:3001/api/communitylabs/news`)
+        // const response = await axios.get(`http://localhost:3001/api/communitylabs/news`) //local test
+        const response = await axios.get(`http://194.233.87.6:3001/api/communitylabs/news`)
+
         setNewsItems(response.data.newsItems)
       } catch (error) {
         console.error("Error fetching news:", error)

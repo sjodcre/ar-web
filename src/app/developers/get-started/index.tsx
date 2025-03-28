@@ -104,7 +104,7 @@ export const topics = [
           { title: "Setting up AOS", path: "aos" },
         ],
       },
-      { title: "Deploy your first app!", path: "deploy" },
+      { title: "Deploy your first app!", path: "deploy-first-app" },
       {
         title: "Wallets",
         path: "wallets",
@@ -358,7 +358,7 @@ const GetStarted = () => {
                       </li>
                       <li>
                         <a
-                          href="/developers/get-started/deploy"
+                          href="/developers/get-started/deploy-first-app"
                           className="text-muted-foreground hover:text-secondary transition-colors"
                         >
                           Deploy Your First App

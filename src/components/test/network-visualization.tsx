@@ -94,7 +94,7 @@ export default function NetworkVisualization({
       // Draw connections
       ctx.lineWidth = 0.5
 
-      nodesRef.current.forEach((node, i) => {
+      nodesRef.current.forEach((node) => {
         node.connections.forEach((targetIndex) => {
           const target = nodesRef.current[targetIndex]
 

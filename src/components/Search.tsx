@@ -34,7 +34,7 @@ const SearchFn = () => {
         console.log("✅ Loaded search index from fuse-index.json")
 
         const fuseIndex = Fuse.parseIndex<SearchItem>(indexJson)
-        setFuse(new Fuse<SearchItem>(searchDataJson, { keys: ["title", "content"], threshold: 0.1 }, fuseIndex))
+        setFuse(new Fuse<SearchItem>(searchDataJson, { keys: ["title", "content"], threshold: 0.2 }, fuseIndex))
       } catch (error) {
         console.warn("⚠️ Could not load index file. Make sure `generateSearchIndex.ts` has been run.")
       } finally {

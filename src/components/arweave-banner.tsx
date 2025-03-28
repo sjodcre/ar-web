@@ -71,7 +71,8 @@ export default function ArweaveBanner() {
         const fetchHighlights = async () => {
             try {
                 // ✅ Fetch from backend, NOT from external site directly
-                const response = await axios.get("http://localhost:3001/api/arweavehub/today");
+                // const response = await axios.get("http://localhost:3001/api/arweavehub/today");
+                const response = await axios.get("http://194.233.87.6:3001/api/arweavehub/today");
 
                 setPublicationDate(response.data.publicationDate);
                 setHighlights(response.data.highlights);
