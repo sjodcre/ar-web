@@ -259,7 +259,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
       if (!sessionId) return // No session, so show welcome message
 
       try {
-        const response = await fetch("http://194.233.87.6:3001/chat-history", {
+        const response = await fetch("https://ao-arweave.com/chat-history", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ sessionId }),
@@ -295,7 +295,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
     setIsLoading(true) // Show loading state
 
     try {
-      const response = await fetch("http://194.233.87.6:3001/chat", {
+      const response = await fetch("https://ao-arweave.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
