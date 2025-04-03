@@ -1,64 +1,105 @@
 # 💰 Funding Your Wander Wallet
 
-To interact with the Arweave and AO ecosystems using your Wander wallet, you'll need to acquire **AR tokens**. Here's a step-by-step guide to help you fund your wallet.
+To interact with the Arweave and AO ecosystems using your **Wander Wallet**, you'll need to acquire **AR** tokens and convert them into **AO-compatible tokens**.
 
 ---
 
-## 🛒 Step 1: Purchase AR Tokens
+## Understanding AR and Its Role in the AO Ecosystem
 
-**AR tokens** are the native cryptocurrency of the Arweave network. You can purchase them through various cryptocurrency exchanges. Here's how:
-
-1. **Choose a Cryptocurrency Exchange**  
-Select a reputable exchange that supports AR token trading. Some popular exchanges include:
-     <!-- - [Binance](https://www.binance.com/)
-     - [Gate.io](https://www.gate.io/)
-     - [KuCoin](https://www.kucoin.com/) -->
-| Exchange  | Logo |
-|-----------|------|
-| [Binance](https://www.binance.com/)  | <a href="https://www.binance.com/" target="_blank"><img src="./binance.png" alt="Binance" width="120"/></a> |
-| [Gate.io](https://www.gate.io/)      | <a href="https://www.gate.io/" target="_blank"><img src="./gateio_black.png" alt="Gate.io" width="120"/></a> |
-| [KuCoin](https://www.kucoin.com/)    | <a href="https://www.kucoin.com/" target="_blank"><img src="./kucoin_2.svg" alt="KuCoin" width="120"/></a> |
-
-2. **Create an Account**  
-   - Sign up on the chosen exchange and complete any necessary verification processes.
-
-3. **Deposit Funds**  
-   - Add funds to your exchange account using your preferred payment method (e.g., bank transfer, credit card).
-
-4. **Purchase AR Tokens**  
-   - Navigate to the trading section and buy the desired amount of AR tokens.
+**AR** is the native token of the Arweave network, used primarily for permanent data storage.  
+However, to utilize AR within the AO ecosystem, it must be converted into AO-compatible tokens such as **wAR** (wrapped AR) or **qAR** (Quantum-wrapped AR).  
+This conversion allows you to interact seamlessly with decentralized applications (dApps) and services within AO.
 
 ---
 
-## 🏦 Step 2: Transfer AR Tokens to Your Wander Wallet
+## Steps to Acquire and Utilize AR in the AO Ecosystem
 
-After purchasing AR tokens, transfer them to your Wander wallet:
+### 1. Obtain AR Tokens
 
-1. **Open Your Wander Wallet**  
-   - Launch the Wander extension or mobile app.
+**Purchase via Centralized Exchanges (CEX):**
 
-2. **Copy Your Wallet Address**  
-   - Locate and copy your unique wallet address. This is typically found under the "Receive" section.
+- **Popular Exchanges:**
+  - [Binance](https://www.binance.com/)
+  - [Gate.io](https://www.gate.io/)
+  - [KuCoin](https://www.kucoin.com/)
 
-3. **Initiate the Transfer**  
-   - In your exchange account, go to the withdrawal section.
-   - Paste your Wander wallet address.
-   - Enter the amount of AR tokens to transfer.
-   - Confirm the transaction.
+- **Steps:**
+  1. Sign up and complete verification on the exchange.
+  2. Deposit funds (e.g., bank transfer, credit card, or crypto deposit).
+  3. Purchase `AR` tokens.
+  4. Withdraw the `AR` tokens to your Wander Wallet address.
 
-4. **Wait for Confirmation**  
-   - Blockchain transactions may take some time. Once confirmed, your AR tokens will appear in your Wander wallet.
+**Direct Purchase within Wander Wallet:**
 
----
-
-## 💡 Additional Resources
-
-For more detailed instructions and support, refer to Wander's official help articles:
-
-- [How to receive Arweave and AO assets](https://www.wander.app/help/browser-extension-how-to-receive-arweave-and-ao-assets)
-- [How to buy AR tokens with fiat currency](https://www.wander.app/help/browser-extension-how-to-buy-ar-tokens-with-a-fiat-currency)
+- Use integrated fiat onramps like **Transak** to purchase AR directly using your debit/credit card.
+- KYC may be required depending on region.
 
 ---
 
-**Note:** Ensure you're sending AR tokens to the correct wallet address. Transactions on the blockchain are irreversible.
+### 2. Convert AR to AO-Compatible Tokens
 
+Once your Wander Wallet holds `AR`, convert it to `wAR` or `qAR` to participate in the AO ecosystem.
+
+#### 🧱 Bridge AR to wAR via AOX
+
+- **URL:** [https://aox.xyz/#/](https://aox.xyz/#/)
+- **Use Case:** Convert AR to wAR for use in AO-native dApps and swaps.
+- **Process:**
+  1. Connect your ArConnect wallet.
+  2. Select Arweave → AO bridge and choose `AR → wAR`.
+  3. Enter amount and confirm the transaction.
+- **Duration:** Typically 10–30 minutes.
+
+#### 🛰 Wrap AR into qAR via Astro USD Bridge
+
+- **URL:** [https://bridge.astrousd.com/](https://bridge.astrousd.com/)
+- **Note:** This is *not* a cross-chain bridge. It wraps AR into `qAR` (Quantum-wrapped AR), used for Quantum-based dApps.
+- **Process:**
+  1. Connect your Arweave wallet.
+  2. Enter the amount of AR to wrap.
+  3. Confirm to receive `qAR`.
+- **Security:** Wrapping secured via Multi-Party Computation (MPC).
+
+- **Docs:** [qAR on Astro USD](https://docs.astrousd.com/quantum/what-is-quantum/q-arweave-qar)
+
+---
+
+## 🔁 Swap Tokens Inside AO
+
+Once you have `wAR` or `qAR`, you can trade inside the AO ecosystem.
+
+### ✅ Swap via Permaswap
+
+- **URL:** [https://www.permaswap.network/#/ao](https://www.permaswap.network/#/ao)
+- **Overview:** AO-native decentralized exchange.
+- **Supported tokens:** `AO`, `wAR`, `aUSD`, and others.
+- **Wallets:** Wander, ArConnect, and compatible wallets.
+- **Features:** Market swaps, limit orders, fast execution.
+
+### 🧪 Experimental Swap via Botega
+
+- **URL:** [https://botega.arweave.net/#/swap](https://botega.arweave.net/#/swap)
+- Testnet AO DEX by Krab Tech.
+- Still evolving; use with caution.
+
+---
+
+## 🔍 Where to Use Your Tokens
+Once you’ve acquired wAR or qAR, explore available AO dApps inside the Wander Wallet:
+
+- Open your Wander extension
+- Click the "Explore" tab
+- Browse and launch supported applications like swaps, bridges, and more
+
+This lets you seamlessly discover what's possible in the AO ecosystem.
+
+---
+
+## ✨ Helpful Resources
+
+- [Official Wander Blog: How to Buy AR Tokens](https://www.wander.app/blog/how-to-buy-arweave-tokens)
+- [Astro USD Blog – Quantum Bridge](https://www.astrousd.com/blog/quantum-bridge-securely-connect-arweave-and-ao-ecosystems)
+
+---
+
+> ⚠️ Always double-check the wallet address before sending tokens. Blockchain transactions are irreversible.
