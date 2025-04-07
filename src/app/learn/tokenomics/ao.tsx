@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
+import React, { useState } from 'react';
+// import ReactMarkdown from 'react-markdown';
+// import remarkGfm from 'remark-gfm';
+// import rehypeRaw from 'rehype-raw';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 const AOComputerTokenomics: React.FC = () => {
-  const [shortContent, setShortContent] = useState('');
-  const [longContent, setLongContent] = useState('');
+  // const [shortContent, setShortContent] = useState('');
+  // const [longContent, setLongContent] = useState('');
   const [showLongVersion, setShowLongVersion] = useState(true);
 
-  useEffect(() => {
-    fetch('/content/learn/tokenomics/ao-short.md')
-      .then(res => res.text())
-      .then(setShortContent);
+  // useEffect(() => {
+  //   fetch('/content/learn/tokenomics/ao-short.md')
+  //     .then(res => res.text())
+  //     .then(setShortContent);
     
-    fetch('/content/learn/tokenomics/ao-long.md')
-      .then(res => res.text())
-      .then(setLongContent);
-  }, []);
+  //   fetch('/content/learn/tokenomics/ao-long.md')
+  //     .then(res => res.text())
+  //     .then(setLongContent);
+  // }, []);
+
+  let markdownFilePath = "learn/tokenomics/ao" // Default page
+
 
   // return (
   //   <div className="text-white container mx-auto p-4">
@@ -49,9 +53,11 @@ const AOComputerTokenomics: React.FC = () => {
 
       {/* Content Container */}
       <div className="markdown text-lg p-6 bg-black border border-gray-800 rounded-md w-full text-justify">
-        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+        {/* <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
           {showLongVersion ? longContent : shortContent}
-        </ReactMarkdown>
+        </ReactMarkdown> */}
+        <MarkdownRenderer filePath={markdownFilePath} variant={showLongVersion ? "long" : "short"} />
+
       </div>
       {/* Video Explanation Section */}
       {/* {showLongVersion &&(

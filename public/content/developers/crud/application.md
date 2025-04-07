@@ -9,6 +9,9 @@ This section walks you through setting up the backend for your CRUD application 
 2. Create a new project.
 3. Ensure the **SQLite module** is selected during project setup.
 
+<img src="/betteridea-sqlite-module.png" alt="betteridea-sqlite-module" style="width: 640px; height: auto "/>
+
+
 ### 1.2 What is a Module in AO?
 Modules in AO are **prebuilt libraries** that can be loaded to extend your process with specific functionality like databases, logging, or networking. They can be used to **spin up a new process** with specific behaviors.
 

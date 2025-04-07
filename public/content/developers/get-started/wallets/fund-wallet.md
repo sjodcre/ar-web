@@ -1,6 +1,9 @@
 # 💰 Funding Your Wander Wallet
 
+<!-- To interact with the Arweave and AO ecosystems using your **Wander Wallet**, you'll need to acquire **AR** tokens and convert them into **AO-compatible tokens**. -->
 To interact with the Arweave and AO ecosystems using your **Wander Wallet**, you'll need to acquire **AR** tokens. If you are only looking to deploy applications, AR tokens are enough (for now). However, if you wish to utilize more features, you may need to convert them into **AO-compatible tokens**.
+
+
 ---
 
 ## Understanding AR and Its Role in the AO Ecosystem
