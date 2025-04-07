@@ -12,13 +12,13 @@ export default function Footer() {
               The permanent storage network and computational platform for the decentralized web.
             </p>
             <div className="flex gap-4 text-muted-foreground">
-              <Link to="#" className="hover:text-foreground transition-colors">
+              <Link to="/legal/terms" className="hover:text-foreground transition-colors">
                 Terms
               </Link>
-              <Link to="#" className="hover:text-foreground transition-colors">
+              <Link to="/legal/privacy" className="hover:text-foreground transition-colors">
                 Privacy
               </Link>
-              <Link to="#" className="hover:text-foreground transition-colors">
+              <Link to="/legal/cookies" className="hover:text-foreground transition-colors">
                 Cookies
               </Link>
             </div>
@@ -28,11 +28,11 @@ export default function Footer() {
               <h3 className="text-lg font-medium mb-2">Documentation</h3>
               <ul className="grid gap-2">
                 <li>
-                  <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/developers/get-started/quick-start" className="text-muted-foreground hover:text-foreground transition-colors">
                     Getting Started
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     API Reference
                   </Link>
@@ -46,29 +46,29 @@ export default function Footer() {
                   <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     Tutorials
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">Resources</h3>
               <ul className="grid gap-2">
                 <li>
-                  <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/community/resource-hub" className="text-muted-foreground hover:text-foreground transition-colors">
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/community/resource-hub" className="text-muted-foreground hover:text-foreground transition-colors">
                     Community
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/community/resource-hub" className="text-muted-foreground hover:text-foreground transition-colors">
                     GitHub
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/community/resource-hub" className="text-muted-foreground hover:text-foreground transition-colors">
                     Discord
                   </Link>
                 </li>

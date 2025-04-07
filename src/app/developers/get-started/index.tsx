@@ -4,7 +4,7 @@ import { JSX, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
-import PermanenceIndicator from "@/components/test/permanence-indicator"
+// import PermanenceIndicator from "@/components/test/permanence-indicator"
 import Sidebar from "@/components/Sidebar"
 import { Code, FileCode, Laptop, Wallet } from "lucide-react"
 import { DocCategory } from "@/types"
@@ -43,15 +43,15 @@ export const topics = [
     
     ],
   },
-  {
-    title: "TBD2",
-    path: "tbd-2",
-    subtopics: [
-      { title: "TBD2", path: "why-arweave-ao/web2" },
-      { title: "TBD2", path: "why-arweave-ao/web3" },
-      { title: "TBD2", path: "why-arweave-ao/applications" },
-    ],
-  },
+  // {
+  //   title: "TBD2",
+  //   path: "tbd-2",
+  //   subtopics: [
+  //     { title: "TBD2", path: "why-arweave-ao/web2" },
+  //     { title: "TBD2", path: "why-arweave-ao/web3" },
+  //     { title: "TBD2", path: "why-arweave-ao/applications" },
+  //   ],
+  // },
 ]
 
 // Helper function to get page metadata
@@ -90,7 +90,7 @@ const getPageMetadata = (page?: string, subpage?: string) => {
             metadata.title = "Installation Guide"
             metadata.icon = <FileCode className="h-5 w-5 text-secondary" />
             metadata.category = "computation"
-        } else if (subpage === "deploy") {
+        } else if (subpage === "deploy-first-app") {
             metadata.title = "Deploy Your First App"
             metadata.icon = <Code className="h-5 w-5 text-secondary" />
             metadata.category = "storage"
@@ -99,8 +99,16 @@ const getPageMetadata = (page?: string, subpage?: string) => {
             metadata.icon = <Wallet className="h-5 w-5 text-secondary" />
         } 
     } else if (page === "crud") {
-      metadata.title = "CRUD Application Setup"
+
+      if (subpage === "application") {
+        metadata.title = "CRUD Application Setup"
       metadata.icon = <Laptop className="h-5 w-5 text-secondary" />
+    } else if (subpage === "deploy") {
+        metadata.title = "Deploy CRUD Application"
+        metadata.icon = <Code className="h-5 w-5 text-secondary" />
+        metadata.category = "storage"
+    }
+      
   }
 
   return metadata
@@ -185,10 +193,10 @@ const GetStarted = () => {
             <div className="md:col-span-3">
               {/* Main content */}
               <div className="prose prose-invert max-w-none p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg">
-                <div className="flex items-center gap-2 mb-4 pb-4 border-b border-secondary/20">
+                {/* <div className="flex items-center gap-2 mb-4 pb-4 border-b border-secondary/20">
                   {metadata.icon}
                   <h1 className="text-2xl font-bold gradient-text m-0">{metadata.title}</h1>
-                </div>
+                </div> */}
                 <MarkdownRenderer filePath={markdownFilePath} />
               </div>
 
@@ -231,7 +239,7 @@ const GetStarted = () => {
             <div className="md:col-span-1">
               {/* Sidebar content */}
               <div className="space-y-4 sticky top-4">
-                <PermanenceIndicator status={metadata.status} timestamp={metadata.lastUpdated} confirmations={15} />
+                {/* <PermanenceIndicator status={metadata.status} timestamp={metadata.lastUpdated} confirmations={15} /> */}
 
                 {/* {headings.length > 0 && (
                   <div className="rounded-lg border border-secondary/20 overflow-hidden">
@@ -256,7 +264,7 @@ const GetStarted = () => {
                 )} */}
 
                 {/* Quick links */}
-                <div className="rounded-lg border border-secondary/20 overflow-hidden">
+                {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
                   <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">
                     <h3 className="font-medium text-sm">Quick Links</h3>
                   </div>
@@ -296,7 +304,7 @@ const GetStarted = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -34,19 +34,28 @@ Visit: [APM Docs](https://apm.betteridea.dev)
 .load-blueprint apm
 ```
 
+<img src="/load-apm-blueprint.png" alt="load-apm-blueprint" style="width: 640px; height: auto "/>
+
+
 #### 1.3.3 Update APM
 ```lua title="update-apm.lua" description="Ensures your APM is on the latest version."
 apm.update()
 ```
+
+<img src="/apm-update.png" alt="apm-update" style="width: 640px; height: auto "/>
+
 
 #### 1.3.4 Install DbAdmin Package
 ```lua title="install-dbadmin.lua" description="Installs the @rakis/DbAdmin package for managing SQLite."
 apm.install("@rakis/DbAdmin")
 ```
 
+<img src="/apm-install-dbadmin.png" alt="apm-install-dbadmin" style="width: 640px; height: auto "/>
+
+
 ### 1.4 Define the CRUD Logic
 
-Copy each code block into your AO environment and click the **green run button** on the left side of each cell.
+Copy each code block into your AO environment and click the **green run button** on the left side of each cell. <img src="/run-cell-button.png" alt="run-cell-button" style="width: 20px; height: auto;"/>
 
 #### 1.4.1 Initialize SQLite and DbAdmin
 
@@ -219,6 +228,8 @@ export const TAGS = {
 import { useEffect, useState } from "react";
 import { message, result, dryrun, createDataItemSigner } from "@permaweb/aoconnect";
 import { processId, TAGS } from "../shared/config/aoConfig";
+import { useNavigate } from 'react-router-dom';
+
 
 type Post = {
     id: number;
@@ -231,13 +242,14 @@ export default function CrudPage() {
     const [posts, setPosts] = useState<Post[]>([]);
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchPosts();
     }, []);
 
     const handleUpdateRedirect = (id: number) => {
-        window.location.href = `/edit/${id}`; // go to update page
+        navigate(`/edit/${id}`);
     };
 
     const handleDeletePost = async (id: number) => {

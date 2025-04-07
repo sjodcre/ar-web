@@ -1,4 +1,4 @@
-# 🛠️ Setting Up Local Arweave with ArLocal
+<!-- # 🛠️ Setting Up Local Arweave with ArLocal
 
 ## 🔹 What is ArLocal?
 ArLocal is a tool that allows developers to quickly set up a **local Arweave gateway** for testing transactions in a **simulated environment**. This enables you to interact with Arweave without spending AR tokens, making development and testing easier.
@@ -162,4 +162,8 @@ import Arweave from "arweave";
 ✅ **Run with npx or install as a dependency**  
 ✅ **Use Arweave.js to interact with the local instance**  
 
-🚀 **Now you're ready to build & test Arweave applications locally!** 🔥
+🚀 **Now you're ready to build & test Arweave applications locally!** 🔥 -->
+
+
+## 🔹 Important Update
+This section will be modified as a new local development environment is being created. In the meantime, you can safely assume that as long as your projects are working on Vercel, a few simple tweaks will get your application to work on Arweave!

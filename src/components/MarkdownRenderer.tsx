@@ -175,7 +175,6 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }
   const [markdownContent, setMarkdownContent] = useState("⌛ Loading content...")
 
   useEffect(() => {
-    console.log("MarkdownRenderer fetching:", filePath)
 
     let fileToFetch = filePath
     if (variant) {
@@ -232,9 +231,6 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }
 
             const meta = metaString.split(" ").slice(1).join(" ") // removes ```lang
 
-            console.log("match", match)
-            console.log("codeText", codeText)
-            console.log("meta", meta)
             const titleMatch = /title="([^"]+)"/.exec(meta)
             const title = titleMatch ? titleMatch[1] : undefined
 

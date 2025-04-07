@@ -312,7 +312,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
 
       const data = await response.json()
 
-      console.log("data from query", data)
+      // console.log("data from query", data)
       if (!sessionId) {
         setSessionId(data.sessionId)
         localStorage.setItem("chatSessionId", data.sessionId) // ✅ Store sessionId

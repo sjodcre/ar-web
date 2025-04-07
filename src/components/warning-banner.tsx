@@ -1,5 +1,5 @@
 export default function WarningBanner() {
-  const lastUpdated = "March 20, 2025" // Set manually
+  const lastUpdated = "April 7, 2025" // Set manually
 
   return (
     <div className="flex justify-center mt-4 mb-8">

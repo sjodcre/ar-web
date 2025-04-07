@@ -16,6 +16,10 @@ import AtomicAssets from './app/learn/atomic-assets'
 import RootLayout from './components/layout/RootLayout'
 import Footer from './components/footer'
 import ExampleDocPage from './app/example-doc-page'
+import ScrollToTop from './components/ScrollToTop'
+import Terms from './app/legal/Terms'
+import Privacy from './app/legal/Privacy'
+import Cookies from './app/legal/Cookies'
 
 
 
@@ -24,12 +28,16 @@ function App() {
   return (
     <RootLayout>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <div className="pt-16">
           <WarningBanner />
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/legal/terms" element={<Terms />} />
+            <Route path="/legal/privacy" element={<Privacy />} />
+            <Route path="/legal/cookies" element={<Cookies />} />
             <Route path="/test" element={<ExampleDocPage />} />
             <Route path="/learn" element={<Learn />} />
             <Route path="/learn/social-impact" element={<SocialImpact />} />

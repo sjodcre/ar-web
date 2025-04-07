@@ -219,7 +219,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
-import PermanenceIndicator from "@/components/test/permanence-indicator"
+// import PermanenceIndicator from "@/components/test/permanence-indicator"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Sidebar from "@/components/Sidebar"
 
@@ -420,8 +420,8 @@ export default function ArweaveAO101() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
             <div className="md:col-span-3">
               {/* Version toggle */}
-              <div className="flex justify-end mb-4">
-                <button
+              <div className="flex justify-center mb-4">
+              <button
                   onClick={() => setShowLongVersion((prev) => !prev)}
                   className={`px-3 py-1.5 rounded-md border ${
                     showLongVersion
@@ -479,7 +479,7 @@ export default function ArweaveAO101() {
             <div className="md:col-span-1">
               {/* Sidebar content */}
               <div className="space-y-4 sticky top-4">
-                <PermanenceIndicator status="permanent" timestamp={lastUpdated} confirmations={12} />
+                {/* <PermanenceIndicator status="permanent" timestamp={lastUpdated} confirmations={12} /> */}
 
                 {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
                   <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">

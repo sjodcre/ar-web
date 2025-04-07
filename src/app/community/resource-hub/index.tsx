@@ -266,7 +266,7 @@
 //                 </div>
 //               </div>
 //             </div>
-           
+
 //           </div>
 //         </div>
 
@@ -472,7 +472,7 @@
 //   return (
 //     <div className="border-t border-gray-800 pt-4">
 //       <h3 className={`font-semibold text-lg ${theme === "cyan" ? "text-cyan-400" : "text-indigo-400"}`}>
-        
+
 //         {handle2 ? 
 //         <>
 //             <a 
@@ -598,14 +598,17 @@ import { ArrowUpRight, ExternalLink, Database } from "lucide-react"
 
 import { FaMedium, FaYoutube, FaDiscord, FaGithub } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
+import { useNavigate } from "react-router-dom"
+
 
 const CommunityPage: FC = () => {
   const [activeTab, setActiveTab] = useState<"arweave" | "ao">("ao")
+  const navigate = useNavigate()
 
   return (
     <div className="min-h-screen bg-background">
       {/* Background patterns */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 grid-lines opacity-20"></div>
         <div className="absolute inset-0 blockchain-pattern opacity-10"></div>
       </div>
@@ -637,7 +640,7 @@ const CommunityPage: FC = () => {
             </p>
             {/* Quick links */}
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
+              {/* <a
                 href="#wayfinding"
                 className="px-6 py-3 rounded-md bg-foreground/10 backdrop-blur-sm border border-foreground/20 text-foreground hover:bg-foreground/20 transition-colors duration-300"
               >
@@ -650,7 +653,7 @@ const CommunityPage: FC = () => {
                 className="px-6 py-3 rounded-md bg-highlight/20 backdrop-blur-sm border border-highlight/30 text-highlight hover:bg-highlight/30 transition-colors duration-300"
               >
                 Join Discord
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -686,7 +689,10 @@ const CommunityPage: FC = () => {
               </div>
 
               <div className="relative z-10">
-                <button className="bg-secondary/20 text-secondary border border-secondary/30 px-6 py-3 rounded-md inline-flex items-center font-medium hover:bg-secondary/30 transition-all duration-300 group-hover:translate-x-1">
+                <button 
+                  onClick={() => navigate("/learn/arweave-ao-101/arweave/introduction")} 
+                  className="bg-secondary/20 text-secondary border border-secondary/30 px-6 py-3 rounded-md inline-flex items-center font-medium hover:bg-secondary/30 transition-all duration-300 group-hover:translate-x-1"
+                >
                   <Database className="h-4 w-4 mr-2" />
                   EXPLORE DOCS
                   <svg
@@ -748,25 +754,46 @@ const CommunityPage: FC = () => {
               </div>
 
               <div className="relative z-10">
-                <button className="bg-highlight/20 text-highlight border border-highlight/30 px-6 py-3 rounded-md inline-flex items-center font-medium hover:bg-highlight/30 transition-all duration-300 group-hover:translate-x-1">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  GO TO PODCAST
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="ml-2"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </button>
+                <div className="flex space-x-4">
+                  <a href="https://www.youtube.com/watch?v=VtBwzHWnWRY&list=PLUKdONsfBIGXqqDfWrSPlGISQQju1agWL" target="_blank" rel="noopener noreferrer" className="bg-highlight/20 text-highlight border border-highlight/30 px-6 py-3 rounded-md inline-flex items-center font-medium hover:bg-highlight/30 transition-all duration-300 group-hover:translate-x-1">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    GO TO PODCAST 1
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="ml-2"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=68rHNRAt2nA&list=PL2nQaVnO6V_M3XDY1Y_ZcKRMPu8b_Qxt1" target="_blank" rel="noopener noreferrer" className="bg-highlight/20 text-highlight border border-highlight/30 px-6 py-3 rounded-md inline-flex items-center font-medium hover:bg-highlight/30 transition-all duration-300 group-hover:translate-x-1">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    GO TO PODCAST 2
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="ml-2"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -797,7 +824,7 @@ const CommunityPage: FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-foreground mb-4">Wayfinding</h2>
         {/* <p className={activeTab === "arweave" ? "text-secondary mb-8 text-xl" : "text-highlight mb-8 text-xl"}> */}
-        <p className= "text-secondary mb-8 text-xl" >
+        <p className="text-secondary mb-8 text-xl" >
 
           Navigate the ecosystem
         </p>
@@ -805,18 +832,16 @@ const CommunityPage: FC = () => {
         {/* Tab Navigation */}
         <div className="flex border-b border-secondary/20 mb-12">
           <button
-            className={`py-3 px-6 font-medium text-lg transition-colors duration-300 relative ${
-              activeTab === "arweave" ? "text-secondary" : "text-muted-foreground hover:text-foreground"
-            }`}
+            className={`py-3 px-6 font-medium text-lg transition-colors duration-300 relative ${activeTab === "arweave" ? "text-secondary" : "text-muted-foreground hover:text-foreground"
+              }`}
             onClick={() => setActiveTab("arweave")}
           >
             Arweave
             {activeTab === "arweave" && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>}
           </button>
           <button
-            className={`py-3 px-6 font-medium text-lg transition-colors duration-300 relative ${
-              activeTab === "ao" ? "text-secondary" : "text-muted-foreground hover:text-foreground"
-            }`}
+            className={`py-3 px-6 font-medium text-lg transition-colors duration-300 relative ${activeTab === "ao" ? "text-secondary" : "text-muted-foreground hover:text-foreground"
+              }`}
             onClick={() => setActiveTab("ao")}
           >
             AO Computer
@@ -1019,19 +1044,19 @@ const CommunityPage: FC = () => {
                     handle1="@aoTheComputer"
                     description="Official AO account for announcements and updates."
                     followers1="49K+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <TwitterAccount
                     handle1="@aoComputerClub"
                     description="AO enthusiasts, sharing insights and resources, with a focus on DevBot for users building on AO."
                     followers1="3K+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <TwitterAccount
                     handle1="@ao_builders"
                     description="A premier innovation hub to realize the vision of @aoTheComputer."
                     followers1="33K+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <TwitterAccount
                     handle1="@CommunityLabs"
@@ -1039,7 +1064,7 @@ const CommunityPage: FC = () => {
                     description="Venture studios igniting innovation on AO & Arweave."
                     followers1="4K+"
                     followers2="1K+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                 </div>
               </div>
@@ -1060,35 +1085,35 @@ const CommunityPage: FC = () => {
                     link="https://www.youtube.com/@perma_web"
                     description="Official Arweave + AO youtube channel."
                     subscribers="2K+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <YouTubeChannel
                     name="Permanent Data Solutions"
                     link="https://www.youtube.com/@pds-inc/"
                     description="Developing solutions for users and enterprises using Arweave."
                     subscribers="700+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <YouTubeChannel
                     name="Weavers"
                     link="https://www.youtube.com/@Weavers_Org"
                     description="A community of developers & creatives in the Arweave ecosystem."
                     subscribers="140+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <YouTubeChannel
                     name="Arweave India "
                     link="https://www.youtube.com/@ArweaveIndia"
                     description="The Arweave Indian community, with tutorials and demo codes for Arweave + AO."
                     subscribers="72+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <YouTubeChannel
                     name="Arweave New York "
                     link="https://www.youtube.com/@arweaveny"
                     description="The Arweave New Yorkcommunity, with tutorials and demo codes for Arweave + AO."
                     subscribers="9+"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                 </div>
               </div>
@@ -1108,25 +1133,25 @@ const CommunityPage: FC = () => {
                     name="AO Main Discord Server"
                     link="https://discord.com/invite/dYXtHwc9dc"
                     description="Join our general chat to connect with community members."
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <DiscordChannel
                     name="Arweave Dev Talk"
                     link="https://discord.gg/eQ4RKYsS"
                     description="Get help and support from fellow developers."
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <DiscordChannel
                     name="Weavers"
                     link="https://discord.com/invite/weavers"
                     description="Be a weaver! Arweave + AO."
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                   <DiscordChannel
                     name="Arweave Hub"
                     link=""
                     description="Watch for upcoming fullstack hackathons on Arweave + AO!"
-                    // theme="highlight"
+                  // theme="highlight"
                   />
                 </div>
               </div>

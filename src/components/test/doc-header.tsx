@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Clock, Database, LinkIcon, Shield } from "lucide-react"
+// import { Clock, Database, LinkIcon, Shield } from "lucide-react"
 import { DocCategory } from "@/types"
 
 interface DocHeaderProps {
@@ -11,17 +11,19 @@ interface DocHeaderProps {
   category?: DocCategory
 }
 
-export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", category = "general" }: DocHeaderProps) {
-  const [currentTime, setCurrentTime] = useState(new Date())
+// export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", category = "general" }: DocHeaderProps) {
+  export default function DocHeader({ title, category = "general" }: DocHeaderProps) {
+
+  // const [currentTime, setCurrentTime] = useState(new Date())
   const [isVisible, setIsVisible] = useState(false)
 
   // Calculate time since last update
-  const lastUpdatedDate = new Date(lastUpdated)
-  const timeDiff = currentTime.getTime() - lastUpdatedDate.getTime()
-  const daysSinceUpdate = Math.floor(timeDiff / (1000 * 3600 * 24))
+  // const lastUpdatedDate = new Date(lastUpdated)
+  // const timeDiff = currentTime.getTime() - lastUpdatedDate.getTime()
+  // const daysSinceUpdate = Math.floor(timeDiff / (1000 * 3600 * 24))
 
   // Determine permanence status
-  const isPermanent = txId !== "unconfirmed"
+  // const isPermanent = txId !== "unconfirmed"
 
   // Category-based styling
   const categoryStyles = {
@@ -34,7 +36,7 @@ export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", ca
   useEffect(() => {
     // Update current time every minute
     const timer = setInterval(() => {
-      setCurrentTime(new Date())
+      // setCurrentTime(new Date())
     }, 60000)
 
     // Animation on mount
@@ -63,7 +65,7 @@ export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", ca
             <h1 className="text-2xl md:text-3xl font-bold font-mono gradient-text mb-2">{title}</h1>
 
             {/* Permanence indicator */}
-            <div className="flex items-center gap-2 text-sm">
+            {/* <div className="flex items-center gap-2 text-sm">
               <div className={`flex items-center gap-1.5 ${isPermanent ? "text-secondary" : "text-muted-foreground"}`}>
                 {isPermanent ? <Shield className="h-4 w-4" /> : <Clock className="h-4 w-4" />}
                 <span>{isPermanent ? "Permanently Stored" : "Not Yet Permanent"}</span>
@@ -75,11 +77,11 @@ export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", ca
                 <Clock className="h-4 w-4" />
                 <span>Updated {daysSinceUpdate} days ago</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Transaction details */}
-          {isPermanent && (
+          {/* {isPermanent && (
             <div className="flex flex-col items-start md:items-end">
               <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
                 <Database className="h-3.5 w-3.5" />
@@ -91,14 +93,13 @@ export default function DocHeader({ title, lastUpdated, txId = "unconfirmed", ca
                   className="text-muted-foreground hover:text-secondary transition-colors"
                   onClick={() => {
                     navigator.clipboard.writeText(txId)
-                    // You could add a toast notification here
                   }}
                 >
                   <LinkIcon className="h-3.5 w-3.5" />
                 </button>
               </div>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Digital horizon line */}

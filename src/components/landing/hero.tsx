@@ -31,14 +31,15 @@ export default function Hero() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
-                to="#"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                to="/developers/get-started/quick-start"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow border border-border transition-colors hover:border-primary hover:bg-opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 Get Started
               </Link>
+
               <Link
-                to="#"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                to="/learn/arweave-ao-101/arweave/introduction"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow border border-border transition-colors hover:border-primary hover:bg-opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

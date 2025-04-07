@@ -195,7 +195,6 @@ const Sidebar: React.FC<SidebarProps> = ({ section, topics }) => {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({})
   const currentPath = [page, subpage, subsubpage].filter(Boolean).join("/")
-  console.log("currentPath:", currentPath)
   // console.log("page:", page)
   // console.log("subpage:", subpage)
   // console.log("subsubpage:", subsubpage)
@@ -206,9 +205,6 @@ const Sidebar: React.FC<SidebarProps> = ({ section, topics }) => {
 
     topics.forEach((topic) => {
       if (topic.path === page) {
-        console.log("updatedSections:", updatedSections)
-        console.log("topic path:", topic.path)
-        console.log("page: ", page)
         updatedSections[topic.title] = true // Open the topic
       }
 
@@ -232,7 +228,6 @@ const Sidebar: React.FC<SidebarProps> = ({ section, topics }) => {
         }
       })
     })
-    console.log("updatedsections:", updatedSections)
     setOpenSections(updatedSections)
   }, [page, subpage, subsubpage]) // Run this effect whenever the URL changes
 

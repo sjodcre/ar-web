@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import DocHeader from "./doc-header"
-import PermanenceIndicator from "./permanence-indicator"
+// import PermanenceIndicator from "./permanence-indicator"
 import Sidebar from "../Sidebar"
 
 interface DocPageLayoutProps {
@@ -21,8 +21,8 @@ export default function DocPageLayout({
   lastUpdated,
   txId,
   category = "general",
-  status = "permanent",
-  confirmations = 12,
+  // status = "permanent",
+  // confirmations = 12,
   section,
   topics,
 }: DocPageLayoutProps) {
@@ -52,7 +52,7 @@ export default function DocPageLayout({
             <div className="md:col-span-1">
               {/* Sidebar content */}
               <div className="space-y-6 sticky top-6">
-                <PermanenceIndicator status={status} timestamp={lastUpdated} confirmations={confirmations} />
+                {/* <PermanenceIndicator status={status} timestamp={lastUpdated} confirmations={confirmations} /> */}
 
                 <div className="rounded-lg border border-secondary/20 overflow-hidden">
                   <div className="bg-card/80 px-4 py-2 border-b border-secondary/20">

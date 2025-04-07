@@ -267,9 +267,6 @@ export const topics: Topic[] = [
 export default function AtomicAssets() {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const navigate = useNavigate()
-  console.log("page", page)
-  console.log("subpage", subpage)
-  console.log("subsubpage", subsubpage)
 
   useEffect(() => {
     if (!page) {

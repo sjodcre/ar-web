@@ -29,9 +29,8 @@ Now that you have your wallet ready, it’s time to set up your development envi
 ---
 <details>
 <summary><span class="text-xl font-bold text-secondary/90">🔹 2.1 Local Arweave Setup (Optional For Testing)</span></summary>
-<!-- ### 🔹 **2.1 Local Arweave Setup (For Testing)**   -->
 
-If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./developers/get-started/installation/arweave)** to create a local testing environment.
+<!-- If you haven't set up ArLocal yet, follow our **[Local Arweave Setup Guide](./developers/get-started/installation/arweave)** to create a local testing environment.
 
 ✅ **No AR tokens required**  
 ✅ **Instant transactions**  
@@ -41,7 +40,8 @@ Once set up, you can start ArLocal using:
 ```sh title="Start Local Arweave Node" description="Launches ArLocal for a local Arweave testing environment with instant transactions."
 npx arlocal
 
-```
+``` -->
+This section is currently being updated as a new local development environment is being created. We will update this section as soon as it is released!
 </details>
 
 ### 🔹 **2.2 Setting Up BetterIdea (For AO Development)**  

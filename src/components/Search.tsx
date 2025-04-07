@@ -31,7 +31,7 @@ const SearchFn = () => {
         const indexJson = await indexResponse.json()
         const searchDataJson = await dataResponse.json()
 
-        console.log("✅ Loaded search index from fuse-index.json")
+        // console.log("✅ Loaded search index from fuse-index.json")
 
         const fuseIndex = Fuse.parseIndex<SearchItem>(indexJson)
         setFuse(new Fuse<SearchItem>(searchDataJson, { keys: ["title", "content"], threshold: 0.2 }, fuseIndex))
@@ -58,7 +58,7 @@ const SearchFn = () => {
     if (!fuse) return
 
     const searchResults = fuse.search(value).map((result) => result.item)
-    console.log("Search Results for:", value, searchResults)
+    // console.log("Search Results for:", value, searchResults)
     setResults(searchResults)
   }
 
