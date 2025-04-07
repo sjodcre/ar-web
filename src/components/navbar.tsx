@@ -57,16 +57,16 @@ const navItems: Record<string, NavItem[]> = {
     },
     { title: "API Reference", href: "#", isDeveloped: false },
   ],
-  Solutions: [
-    { title: "Enterprise", href: "#", isDeveloped: false },
-    { title: "Startups", href: "#", isDeveloped: false },
-    { title: "Use Cases", href: "#", isDeveloped: false },
-  ],
-  Network: [
-    { title: "Overview", href: "#", isDeveloped: false },
-    { title: "Statistics", href: "#", isDeveloped: false },
-    { title: "Explorer", href: "#", isDeveloped: false },
-  ],
+  // Solutions: [
+  //   { title: "Enterprise", href: "#", isDeveloped: false },
+  //   { title: "Startups", href: "#", isDeveloped: false },
+  //   { title: "Use Cases", href: "#", isDeveloped: false },
+  // ],
+  // Network: [
+  //   { title: "Overview", href: "#", isDeveloped: false },
+  //   { title: "Statistics", href: "#", isDeveloped: false },
+  //   { title: "Explorer", href: "#", isDeveloped: false },
+  // ],
   Community: [
     { title: "News", href: "/community/news", isDeveloped: true },
     { title: "Events", href: "#", isDeveloped: false },
