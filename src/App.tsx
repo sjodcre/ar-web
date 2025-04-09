@@ -31,7 +31,7 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <div className="pt-16">
-          <WarningBanner />
+          {/* <WarningBanner /> */}
 
           <Routes>
             <Route path="/" element={<Home />} />
