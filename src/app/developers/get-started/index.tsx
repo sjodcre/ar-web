@@ -43,15 +43,14 @@ export const topics = [
     
     ],
   },
-  // {
-  //   title: "TBD2",
-  //   path: "tbd-2",
-  //   subtopics: [
-  //     { title: "TBD2", path: "why-arweave-ao/web2" },
-  //     { title: "TBD2", path: "why-arweave-ao/web3" },
-  //     { title: "TBD2", path: "why-arweave-ao/applications" },
-  //   ],
-  // },
+  {
+    title: "Concepts",
+    path: "concepts",
+    subtopics: [
+      { title: "Lua Handlers", path: "handlers" },
+      { title: "Signing Transactions", path: "sign-transaction" },
+    ],
+  },
 ]
 
 // Helper function to get page metadata
