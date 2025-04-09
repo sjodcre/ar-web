@@ -14,7 +14,7 @@ const navItems: Record<string, NavItem[]> = {
     { title: "Arweave and AO 101", href: "/learn/arweave-ao-101", isDeveloped: true },
     { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact", isDeveloped: false },
-    { title: "Storage Fee Structure", href: "learn/fee-structure", isDeveloped: false },
+    { title: "Storage Fee Structure", href: "/learn/fees", isDeveloped: true },
     {
       title: "Whitepapers",
       href: "/learn/whitepapers",

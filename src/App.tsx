@@ -9,7 +9,7 @@ import News from './app/community/news'
 import AOComputerTokenomics from './app/learn/tokenomics/ao'
 import ArweaveTokenomics from './app/learn/tokenomics/arweave'
 import CommunityPage from './app/community/resource-hub'
-import WarningBanner from './components/warning-banner'
+// import WarningBanner from './components/warning-banner'
 import GetStarted from './app/developers/get-started'
 import { Toaster } from "@/components/ui/sonner"
 import AtomicAssets from './app/learn/atomic-assets'
@@ -20,6 +20,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Terms from './app/legal/Terms'
 import Privacy from './app/legal/Privacy'
 import Cookies from './app/legal/Cookies'
+import StorageFeesPage from './app/learn/storage-fees'
 
 
 
@@ -35,6 +36,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/learn/fees" element={<StorageFeesPage />} />
             <Route path="/legal/terms" element={<Terms />} />
             <Route path="/legal/privacy" element={<Privacy />} />
             <Route path="/legal/cookies" element={<Cookies />} />
