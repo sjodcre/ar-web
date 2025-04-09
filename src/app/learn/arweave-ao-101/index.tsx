@@ -220,7 +220,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
 // import PermanenceIndicator from "@/components/test/permanence-indicator"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { BookOpen, ChevronLeft, ChevronRight, FileText } from "lucide-react"
 import Sidebar from "@/components/Sidebar"
 
 interface Subtopic {
@@ -421,15 +421,24 @@ export default function ArweaveAO101() {
             <div className="md:col-span-3">
               {/* Version toggle */}
               <div className="flex justify-center mb-4">
-              <button
+                <button
                   onClick={() => setShowLongVersion((prev) => !prev)}
-                  className={`px-3 py-1.5 rounded-md border ${
-                    showLongVersion
-                      ? "border-secondary/30 bg-secondary/10 text-secondary"
-                      : "border-muted text-muted-foreground"
-                  } hover:bg-secondary/20 transition-colors`}
+                  className={`px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 ${showLongVersion
+                      ? "bg-secondary/20 text-secondary border border-secondary/30 hover:bg-secondary/30"
+                      : "bg-highlight/20 text-highlight border border-highlight/30 hover:bg-highlight/30"
+                    }`}
                 >
-                  {showLongVersion ? "Switch to TL;DR" : "Switch to Full Version"}
+                  {showLongVersion ? (
+                    <>
+                      <FileText className="h-4 w-4" />
+                      <span>TL;DR</span>
+                    </>
+                  ) : (
+                    <>
+                      <BookOpen className="h-4 w-4" />
+                      <span>Full Version</span>
+                    </>
+                  )}
                 </button>
               </div>
 
@@ -444,11 +453,10 @@ export default function ArweaveAO101() {
                 <button
                   onClick={() => prevPath && navigate(prevPath)}
                   disabled={!prevPath}
-                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${
-                    prevPath
-                      ? "bg-card hover:bg-secondary/10 border border-secondary/20 cursor-pointer"
-                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                  }`}
+                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${prevPath
+                    ? "bg-card hover:bg-secondary/10 border border-secondary/20 cursor-pointer"
+                    : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
+                    }`}
                 >
                   <ChevronLeft className="h-5 w-5" />
                   <div className="flex flex-col items-start text-left">
@@ -461,11 +469,10 @@ export default function ArweaveAO101() {
                 <button
                   onClick={() => nextPath && navigate(nextPath)}
                   disabled={!nextPath}
-                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${
-                    nextPath
-                      ? "bg-card hover:bg-secondary/10 border border-secondary/20"
-                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                  }`}
+                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${nextPath
+                    ? "bg-card hover:bg-secondary/10 border border-secondary/20"
+                    : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
+                    }`}
                 >
                   <div className="flex flex-col items-end text-right">
                     <span className="text-xs text-muted-foreground">Next</span>
@@ -476,9 +483,8 @@ export default function ArweaveAO101() {
               </div>
             </div>
 
-            <div className="md:col-span-1">
-              {/* Sidebar content */}
-              <div className="space-y-4 sticky top-4">
+            {/* <div className="md:col-span-1"> */}
+              {/* <div className="space-y-4 sticky top-4"> */}
                 {/* <PermanenceIndicator status="permanent" timestamp={lastUpdated} confirmations={12} /> */}
 
                 {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
@@ -519,8 +525,8 @@ export default function ArweaveAO101() {
                     </ul>
                   </div>
                 </div> */}
-              </div>
-            </div>
+              {/* </div> */}
+            {/* </div> */}
           </div>
         </div>
       </main>

@@ -22,7 +22,6 @@ Arweave fosters a **community-driven ecosystem** where developers can build:
 - **Fully decentralized applications (dApps)**.
 - **Gateways** that provide seamless access to stored data.
 - **GraphQL APIs** for efficient data querying.
-- **SmartWeave**—a platform for decentralized smart contracts.
 
 ## **Sources**
 - [What is Arweave](https://arweave.org/)
