@@ -16,8 +16,6 @@ Beyond static files, developers can create **full-fledged decentralized applicat
 ## **Key Technologies**
 - **Gateways** → Act as access points for retrieving and displaying stored data.
 - **GraphQL APIs** → Enable users to efficiently query stored data.
-- **SmartWeave** → Arweave’s **smart contract** system.
-- **Profit-Sharing Communities (PSCs)** → Allow developers to distribute revenue and governance to users.
 
 ## **Sources**
 - [What is the Permaweb](https://arweave.org/)

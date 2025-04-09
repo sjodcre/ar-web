@@ -5,7 +5,7 @@
 | **Hosting & Backend** | Uses centralized cloud providers (AWS, Firebase, Vercel) | Some decentralized hosting (IPFS, Filecoin) but limited permanence | Fully decentralized hosting & compute (Arweave + AO) |
 | **Storage**          | Databases like PostgreSQL, MongoDB, Firebase (data can be altered/deleted) | Uses IPFS/Filecoin (but requires pinning to keep data accessible) | **Arweave provides permanent, immutable storage** |
 | **Compute Execution** | Runs on centralized servers (Node.js, Python, Go, etc.) | Smart contracts execute on-chain (Ethereum/Solana) but limited in scope | **AO enables scalable, parallel, decentralized execution** |
-| **Smart Contracts**  | Uses Node.js, Python, Express for API logic | Solidity (Ethereum), Rust (Solana) | **AO uses Lua for execution, SmartWeave for contract logic** |
+| **Smart Contracts**  | Uses Node.js, Python, Express for API logic | Solidity (Ethereum), Rust (Solana) | **AO uses Lua for execution and for contract logic** |
 | **Databases**        | SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Firebase) | Indexed event logs, IPFS/Filecoin for partial data storage | **Databases can be written inside AO (currently SQLite3)** |
 | **Frontend & Routing** | Uses Next.js, Vite, traditional SSR/CSR models | Same frameworks, but relies on blockchain nodes for querying | **Same frontend stack (Next.js, Vite, React)**, routing works differently (Arweave gateways instead of servers) |
 
