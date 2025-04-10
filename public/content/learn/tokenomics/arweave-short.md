@@ -1,3 +1,8 @@
+---
+title: "Understanding the AR Token and Its Role in Arweave's Economy"
+description: "Explore the significance of the AR token in Arweave's permanent storage network, including its utility, supply, and economic sustainability."
+---
+
 The **AR token** is central to Arweave’s **permanent storage economy**, ensuring network sustainability.
 
 ## 🔹 Utility of AR

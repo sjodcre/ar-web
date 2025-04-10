@@ -1,3 +1,8 @@
+---
+title: "Introduction to AO: A Decentralized Hyper-Parallel Compute Layer on Arweave"
+description: "Explore AO, a decentralized hyper-parallel compute layer built on Arweave, designed for efficient task execution and infinite scalability for various applications."
+---
+
 AO is a **decentralized hyper-parallel compute** layer built on **Arweave**.
 
 ## **Key Components**

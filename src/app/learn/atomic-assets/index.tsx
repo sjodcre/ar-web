@@ -22,11 +22,11 @@ interface Topic {
 export const topics: Topic[] = [
   {
     title: "Atomic Assets",
-    path: "introduction",
+    path: "introduction-atomic-assets",
     subtopics: [
       {
         title: "What are Atomic Assets?",
-        path: "introduction-atomic-assets",
+        path: "atomic-assets",
       },
       {
         title: "UDL in Depth",
@@ -60,7 +60,7 @@ export default function AtomicAssets() {
 
   useEffect(() => {
     if (!page) {
-      navigate("/learn/atomic-assets/introduction/introduction-atomic-assets", { replace: true })
+      navigate("/learn/atomic-assets/introduction-atomic-assets/atomic-assets", { replace: true })
     }
   }, [page])
 
@@ -154,16 +154,16 @@ export default function AtomicAssets() {
       if (topicIndex > 0) {
         const prevTopic = topics[topicIndex - 1]
         prevPath = prevTopic.subtopics
-          ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-          : `/learn/arweave-ao-101/${prevTopic.path}`
+          ? `/learn/atomic-assets/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
+          : `/learn/atomic-assets/${prevTopic.path}`
         prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title
       }
 
       if (topicIndex < topics.length - 1) {
         const nextTopic = topics[topicIndex + 1]
         nextPath = nextTopic.subtopics
-          ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-          : `/learn/arweave-ao-101/${nextTopic.path}`
+          ? `/learn/atomic-assets/${nextTopic.path}/${nextTopic.subtopics[0].path}`
+          : `/learn/atomic-assets/${nextTopic.path}`
         nextTitle = nextTopic.subtopics[0].title
       }
     }
@@ -191,10 +191,10 @@ export default function AtomicAssets() {
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 to-accent/5 opacity-30"></div>
       <div className="relative z-10">
         <h2 className="text-lg font-bold mb-4 text-foreground font-mono flex items-center">
-          <span className="gradient-text">📚 Arweave & AO 101</span>
+          <span className="gradient-text">📚 Atomic Assets </span>
         </h2>
         {/* Your existing sidebar content would go here */}
-        <Sidebar section="learn/arweave-ao-101" topics={topics} />
+        <Sidebar section="learn/atomic-assets" topics={topics} />
 
       </div>
     </div>

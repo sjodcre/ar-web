@@ -1,3 +1,8 @@
+---
+title: "Introduction to Arweave: The Future of Permanent Data Storage"
+description: "Discover how Arweave revolutionizes data storage with its decentralized protocol, offering a unique 'pay once, store forever' model that ensures data immutability and accessibility."
+---
+
 Arweave is a groundbreaking **decentralized storage protocol** designed to provide **permanent data storage solutions**. 
 
 Unlike traditional storage systems that require recurring payments and are susceptible to data loss or censorship, Arweave offers a unique **"pay once, store forever"** model. This approach ensures that **data remains immutable and perpetually accessible**, revolutionizing how information is preserved in the digital age.

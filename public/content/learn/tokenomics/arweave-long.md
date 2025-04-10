@@ -1,3 +1,8 @@
+---
+title: "Understanding the AR Token and Its Role in Arweave's Ecosystem"
+description: "Explore the AR token's function in Arweave's permanent storage network, including its supply, distribution, and economic sustainability."
+---
+
 The **AR token** fuels Arweave’s **permanent storage network**, providing **long-term economic sustainability**.
 
 ## 🔹 Key Features

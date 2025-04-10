@@ -1,3 +1,8 @@
+---
+title: "Scalability of AO: Infinite Parallel Execution"
+description: "Explore how AO achieves infinite scalability through hyper-parallel computing and modular on-demand computation, revolutionizing decentralized applications."
+---
+
 One of AO’s defining features is its ability to **scale infinitely through parallel execution**. Unlike traditional blockchain systems that rely on **sequential execution**, AO enables **modular and on-demand computation**.
 
 ## **1. Hyper-Parallel Computing**

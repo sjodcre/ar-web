@@ -1,3 +1,8 @@
+---
+title: "Universal Data License: Empowering Creators in the Digital Age"
+description: "Learn how the Universal Data License (UDL) provides creators with comprehensive control over the usage, licensing, and monetization of their digital assets."
+---
+
 The **Universal Data License (UDL)** offers **creators full control** over **usage, licensing, and monetization** of digital assets.
 
 ## **🔹 Key Features of the UDL**

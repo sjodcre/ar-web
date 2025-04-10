@@ -1,3 +1,8 @@
+---
+title: "Exploring the Advantages of Arweave + AO in the Web3 Landscape"
+description: "Discover how Arweave and AO redefine the Web3 ecosystem with permanent storage, scalable compute, and enhanced interoperability, setting them apart from traditional blockchain solutions."
+---
+
 ## ⚡ How is Arweave + AO Different from Other Web3 Ecosystems?
 
 | Feature            | Ethereum / Solana / Polygon | Arweave + AO The Computer |

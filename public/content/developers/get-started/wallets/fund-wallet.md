@@ -1,18 +1,18 @@
+---
+title: "Funding Your Wander Wallet: A Comprehensive Guide" 
+description: "Learn how to acquire AR tokens and convert them into AO-compatible tokens to fully utilize your Wander Wallet in the Arweave and AO ecosystems." 
+---
+
 # 💰 Funding Your Wander Wallet
 
 <!-- To interact with the Arweave and AO ecosystems using your **Wander Wallet**, you'll need to acquire **AR** tokens and convert them into **AO-compatible tokens**. -->
 To interact with the Arweave and AO ecosystems using your **Wander Wallet**, you'll need to acquire **AR** tokens. If you are only looking to deploy applications, AR tokens are enough (for now). However, if you wish to utilize more features, you may need to convert them into **AO-compatible tokens**.
-
-
----
 
 ## Understanding AR and Its Role in the AO Ecosystem
 
 **AR** is the native token of the Arweave network, used primarily for permanent data storage.  
 However, to utilize AR within the AO ecosystem, it must be converted into AO-compatible tokens such as **wAR** (wrapped AR) or **qAR** (Quantum-wrapped AR).  
 This conversion allows you to interact seamlessly with decentralized applications (dApps) and services within AO.
-
----
 
 ## Steps to Acquire and Utilize AR in the AO Ecosystem
 
@@ -36,7 +36,6 @@ This conversion allows you to interact seamlessly with decentralized application
 - Use integrated fiat onramps like **Transak** to purchase AR directly using your debit/credit card.
 - KYC may be required depending on region.
 
----
 
 ### 2. Convert AR to AO-Compatible Tokens
 
@@ -64,7 +63,6 @@ Once your Wander Wallet holds `AR`, convert it to `wAR` or `qAR` to participate 
 
 - **Docs:** [qAR on Astro USD](https://docs.astrousd.com/quantum/what-is-quantum/q-arweave-qar)
 
----
 
 ## 🔁 Swap Tokens Inside AO
 
@@ -84,8 +82,6 @@ Once you have `wAR` or `qAR`, you can trade inside the AO ecosystem.
 - Testnet AO DEX by Krab Tech.
 - Still evolving; use with caution.
 
----
-
 ## 🔍 Where to Use Your Tokens
 Once you’ve acquired wAR or qAR, explore available AO dApps inside the Wander Wallet:
 
@@ -95,13 +91,9 @@ Once you’ve acquired wAR or qAR, explore available AO dApps inside the Wander 
 
 This lets you seamlessly discover what's possible in the AO ecosystem.
 
----
-
 ## ✨ Helpful Resources
 
 - [Official Wander Blog: How to Buy AR Tokens](https://www.wander.app/blog/how-to-buy-arweave-tokens)
 - [Astro USD Blog – Quantum Bridge](https://www.astrousd.com/blog/quantum-bridge-securely-connect-arweave-and-ao-ecosystems)
-
----
 
 > ⚠️ Always double-check the wallet address before sending tokens. Blockchain transactions are irreversible.

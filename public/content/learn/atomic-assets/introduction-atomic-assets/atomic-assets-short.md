@@ -1,3 +1,8 @@
+---
+title: "Atomic Assets: Redefining Digital Ownership"
+description: "Explore how Atomic Assets enhance digital ownership by providing permanent on-chain storage, enabling fractional ownership, and integrating clear licensing frameworks."
+---
+
 Atomic Assets represent a **significant advancement in digital assets**, addressing the **limitations of traditional NFTs** by:
 
 - **Ensuring complete on-chain storage** (permanent and tamper-proof).

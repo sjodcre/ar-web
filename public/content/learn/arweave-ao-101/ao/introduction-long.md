@@ -1,3 +1,8 @@
+---
+title: "Introduction to AO: A Decentralized Compute Platform on Arweave"
+description: "Discover AO, a revolutionary decentralized compute platform built on Arweave that leverages hyper-parallel computing for unlimited task execution and efficient decentralized applications."
+---
+
 AO is a **decentralized compute platform** built on Arweave that introduces a **revolutionary way to process and execute computations at scale**.
 
 Unlike traditional **cloud or blockchain systems**, which have **limited processing power**, AO uses **hyper-parallel computing**, allowing **unlimited simultaneous tasks**.

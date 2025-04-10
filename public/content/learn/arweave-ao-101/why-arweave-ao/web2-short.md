@@ -1,3 +1,8 @@
+--- 
+title: "Comparing Arweave + AO with Traditional Full-Stack Applications" 
+description: "Discover the transformative differences between traditional full-stack applications and the innovative architecture of Arweave + AO, focusing on storage, compute, data ownership, scalability, and security." 
+--- 
+
 ## 🚀 How is Arweave + AO Different from Traditional Full-Stack Applications?
 
 | Feature            | Traditional Full-Stack Apps | Arweave + AO The Computer |

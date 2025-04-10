@@ -1,3 +1,8 @@
+---
+title: "Scalability of AO: Achieving Infinite Parallelism"
+description: "Discover how AO achieves infinite scalability through parallel task execution, modular computation, and dynamic resource expansion, making it perfect for decentralized applications."
+---
+
 AO achieves **infinite scalability** by executing tasks **in parallel**.
 
 ## **Key Scalability Innovations**

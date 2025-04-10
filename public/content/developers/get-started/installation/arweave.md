@@ -165,5 +165,10 @@ import Arweave from "arweave";
 🚀 **Now you're ready to build & test Arweave applications locally!** 🔥 -->
 
 
+---
+title: 
+description: 
+---
+
 ## 🔹 Important Update
 This section will be modified as a new local development environment is being created. In the meantime, you can safely assume that as long as your projects are working on Vercel, a few simple tweaks will get your application to work on Arweave!

@@ -1,3 +1,8 @@
+---
+title: "Building a CRUD Application on Arweave's AO with BetterIDEa"
+description: "A comprehensive guide to setting up a CRUD application using BetterIDEa IDE, SQLite, and integrating with a Vite React TypeScript frontend."
+---
+
 # Building a CRUD App on Arweave's AO with BetterIDEa
 
 ## 1. Backend Setup with BetterIDEa IDE
@@ -159,8 +164,6 @@ Send({Target = ao.id, Action = "Delete-Post", AutoID = "11"})
 
 Full reference: [DbAdmin Package Documentation](https://apm.betteridea.dev/pkg?id=@rakis/DbAdmin)
 
----
-
 ## 2. Frontend Setup with React + Vite + TypeScript
 
 This section walks through building a frontend to interact with the AO CRUD backend.
@@ -188,8 +191,6 @@ npm install tailwindcss @tailwindcss/vite @permaweb/aoconnect react-router-dom
 
 - You may remove default CSS from `index.css` and `App.css`.
 
----
-
 ### 2.3 Wallet Signing
 
 To send messages on AO, transactions must be signed.  
@@ -198,8 +199,6 @@ We're using the quickest method by accessing the `arweaveWallet` global object.
 > 🔐 For cleaner wallet integration, consider:
 > - [Arweave Wallet Kit GitHub](https://github.com/labscommunity/arweave-wallet-kit)
 > - [Arweave Wallet Kit Docs](https://docs.arweavekit.com/)
-
----
 
 ### 2.4 Add Config File
 
@@ -217,8 +216,6 @@ export const TAGS = {
     DELETE: [{ name: "Action", value: "Delete-Post" }],
 };
 ```
-
----
 
 ### 2.5 Create the Main CRUD Page
 
@@ -375,8 +372,6 @@ export default function CrudPage() {
 
 </details>
 
----
-
 ### 2.6 Create the Edit Post Page
 
 **Path**: `src/pages/edit/[id].tsx`
@@ -472,8 +467,6 @@ export default function EditPostPage() {
 
 </details>
 
----
-
 ### 2.7 Configure Routing
 
 **Path**: `src/App.tsx`
@@ -497,8 +490,6 @@ function App() {
 
 export default App
 ```
-
----
 
 ✅ You’re now ready to run the frontend with:
 

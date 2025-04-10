@@ -1,3 +1,8 @@
+---
+title: "Introduction to Atomic Assets: The Future of Digital Ownership"
+description: "Discover how Atomic Assets revolutionize digital ownership and decentralized storage by integrating data, metadata, and licensing into a single immutable identifier on the Arweave network."
+---
+
 In the evolving landscape of **digital ownership and decentralized storage**, Atomic Assets emerge as a **groundbreaking solution**. Built on **Arweave**, they integrate **data, metadata, and licensing** into a **single immutable identifier**.
 
 ## **🔹 Understanding Atomic Assets**

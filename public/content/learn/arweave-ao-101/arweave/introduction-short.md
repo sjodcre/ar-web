@@ -1,3 +1,8 @@
+---
+title: "Introduction to Arweave: Permanent Data Storage Revolution"
+description: "Explore how Arweave's decentralized protocol enables permanent data storage with a one-time fee, fostering a resilient and open internet through the permaweb."
+---
+
 Arweave is a decentralized protocol designed for **permanent data storage**, allowing users to preserve information indefinitely with a single, one-time fee. 
 
 Secured by a network of **miners rewarded with AR tokens**, Arweave ensures data is replicated and remains accessible through a **sustainable endowment model**. 

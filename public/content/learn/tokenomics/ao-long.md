@@ -1,3 +1,8 @@
+---
+title: "Understanding the AO Token and Its Economic Model"
+description: "Explore the AO token's supply, distribution, economic incentives, and the unique features of the AO Computer platform, designed for decentralized supercomputing."
+---
+
 AO Computer is a **decentralized supercomputing platform** powered by the **AO token**, facilitating **secure, incentive-driven computations**.
 
 ## 🔹 Token Supply & Minting

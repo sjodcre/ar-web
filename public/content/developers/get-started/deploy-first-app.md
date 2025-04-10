@@ -1,8 +1,11 @@
+---
+title: "Deploying Your AO + React Application on Arweave with ArLink"
+description: "A comprehensive guide to deploying your AO and React application to Arweave's permanent storage using ArLink, including wallet setup and deployment options."
+---
+
 # 🚀 Deploy Your AO + React App to Arweave with ArLink
 
 You’ve built your app — now it’s time to **go live** on the **permaweb** using [Arweave](https://www.arweave.org) and **ArLink**.
-
----
 
 ## 🌐 Did You Know?
 
@@ -12,19 +15,13 @@ You’ve built your app — now it’s time to **go live** on the **permaweb** u
 
 Arweave operates as a decentralized storage network without traditional server-side routing. This means client-side routing configurations (e.g. `HashRouter`) are crucial. Without them, users may encounter broken links or refresh errors.
 
----
-
 ## ⚠️ Important: Wallet Must Have AR Tokens
 
 To deploy your app, your wallet **must contain AR tokens**. These are used to pay for storage. Without AR tokens, deployment **will fail**.
 
----
-
 ## 🚀 Deployment Options
 
 You can deploy your app in **two ways**:
-
----
 
 <details open>
 <summary><span class="text-xl font-bold text-secondary">🌐 Option 1: Use the ArLink Web Interface</span></summary>
@@ -46,8 +43,6 @@ All you need is:
 
 </details>
 
----
-
 <details>
 <summary><span class="text-xl font-bold text-secondary">🧱 Option 2: Local CLI + ArNS (Advanced)</span></summary>
 
@@ -57,7 +52,6 @@ This method uses **ArNS** (Arweave Name System), a decentralized naming system f
 
 ### 🔧 Step 1: Install `permaweb-deploy`
 Install globally:
-
 ```sh
 npm install -g permaweb-deploy
 ```
@@ -122,14 +116,10 @@ https://your-name.ar
 
 </details>
 
----
-
 ## 🌍 Optional: Custom Domain
 
 You can link a custom domain to your Arweave deployment using TXT records.  
 Read more: [ArLink Docs – Custom Domains](https://arlink.dev/docs/custom-domains)
-
----
 
 ## 🧭 What's Next?
 

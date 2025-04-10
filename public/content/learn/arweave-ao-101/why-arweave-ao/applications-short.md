@@ -9,8 +9,6 @@
 | **Databases**        | SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Firebase) | Indexed event logs, IPFS/Filecoin for partial data storage | **Databases can be written inside AO (currently SQLite3)** |
 | **Frontend & Routing** | Uses Next.js, Vite, traditional SSR/CSR models | Same frameworks, but relies on blockchain nodes for querying | **Same frontend stack (Next.js, Vite, React)**, routing works differently (Arweave gateways instead of servers) |
 
----
-
 ### 🚀 **Key Takeaways**
 - **Frontend development stays the same** → You still use Next.js, Vite, TailwindCSS, etc.
 - **Routing system differs** → Since Arweave stores content permanently, it uses gateways instead of standard API-based routing.

@@ -1,8 +1,12 @@
+---
+title: "Getting Started with Arweave and AO Development"
+description: "A comprehensive guide to quickly setting up and deploying applications on Arweave's permanent storage using AO."
+---
+
 # 🚀 Quick Start Guide: Arweave + AO Development
 
 Welcome to the **Arweave + AO Quick Start Guide**! This guide will help you get up and running as quickly as possible with Arweave’s **permanent storage** and AO’s **decentralized compute**.
 
----
 <details>
 <!-- <summary><h2> 🏦 Step 1: Create and Fund Your Wallet</h2></summary> -->
 <summary><span class="text-2xl font-bold text-secondary">🏦 Step 1: Create and Fund Your Wallet (Optional if Done)</span></summary>
@@ -26,7 +30,6 @@ For local development and testing, you can use **ArLocal** to simulate the Arwea
 
 Now that you have your wallet ready, it’s time to set up your development environment for **building on Arweave and AO**.
 
----
 <details>
 <summary><span class="text-xl font-bold text-secondary/90">🔹 2.1 Local Arweave Setup (Optional For Testing)</span></summary>
 
@@ -97,8 +100,6 @@ Run the code after you finished pasting/typing it into the block.
 #### 🚀 Step 5: Communicating with the AO Process  
 
 Now that our AO process is deployed, let's send a message to it using **AO’s CLI tool** to test the `"Ping-Handler"`.
-
----
 
 #### 📡 **Step 5.1: Test Your AO Process via BetterIdea CLI**
 
@@ -302,5 +303,4 @@ If you're eager to take your skills further, check out our **[Deploy Your First 
 🔗 **[@permaweb/aoconnect on npm](https://www.npmjs.com/package/@permaweb/aoconnect)** - Official package to communicate with AO processes.  
 🔗 **[AO Cookbook: Dry-Run Messages](https://cookbook_ao.g8way.io/guides/aoconnect/dryrun.html)** - Step-by-step guide on sending messages via dry-run.
 
----
 

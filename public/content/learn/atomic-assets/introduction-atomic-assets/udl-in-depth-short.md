@@ -1,3 +1,8 @@
+---
+title: "Universal Data License: A Comprehensive Framework for Digital Creators"
+description: "Explore how the Universal Data License (UDL) empowers content creators by defining usage terms, enabling monetization, and ensuring transparency through on-chain storage."
+---
+
 The **Universal Data License (UDL)** is a **standardized framework** that enables **content creators** to:
 
 - **Define usage terms** (commercial use, modifications, derivative works).

@@ -1,26 +1,29 @@
-The **Funding Wallet** in UCM BazAR is designed to **handle decentralized transactions seamlessly**.
+---
+title: "Funding Wallets on UCM BazAR"
+description: "Learn how to fund your wallet to interact with UCM BazAR's decentralized asset marketplace, and how AR tokens are converted for use in the AO ecosystem."
+---
 
-## **🔹 Key Features**
-### **1️⃣ Secure Fund Storage**
-- Digital assets are **permanently stored** on Arweave.
-- Transactions are **transparent & immutable**.
+UCM BazAR operates on Arweave and AO — two powerful decentralized networks that require wallet funding with AR tokens to enable storage and transactions.
 
-### **2️⃣ Automatic Computation Funding**
-- Computation fees are **paid dynamically** without user intervention.
-- Supports **microtransactions for on-chain execution**.
+## 🔹 Step-by-Step: How to Fund Your Wallet
 
-### **3️⃣ Multi-Asset Support**
-- Users can fund computations using **AR tokens, stablecoins, or other assets**.
+### 1️⃣ Acquire AR Tokens
+You can obtain AR tokens from centralized exchanges like Binance, KuCoin, or Gate.io. These tokens are the native currency of the Arweave network and are required to store content or execute transactions.
 
-## **🔹 Why It Matters**
-- **Removes reliance on centralized financial systems.**  
-- **Enables autonomous on-chain execution.**  
-- **Ensures sustainable funding for decentralized computing.**  
+### 2️⃣ Transfer AR to Your Wallet
+After purchase, transfer the AR tokens to your personal wallet. You can use a compatible wallet such as **ArConnect** or **Wander Wallet**. Once in your wallet, you're ready to use UCM BazAR.
 
-## **🔹 Conclusion**
-The **Funding Wallet** makes UCM BazAR a **fully self-sustaining, decentralized computing ecosystem**.
+### 3️⃣ Convert AR to AO-Compatible Format
+To use your AR in the AO ecosystem (where on-chain computation happens), it must be converted into AO-compatible tokens like **wAR** (wrapped AR) or **qAR** (quantum AR).
 
-## **🔹 Sources**
-- [AO Processes](https://cookbook_ao.g8way.io/concepts/specs.html)
-- [AO Messages](https://cookbook_ao.g8way.io/concepts/messages.html)
-- [AO Units](https://cookbook_ao.g8way.io/concepts/units.html)
+You can learn more about how this conversion works — including how to use bridges like AOX or Astro — in the **[Funding Guide](./developers/get-started/wallets/fund-wallet)**.
+
+## 🔹 Why This Matters
+- 🧠 **Compute & Interact**: AR funds storage on Arweave, but wAR/qAR unlock your ability to run bots, agents, or services in AO.
+- 🔄 **Dynamic Usage**: Computation costs and usage fees are deducted in real time as you interact with dApps in UCM BazAR.
+
+> 💡 Think of AR as the raw fuel — but to power advanced features like AO computations, you need the right form of that fuel.
+
+## 🔗 References
+- [How to Fund Your Wallet – UCM Docs](https://bazar.arweave.net/#/docs/collectors/how-to-fund)
+- [Funding Guide](./developers/get-started/wallets/fund-wallet)

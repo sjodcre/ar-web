@@ -1,3 +1,8 @@
+---
+title: "Overview of the AO Token and Its Role in Decentralized Computing"
+description: "Discover the AO token's supply, distribution, and economic model within the AO Computer platform, designed for decentralized supercomputing on Arweave."
+---
+
 AO Computer is a **decentralized supercomputing platform** built on Arweave, featuring the **AO token** to facilitate computational tasks.
 
 ## 🔹 Token Supply & Distribution

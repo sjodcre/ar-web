@@ -1,36 +1,42 @@
-UCM BazAR is a **decentralized compute platform** built on **Arweave** that enables **massively parallel computations**.  
-Unlike **traditional cloud computing**, UCM BazAR provides:
-- **Scalability without limits**
-- **No central point of failure**
-- **True decentralized hosting of applications**
+---
+title: "UCM BazAR: Decentralized Atomic Asset Marketplace"
+description: "Explore how UCM BazAR leverages Arweave and AO to provide a fully decentralized platform for creating, trading, and managing atomic assets with permanent storage and fractional ownership."
+---
 
-## **🔹 Core Components of UCM BazAR**
-### **1️⃣ Scheduler Units (SUs)**
-- Task managers that assign jobs to computing nodes.
-- Ensure efficient distribution of processing power.
+**UCM BazAR** is a decentralized marketplace built on the Arweave network, enabling users to create, trade, and manage atomic assets securely and efficiently. By utilizing the Universal Content Marketplace (UCM) protocol and Arweave's permanent storage capabilities, BazAR ensures that all digital assets are stored fully on-chain, providing immutability and censorship resistance.
 
-### **2️⃣ Compute Units (CUs)**
-- Execute computing tasks.
-- Return results securely.
+## **🔹 What are Atomic Assets?**
+Atomic assets are digital items where all associated data is stored under a single Arweave transaction ID, ensuring complete on-chain storage. This approach guarantees that assets are immutable and permanently accessible without reliance on centralized servers. Additionally, atomic assets can be fractionalized, allowing multiple users to own portions of a single asset, with ownership represented by Profit Sharing Tokens (PSTs).
 
-### **3️⃣ Messenger Units (MUs)**
-- Handle communication between different processes.
-- Ensure seamless coordination between computing nodes.
+## **🔹 Key Features of UCM BazAR**
+### **1️⃣ Decentralized Trading**
+- **Trustless Transactions**: Facilitates peer-to-peer trading without intermediaries, leveraging the UCM protocol for secure exchanges.
+- **Fractional Ownership**: Supports the division of assets into shares, enabling collective ownership and investment.
 
-## **🔹 Benefits of UCM BazAR**
-✅ **Infinite scalability** → Computation scales as demand grows.  
-✅ **Permanent storage** → All computations & results are stored immutably.  
-✅ **Fully decentralized** → No central authority controls the system.  
+### **2️⃣ Integration with AO**
+- **Enhanced Performance**: By operating on AO, a hyper-parallel computing system on Arweave, BazAR benefits from improved transaction speeds and scalability.
+- **Profile Agents**: Users have dedicated AO processes managing their profiles, streamlining interactions within the marketplace.
 
-## **🔹 Real-World Applications**
-- **AI and Machine Learning** → Train complex models in a decentralized environment.  
-- **Decentralized Finance (DeFi)** → Enable autonomous financial computations.  
-- **Web3 Social Media** → Fully decentralized social networks with no central control.  
+### **3️⃣ Universal Data License (UDL) Support**
+- **Creator Control**: Allows asset creators to define usage rights and monetization terms, embedding them directly into the asset's metadata.
+- **Transparent Licensing**: Ensures that all licensing terms are publicly accessible and enforceable on-chain.
+
+## **🔹 Benefits of Using UCM BazAR**
+✅ **Permanent Storage**: Assets are stored indefinitely on Arweave, ensuring longevity and accessibility.  
+✅ **Censorship Resistance**: The decentralized nature of Arweave and AO prevents unauthorized alterations or removals.  
+✅ **Ecosystem Rewards**: Users engaging with the platform can earn tokens like $PIXL, incentivizing active participation.
+
+## **🔹 Getting Started with UCM BazAR**
+1. **Set Up a Wallet**: Install compatible wallets such as ArConnect to manage your AR tokens.
+2. **Acquire AR Tokens**: Purchase AR from supported exchanges and transfer them to your wallet.
+3. **Explore the Marketplace**: Visit the [BazAR platform](https://bazar.arweave.net/) to browse, purchase, or create atomic assets.
+
+For a comprehensive guide on funding your wallet and converting AR tokens for use within the AO ecosystem, refer to the [Funding Guide](./developers/get-started/wallets/fund-wallet).
 
 ## **🔹 Conclusion**
-UCM BazAR is the **next major evolution in decentralized computing**, providing an **infinitely scalable, censorship-resistant infrastructure**.
+UCM BazAR represents a significant advancement in decentralized digital asset management, offering a secure, transparent, and user-centric platform for creators and collectors alike.
 
 ## **🔹 Sources**
-- [An Introduction to AO on Arweave](https://mirror.xyz/jonnyringo.eth/O4brlNpgarwI8jn_e73pIFuUEdNCs7vs9l1vtcWWQLo)
-- [Arweave and AO: Building On-Chain Worlds](https://x.com/onlyarweave/status/1866971929179197847)
-- [AO Specs](https://cookbook_ao.g8way.io/concepts/specs.html)
+- [Introducing BazAR](https://g8way.io/cFPxLK9V0vWjNaIfAuDKx88QoTJeJ-SitJ30TUHJLpQ)
+- [BazAR on AO](https://mirror.xyz/afmedia.eth/dJM5X2Flj2gL29kuLZZXSh8hg3ZjmkpqeN0rSX2pgQA)
+- [BazAR GitHub Repository](https://github.com/permaweb/bazar)

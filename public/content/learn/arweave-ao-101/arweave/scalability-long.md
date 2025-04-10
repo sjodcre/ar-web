@@ -1,3 +1,8 @@
+---
+title: "Scalability Innovations in Arweave: Overcoming Blockchain Challenges"
+description: "Explore how Arweave addresses scalability issues in blockchain-based storage through unique innovations like uniform data storage, transaction bundling, and recursive bundling."
+---
+
 <!-- # **Scalability and Technical Innovations in Arweave** -->
 
 One of the biggest challenges in **blockchain-based storage solutions** is **scalability**. Arweave tackles this challenge through **unique innovations** that allow it to scale indefinitely.

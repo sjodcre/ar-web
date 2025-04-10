@@ -1,3 +1,8 @@
+---
+title: "Scalability Innovations in Arweave"
+description: "Discover how Arweave achieves scalability through innovative techniques like transaction bundling, blockweave structure, and recursive bundling, ensuring efficient and permanent data storage."
+---
+
 Arweave achieves **scalability** through several key innovations:
 
 - **Transaction bundling** → Multiple transactions are combined into a single block, improving efficiency.

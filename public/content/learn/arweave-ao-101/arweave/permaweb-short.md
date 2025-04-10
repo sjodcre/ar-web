@@ -1,3 +1,8 @@
+---
+title: "The Permaweb: A Permanent Decentralized Web"
+description: "Discover the permaweb, a revolutionary concept built on Arweave that ensures permanent accessibility of data and decentralized applications, eliminating broken links and the need for ongoing maintenance."
+---
+
 The **permaweb** is a **permanent, decentralized web** built on Arweave. It **eliminates broken links and missing content**, ensuring that data and applications remain **permanently accessible**.
 
 Beyond simple **file storage**, the permaweb hosts **full-fledged decentralized applications** that:

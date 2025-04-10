@@ -1,3 +1,8 @@
+---
+title: "Core Architecture of AO: A Decentralized Computing Model"
+description: "Explore the core architecture of AO, which operates on a decentralized computing model featuring Messages, Processes, and the AO Grid for efficient and scalable computations."
+---
+
 AO operates on a **decentralized computing model** consisting of three major components: **Messages, Processes, and the AO Grid**. These allow AO to execute computations in a **highly scalable and efficient manner**.
 
 ## **1. Messages and Processes**

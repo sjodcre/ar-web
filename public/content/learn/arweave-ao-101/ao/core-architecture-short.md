@@ -1,3 +1,8 @@
+---
+title: "Core Architecture of AO: Message-Passing and Scalability"
+description: "Explore the message-passing model of AO, which enables Processes to execute code without shared state, featuring key components that facilitate infinite scalability for decentralized applications."
+---
+
 AO’s **message-passing model** allows Processes to execute code **without requiring shared state**.
 
 ## **Key Components**
