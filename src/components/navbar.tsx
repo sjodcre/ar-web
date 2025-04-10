@@ -15,6 +15,7 @@ const navItems: Record<string, NavItem[]> = {
     { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
     { title: "Social Impact", href: "/learn/social-impact", isDeveloped: false },
     { title: "Storage Fee Structure", href: "/learn/fees", isDeveloped: true },
+    { title: "Glossary", href: "/learn/glossary", isDeveloped: true },
     {
       title: "Whitepapers",
       href: "/learn/whitepapers",
