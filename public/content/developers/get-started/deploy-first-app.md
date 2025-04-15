@@ -60,10 +60,10 @@ npm install -g permaweb-deploy
 
 1. Open the **Wander Wallet** browser extension  
 2. Select **"Accounts"**.  
-<img src="/wander-accounts-button.png" alt="wander-accounts-button" style="width: 640px; height: auto;"/>
+<img src="/images-webp/wander-accounts-button.webp" alt="wander-accounts-button" style="width: 640px; height: auto;"/>
 3. Click which wallet account you want to use to deploy your application.  
 4. Click **Export Keyfile**.  
-<img src="/wander-export-keyfile.png" alt="wander-export-keyfile" style="width: 640px; height: auto;"/>  
+<img src="/images-webp/wander-export-keyfile.webp" alt="wander-export-keyfile" style="width: 640px; height: auto;"/>  
 5. Key in your password.  
 6. Rename the file to `wallet.json`  
 7. Move it into `.secrets/wallet.json`

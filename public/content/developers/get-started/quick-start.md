@@ -68,13 +68,13 @@ Go to the BetterIdea web IDE:
 #### 🛠 **Step 2: Connect Your Wallet**  
 1. Click on **“Connect Wallet”**  
 2. Select **Wander Wallet** or another Arweave-compatible wallet  
-<img src="/betteridea-login.png" alt="betteridea-login" style="width: 640px; height: auto;"/>
+<img src="/images-webp/betteridea-login.webp" alt="betteridea-login" style="width: 640px; height: auto;"/>
 3. Approve the connection  
 
 #### 🚀 **Step 3: Create Your First AO Process**  
 1. Click **"New Project"** and select **AO Process**  
 2. Choose a **project name** and click **Create**  
-<img src="/betteridea-create-project.png" alt="betteridea-create-project" style="width: 640px; height: auto;"/>
+<img src="/images-webp/betteridea-create-project.webp" alt="betteridea-create-project" style="width: 640px; height: auto;"/>
 
 3. You’ll see a Lua script template  
 
@@ -94,7 +94,7 @@ Handlers.add(
 
 Run the code after you finished pasting/typing it into the block.
 
-<img src="/betteridea-run-code.png" alt="betteridea-run-code" style="width: 640px; height: auto;"/>
+<img src="/images-webp/betteridea-run-code.webp" alt="betteridea-run-code" style="width: 640px; height: auto;"/>
 
 
 #### 🚀 Step 5: Communicating with the AO Process  
@@ -117,7 +117,7 @@ Now that our AO process is deployed, let's send a message to it using **AO’s C
     })
   ```
   - Paste into the terminal: 
-<img src="/betteridea-terminal-paste.png" alt="betteridea-terminal-paste" style="width: 640px; height: auto;"/>
+<img src="/images-webp/betteridea-terminal-paste.webp" alt="betteridea-terminal-paste" style="width: 640px; height: auto;"/>
 
 
     - Replace PROCESS_ID with your actual **deployed AO Process ID** which can be found at the bottom right of the IDE
@@ -282,7 +282,7 @@ export default App;
 After clicking **"Send Message"**, you should see the AO Process reply in the UI:
 
 <!-- <img src="./dryrun-output.png" alt="dryrun-output" width="120"/> -->
-<img src="/dryrun-output.png" alt="dryrun-output" style="width: 640px; height: auto;"/>
+<img src="/images-webp/dryrun-output.webp" alt="dryrun-output" style="width: 640px; height: auto;"/>
 
 
 This confirms that our frontend **successfully communicates with AO** 🎉.

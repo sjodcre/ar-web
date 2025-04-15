@@ -69,10 +69,10 @@
 "use client"
 
 import { Github, Twitter, DiscIcon as Discord } from "lucide-react"
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Community() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 relative">
@@ -90,10 +90,14 @@ export default function Community() {
           </div>
         </div>
         <div className="mx-auto flex flex-wrap justify-center gap-8 py-12 max-w-5xl">
-          <a
+          {/* <a
             onClick={() => navigate("/community/resource-hub")}
             className="group cursor-pointer flex flex-col items-center space-y-3 rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-secondary hover:shadow-md w-64"
-          >
+          > */}
+          <Link
+  to="/community/resource-hub"
+  className="group cursor-pointer flex flex-col items-center space-y-3 rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-secondary hover:shadow-md w-64"
+>
             <div className="rounded-full bg-secondary/10 p-4 group-hover:bg-secondary/20 transition-colors">
               <Github className="h-6 w-6 text-secondary" />
             </div>
@@ -101,9 +105,10 @@ export default function Community() {
             <p className="text-center text-muted-foreground">
               Explore our open source code and contribute to the project.
             </p>
-          </a>
-          <a
-            onClick={() => navigate("/community/resource-hub")}
+          {/* </a> */}
+          </Link>
+          <Link
+            to="/community/resource-hub"
             className="group cursor-pointer flex flex-col items-center space-y-3 rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-secondary hover:shadow-md w-64"
           >
             <div className="rounded-full bg-secondary/10 p-4 group-hover:bg-secondary/20 transition-colors">
@@ -111,9 +116,9 @@ export default function Community() {
             </div>
             <h3 className="text-xl font-bold">Discord</h3>
             <p className="text-center text-muted-foreground">Join our community chat to get help and share ideas.</p>
-          </a>
-          <a
-            onClick={() => navigate("/community/resource-hub")}
+          </Link>
+          <Link
+            to="/community/resource-hub"
             className="group cursor-pointer flex flex-col items-center space-y-3 rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-secondary hover:shadow-md w-64"
           >
             <div className="rounded-full bg-secondary/10 p-4 group-hover:bg-secondary/20 transition-colors">
@@ -121,7 +126,7 @@ export default function Community() {
             </div>
             <h3 className="text-xl font-bold">Twitter</h3>
             <p className="text-center text-muted-foreground">Follow us for the latest news and announcements.</p>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

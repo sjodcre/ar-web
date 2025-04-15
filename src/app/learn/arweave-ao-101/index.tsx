@@ -1,12 +1,13 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
 // import PermanenceIndicator from "@/components/test/permanence-indicator"
 import { BookOpen, ChevronLeft, ChevronRight, FileText } from "lucide-react"
 import Sidebar from "@/components/Sidebar"
+import { SeoHead } from "@/components/SeoHead"
 
 interface Subtopic {
   title: string
@@ -53,13 +54,33 @@ export const topics: Topic[] = [
 export default function ArweaveAO101() {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const navigate = useNavigate()
-  const [showLongVersion, setShowLongVersion] = useState(true)
+  // const [showLongVersion, setShowLongVersion] = useState(true)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const variantParam = searchParams.get("variant")
+  const [showLongVersion, setShowLongVersion] = useState(variantParam !== "short")
+  const [seoMeta, setSeoMeta] = useState<{ title: string; description: string }>({
+    title: "",
+    description: "",
+  })
+  const location = useLocation();
+  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+
 
   useEffect(() => {
     if (!page) {
       navigate("/learn/arweave-ao-101/arweave/introduction", { replace: true })
     }
   }, [page, navigate])
+
+  const toggleVersion = () => {
+    const newVersion = showLongVersion ? "short" : "long"
+    setShowLongVersion(!showLongVersion)
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev)
+      newParams.set("variant", newVersion)
+      return newParams
+    }, { replace: true })
+  }
 
   let markdownFilePath = "learn/arweave-ao-101/arweave/introduction" // Default page
   if (page) markdownFilePath = `learn/arweave-ao-101/${page}`
@@ -180,99 +201,116 @@ export default function ArweaveAO101() {
   if (page === "why-arweave-ao") category = "network"
 
   return (
-    <div className="flex min-h-screen bg-background">
-      {/* Sidebar - using your existing Sidebar component */}
-      <div className="hidden md:block w-72 bg-primary/30 backdrop-blur-md p-4 border-r border-secondary/20 relative">
-        <div className="absolute inset-0 grid-lines opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 to-accent/5 opacity-30"></div>
-        <div className="relative z-10">
-          <h2 className="text-lg font-bold mb-4 text-foreground font-mono flex items-center">
-            <span className="gradient-text">📚 Arweave & AO 101</span>
-          </h2>
-          {/* Your existing sidebar content would go here */}
-          <Sidebar section="learn/arweave-ao-101" topics={topics} />
+    <>
+      <SeoHead
+        title={seoMeta.title || currentTitle}
+        description={seoMeta.description || "Documentation for AO & Arweave"}
+        url={currentUrl}
+      />
+      <div className="flex min-h-screen bg-background">
+        {/* Sidebar - using your existing Sidebar component */}
+        <div className="hidden md:block w-72 bg-primary/30 backdrop-blur-md p-4 border-r border-secondary/20 relative">
+          <div className="absolute inset-0 grid-lines opacity-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 to-accent/5 opacity-30"></div>
+          <div className="relative z-10">
+            <h2 className="text-lg font-bold mb-4 text-foreground font-mono flex items-center">
+              <span className="gradient-text">📚 Arweave & AO 101</span>
+            </h2>
+            {/* Your existing sidebar content would go here */}
+            <Sidebar section="learn/arweave-ao-101" topics={topics} />
 
+          </div>
         </div>
-      </div>
 
-      {/* Main content */}
-      <main className="flex-1 p-4 md:p-6 overflow-auto">
-        <div className="max-w-4xl mx-auto">
-          {/* Document header */}
-          <DocHeader title={currentTitle} lastUpdated={lastUpdated} txId={txId} category={category} />
+        {/* Main content */}
+        <main className="flex-1 p-4 md:p-6 overflow-auto">
+          <div className="max-w-4xl mx-auto">
+            {/* Document header */}
+            <DocHeader title={currentTitle} lastUpdated={lastUpdated} txId={txId} category={category} />
 
-          {/* Content area */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
-            <div className="md:col-span-3">
-              {/* Version toggle */}
-              <div className="flex justify-center mb-4">
-                <button
-                  onClick={() => setShowLongVersion((prev) => !prev)}
-                  className={`px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 ${showLongVersion
+            {/* Content area */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+              <div className="md:col-span-3">
+                {/* Version toggle */}
+                <div className="flex justify-center mb-4">
+                  <button
+                    // onClick={() => setShowLongVersion((prev) => !prev)}
+                    onClick={toggleVersion}
+                    className={`px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 ${showLongVersion
                       ? "bg-secondary/20 text-secondary border border-secondary/30 hover:bg-secondary/30"
                       : "bg-highlight/20 text-highlight border border-highlight/30 hover:bg-highlight/30"
-                    }`}
-                >
-                  {showLongVersion ? (
-                    <>
-                      <FileText className="h-4 w-4" />
-                      <span>TL;DR</span>
-                    </>
-                  ) : (
-                    <>
-                      <BookOpen className="h-4 w-4" />
-                      <span>Full Version</span>
-                    </>
-                  )}
-                </button>
+                      }`}
+                  >
+                    {showLongVersion ? (
+                      <>
+                        <FileText className="h-4 w-4" />
+                        <span>TL;DR</span>
+                      </>
+                    ) : (
+                      <>
+                        <BookOpen className="h-4 w-4" />
+                        <span>Full Version</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {/* Main content */}
+                <div className="prose prose-invert max-w-none p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg">
+                  {/* <MarkdownRenderer filePath={markdownFilePath} variant={showLongVersion ? "long" : "short"} /> */}
+                  <MarkdownRenderer
+                    filePath={markdownFilePath}
+                    variant={showLongVersion ? "long" : "short"}
+                    onMetaExtracted={(meta) =>
+                      setSeoMeta({
+                        title: meta.title ?? "",
+                        description: meta.description ?? "",
+                      })
+                    }
+                  />
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="flex justify-between mt-6 w-full">
+                  {/* Previous Button */}
+                  <button
+                    onClick={() => prevPath && navigate(prevPath)}
+                    disabled={!prevPath}
+                    className={`p-3 rounded-md flex items-center gap-2 transition-colors ${prevPath
+                      ? "bg-card hover:bg-secondary/10 border border-secondary/20 cursor-pointer"
+                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
+                      }`}
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                    <div className="flex flex-col items-start text-left">
+                      <span className="text-xs text-muted-foreground">Previous</span>
+                      <span className="font-medium">{prevTitle || "None"}</span>
+                    </div>
+                  </button>
+
+                  {/* Next Button */}
+                  <button
+                    onClick={() => nextPath && navigate(nextPath)}
+                    disabled={!nextPath}
+                    className={`p-3 rounded-md flex items-center gap-2 transition-colors ${nextPath
+                      ? "bg-card hover:bg-secondary/10 border border-secondary/20"
+                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
+                      }`}
+                  >
+                    <div className="flex flex-col items-end text-right">
+                      <span className="text-xs text-muted-foreground">Next</span>
+                      <span className="font-medium">{nextTitle || "None"}</span>
+                    </div>
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
+                </div>
               </div>
 
-              {/* Main content */}
-              <div className="prose prose-invert max-w-none p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg">
-                <MarkdownRenderer filePath={markdownFilePath} variant={showLongVersion ? "long" : "short"} />
-              </div>
-
-              {/* Navigation Buttons */}
-              <div className="flex justify-between mt-6 w-full">
-                {/* Previous Button */}
-                <button
-                  onClick={() => prevPath && navigate(prevPath)}
-                  disabled={!prevPath}
-                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${prevPath
-                    ? "bg-card hover:bg-secondary/10 border border-secondary/20 cursor-pointer"
-                    : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                    }`}
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                  <div className="flex flex-col items-start text-left">
-                    <span className="text-xs text-muted-foreground">Previous</span>
-                    <span className="font-medium">{prevTitle || "None"}</span>
-                  </div>
-                </button>
-
-                {/* Next Button */}
-                <button
-                  onClick={() => nextPath && navigate(nextPath)}
-                  disabled={!nextPath}
-                  className={`p-3 rounded-md flex items-center gap-2 transition-colors ${nextPath
-                    ? "bg-card hover:bg-secondary/10 border border-secondary/20"
-                    : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                    }`}
-                >
-                  <div className="flex flex-col items-end text-right">
-                    <span className="text-xs text-muted-foreground">Next</span>
-                    <span className="font-medium">{nextTitle || "None"}</span>
-                  </div>
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* <div className="md:col-span-1"> */}
+              {/* <div className="md:col-span-1"> */}
               {/* <div className="space-y-4 sticky top-4"> */}
-                {/* <PermanenceIndicator status="permanent" timestamp={lastUpdated} confirmations={12} /> */}
+              {/* <PermanenceIndicator status="permanent" timestamp={lastUpdated} confirmations={12} /> */}
 
-                {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
+              {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
                   <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">
                     <h3 className="font-medium text-sm">On This Page</h3>
                   </div>
@@ -311,11 +349,13 @@ export default function ArweaveAO101() {
                   </div>
                 </div> */}
               {/* </div> */}
-            {/* </div> */}
+              {/* </div> */}
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
+
   )
 }
 

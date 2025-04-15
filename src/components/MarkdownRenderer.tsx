@@ -9,15 +9,21 @@ import EnhancedCodeBlock from "./test/enhanced-code-block"
 import { Link as RouterLink } from "react-router-dom"
 import { GithubIcon } from "@/icons/GithubIcon"
 import { XIcon } from "@/icons/XIcon"
+import fm from "front-matter";
 
 
 interface MarkdownRendererProps {
   filePath: string
   variant?: "short" | "long" // Optional variant for files with short/long versions
+  onMetaExtracted?: (meta: Record<string, any>) => void;
+
 }
 
-const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }) => {
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant, onMetaExtracted }) => {
   const [markdownContent, setMarkdownContent] = useState("⌛ Loading content...")
+  //@ts-ignore
+  const [markdownMeta, setMarkdownMeta] = useState({});
+
 
   useEffect(() => {
 
@@ -37,12 +43,20 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath, variant }
             return fallbackRes.text()
           })
         }
+        
         return res.text()
       })
       // .then(setMarkdownContent)
       .then((rawText) => {
-        const stripped = rawText.replace(/^---[\s\S]*?---\s*/, '') // regex removes first frontmatter block
-        setMarkdownContent(stripped)
+        // const file = matter.read(rawText);
+        // console.log("matter.read md file", file)
+        const parsed = fm(rawText); // Safe frontmatter parse
+        // console.log("matter.read md file", parsed)
+        setMarkdownContent(parsed.body);
+        setMarkdownMeta(parsed.attributes);
+        if (onMetaExtracted) {
+          onMetaExtracted(parsed.attributes)
+        }
       })
       .catch((err) => {
         console.error("Markdown Load Error:", err)

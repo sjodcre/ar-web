@@ -34,7 +34,11 @@ const SearchFn = () => {
         // console.log("✅ Loaded search index from fuse-index.json")
 
         const fuseIndex = Fuse.parseIndex<SearchItem>(indexJson)
-        setFuse(new Fuse<SearchItem>(searchDataJson, { keys: ["title", "content"], threshold: 0.2 }, fuseIndex))
+        setFuse(new Fuse<SearchItem>(searchDataJson, { 
+          keys: ["title", "content"], 
+          threshold: 0.2 ,
+          ignoreLocation: true, },
+          fuseIndex))
       } catch (error) {
         console.warn("⚠️ Could not load index file. Make sure `generateSearchIndex.ts` has been run.")
       } finally {
@@ -58,7 +62,7 @@ const SearchFn = () => {
     if (!fuse) return
 
     const searchResults = fuse.search(value).map((result) => result.item)
-    // console.log("Search Results for:", value, searchResults)
+    console.log("Search Results for:", value, searchResults)
     setResults(searchResults)
   }
 

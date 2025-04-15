@@ -21,7 +21,7 @@ import Terms from './app/legal/Terms'
 import Privacy from './app/legal/Privacy'
 import Cookies from './app/legal/Cookies'
 import StorageFeesPage from './app/learn/storage-fees'
-import GlossaryPage from './app/learn/GlossaryPage'
+import GlossaryPage from './app/learn/glossary'
 
 
 

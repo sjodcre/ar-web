@@ -9,7 +9,7 @@ import { Link, useLocation } from "react-router-dom"
 import SearchFn from "@/components/Search"
 import { NavItem } from "@/types"
 
-const navItems: Record<string, NavItem[]> = {
+export const navItems: Record<string, NavItem[]> = {
   Learn: [
     { title: "Arweave and AO 101", href: "/learn/arweave-ao-101", isDeveloped: true },
     { title: "Intro to Atomic Assets", href: "/learn/atomic-assets", isDeveloped: true },
