@@ -14,7 +14,7 @@ This section walks you through setting up the backend for your CRUD application 
 2. Create a new project.
 3. Ensure the **SQLite module** is selected during project setup.
 
-<img src="/betteridea-sqlite-module.png" alt="betteridea-sqlite-module" style="width: 640px; height: auto "/>
+<img src="/images-webp/betteridea-sqlite-module.webp" alt="betteridea-sqlite-module" style="width: 640px; height: auto "/>
 
 
 ### 1.2 What is a Module in AO?
@@ -42,7 +42,7 @@ Visit: [APM Docs](https://apm.betteridea.dev)
 .load-blueprint apm
 ```
 
-<img src="/load-apm-blueprint.png" alt="load-apm-blueprint" style="width: 640px; height: auto "/>
+<img src="/images-webp/load-apm-blueprint.webp" alt="load-apm-blueprint" style="width: 640px; height: auto "/>
 
 
 #### 1.3.3 Update APM
@@ -50,7 +50,7 @@ Visit: [APM Docs](https://apm.betteridea.dev)
 apm.update()
 ```
 
-<img src="/apm-update.png" alt="apm-update" style="width: 640px; height: auto "/>
+<img src="/images-webp/apm-update.webp" alt="apm-update" style="width: 640px; height: auto "/>
 
 
 #### 1.3.4 Install DbAdmin Package
@@ -58,12 +58,12 @@ apm.update()
 apm.install("@rakis/DbAdmin")
 ```
 
-<img src="/apm-install-dbadmin.png" alt="apm-install-dbadmin" style="width: 640px; height: auto "/>
+<img src="/images-webp/apm-install-dbadmin.webp" alt="apm-install-dbadmin" style="width: 640px; height: auto "/>
 
 
 ### 1.4 Define the CRUD Logic
 
-Copy each code block into your AO environment and click the **green run button** on the left side of each cell. <img src="/run-cell-button.png" alt="run-cell-button" style="width: 20px; height: auto;"/>
+Copy each code block into your AO environment and click the **green run button** on the left side of each cell. <img src="/images-webp/run-cell-button.webp" alt="run-cell-button" style="width: 20px; height: auto;"/>
 
 #### 1.4.1 Initialize SQLite and DbAdmin
 

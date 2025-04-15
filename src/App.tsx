@@ -21,6 +21,7 @@ import Terms from './app/legal/Terms'
 import Privacy from './app/legal/Privacy'
 import Cookies from './app/legal/Cookies'
 import StorageFeesPage from './app/learn/storage-fees'
+import GlossaryPage from './app/learn/glossary'
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/learn/fees" element={<StorageFeesPage />} />
+            <Route path="/learn/glossary" element={<GlossaryPage />} />
             <Route path="/legal/terms" element={<Terms />} />
             <Route path="/legal/privacy" element={<Privacy />} />
             <Route path="/legal/cookies" element={<Cookies />} />

@@ -10,7 +10,7 @@ export default function Home() {
             <SeoHead
                 title="Arweave and AO/AOtheComputer Documentation"
                 description="All you need to know about Arweave and AOtheComputer/AO."
-                image="https://ar-web_arlink.arweave.net/arweave-light-seal-1200x630.png"
+                image="https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
                 url="https://ar-web_arlink.arweave.net/"
             />
             <Hero />

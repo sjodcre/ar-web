@@ -1,5 +1,7 @@
 // components/SeoHead.tsx
 import { Helmet } from 'react-helmet-async';
+// import helmetAsync from 'react-helmet-async';
+// const { Helmet } = helmetAsync;
 
 interface SeoProps {
   title: string;
@@ -12,7 +14,7 @@ interface SeoProps {
 export function SeoHead({
   title,
   description,
-  image = 'https://ar-web_arlink.arweave.net/arweave-light-seal-1200x630.png',
+  image = 'https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp',
   url = '',
   twitterHandle = '@Dev4L4fe',
 }: SeoProps) {
@@ -20,6 +22,9 @@ export function SeoHead({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+
+      {url && <link rel="canonical" href={url} />}
+
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

@@ -10,11 +10,11 @@ import {
   Network,
 } from "lucide-react"
 import WarningBanner from "../warning-banner";
-import { Button } from "../ui/button";
-import { useNavigate } from "react-router-dom";
+// import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -75,16 +75,19 @@ export default function Hero() {
           Arweave makes data permanent. AO gives it intelligence. Together, they create a new kind of web — where apps and ideas live forever.
         </motion.p>
         <div className="flex justify-center gap-4 pt-8">
-          <Button
+          {/* <Button
             size="lg"
             className="bg-white text-black border-1"
             onClick={() => navigate('/learn/arweave-ao-101/arweave/introduction')}
           >
             Find Out More!
-          </Button>
-          {/* <Button size="lg" variant="outline">
-                                RESOURCES
-                            </Button> */}
+          </Button> */}
+<Link
+  to="/learn/arweave-ao-101/arweave/introduction"
+  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md bg-white text-black border border-input shadow-sm transition hover:bg-gray-100"
+>
+  Find Out More!
+</Link>
         </div>
       </div>
 

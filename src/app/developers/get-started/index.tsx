@@ -1,13 +1,15 @@
 "use client"
 
-import { JSX, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { JSX, useEffect, useState } from "react"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
 // import PermanenceIndicator from "@/components/test/permanence-indicator"
 import Sidebar from "@/components/Sidebar"
 import { Code, FileCode, Laptop, Wallet } from "lucide-react"
 import { DocCategory } from "@/types"
+import { SeoHead } from "@/components/SeoHead"
+// import { SeoHead } from "@/components/SeoHead"
 
 export const topics = [
   {
@@ -40,7 +42,7 @@ export const topics = [
     subtopics: [
       { title: "Creating CRUD Application", path: "application" },
       { title: "Deploy Application onto Arweave", path: "deploy" },
-    
+
     ],
   },
   {
@@ -55,59 +57,51 @@ export const topics = [
 
 // Helper function to get page metadata
 const getPageMetadata = (page?: string, subpage?: string) => {
-  // Default values
-//   const metadata = {
-//     title: "Get Started with Arweave & AO",
-//     icon: <Code className="h-5 w-5 text-secondary" />,
-//     category: "general" as const,
-//     lastUpdated: "2025-03-20T10:30:00Z",
-//     txId: "KJD8wqkj-dkQWjqkdj38djqkwjdkQWJDkqw8",
-    //     status: "permanent" as const,
-    //   }    
-    const metadata: {
-        title: string
-        icon: JSX.Element
-        category: DocCategory
-        lastUpdated: string
-        txId: string
-        status: "permanent"
-    } = {
-        title: "Get Started with Arweave & AO",
-        icon: <Code className="h-5 w-5 text-secondary" />,
-        category: "general",
-        lastUpdated: "2025-03-20T10:30:00Z",
-        txId: "KJD8wqkj-dkQWjqkdj38djqkwjdkQWJDkqw8",
-        status: "permanent",
+
+  const metadata: {
+    title: string
+    icon: JSX.Element
+    category: DocCategory
+    lastUpdated: string
+    txId: string
+    status: "permanent"
+  } = {
+    title: "Get Started with Arweave & AO",
+    icon: <Code className="h-5 w-5 text-secondary" />,
+    category: "general",
+    lastUpdated: "2025-03-20T10:30:00Z",
+    txId: "KJD8wqkj-dkQWjqkdj38djqkwjdkQWJDkqw8",
+    status: "permanent",
+  }
+
+  // Update based on current page
+  if (page === "get-started") {
+    if (subpage === "quick-start") {
+      metadata.title = "Quick Start Guide"
+      metadata.icon = <Laptop className="h-5 w-5 text-secondary" />
+    } else if (subpage === "installation") {
+      metadata.title = "Installation Guide"
+      metadata.icon = <FileCode className="h-5 w-5 text-secondary" />
+      metadata.category = "computation"
+    } else if (subpage === "deploy-first-app") {
+      metadata.title = "Deploy Your First App"
+      metadata.icon = <Code className="h-5 w-5 text-secondary" />
+      metadata.category = "storage"
+    } else if (subpage === "wallets") {
+      metadata.title = "Wallet Setup"
+      metadata.icon = <Wallet className="h-5 w-5 text-secondary" />
     }
+  } else if (page === "crud") {
 
-    // Update based on current page
-    if (page === "get-started") {
-        if (subpage === "quick-start") {
-            metadata.title = "Quick Start Guide"
-            metadata.icon = <Laptop className="h-5 w-5 text-secondary" />
-        } else if (subpage === "installation") {
-            metadata.title = "Installation Guide"
-            metadata.icon = <FileCode className="h-5 w-5 text-secondary" />
-            metadata.category = "computation"
-        } else if (subpage === "deploy-first-app") {
-            metadata.title = "Deploy Your First App"
-            metadata.icon = <Code className="h-5 w-5 text-secondary" />
-            metadata.category = "storage"
-        } else if (subpage === "wallets") {
-            metadata.title = "Wallet Setup"
-            metadata.icon = <Wallet className="h-5 w-5 text-secondary" />
-        } 
-    } else if (page === "crud") {
-
-      if (subpage === "application") {
-        metadata.title = "CRUD Application Setup"
+    if (subpage === "application") {
+      metadata.title = "CRUD Application Setup"
       metadata.icon = <Laptop className="h-5 w-5 text-secondary" />
     } else if (subpage === "deploy") {
-        metadata.title = "Deploy CRUD Application"
-        metadata.icon = <Code className="h-5 w-5 text-secondary" />
-        metadata.category = "storage"
+      metadata.title = "Deploy CRUD Application"
+      metadata.icon = <Code className="h-5 w-5 text-secondary" />
+      metadata.category = "storage"
     }
-      
+
   }
 
   return metadata
@@ -139,6 +133,15 @@ const getPageMetadata = (page?: string, subpage?: string) => {
 const GetStarted = () => {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const navigate = useNavigate()
+  const [seoMeta, setSeoMeta] = useState<{ title: string; description: string }>({
+    title: "",
+    description: "",
+  })
+  const location = useLocation();
+  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+
+  // const [markdownMeta, setMarkdownMeta] = useState<Record<string, any>>({});
+
   // const [markdownContent, setMarkdownContent] = useState<string>("")
   // const [headings, setHeadings] = useState<{ id: string; text: string }[]>([])
 
@@ -153,54 +156,60 @@ const GetStarted = () => {
   if (subpage) markdownFilePath = `developers/${page}/${subpage}`
   if (subsubpage) markdownFilePath = `developers/${page}/${subpage}/${subsubpage}`
 
-  // Fetch markdown content to extract headings
-  // useEffect(() => {
-  //   fetch(`/src/content/${markdownFilePath}.md`)
-  //     .then((res) => res.text())
-  //     .then((content) => {
-  //       setMarkdownContent(content)
-  //       setHeadings(extractHeadings(content))
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error loading markdown:", err)
-  //       setMarkdownContent("# Error loading content")
-  //       setHeadings([])
-  //     })
-  // }, [markdownFilePath])
-
   // Get metadata for current page
   const metadata = getPageMetadata(page, subpage)
+  // const location = useLocation();
+  // console.log("current location", location)
+  // const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+
+  
 
   return (
-    <div className="flex min-h-screen bg-background">
-      {/* Sidebar */}
-      <Sidebar section="developers" topics={topics} />
+    <>
+    <SeoHead
+        title={seoMeta.title || ""}
+        description={seoMeta.description || "Documentation for AO & Arweave"}
+        url={currentUrl}
+      />
+      <div className="flex min-h-screen bg-background">
+        {/* Sidebar */}
+        <Sidebar section="developers" topics={topics} />
 
-      {/* Main content */}
-      <main className="flex-1 p-4 md:p-6 overflow-auto">
-        <div className="max-w-4xl mx-auto">
-          {/* Document header */}
-          <DocHeader
-            title={metadata.title}
-            lastUpdated={metadata.lastUpdated}
-            txId={metadata.txId}
-            category={metadata.category}
-          />
+        {/* Main content */}
+        <main className="flex-1 p-4 md:p-6 overflow-auto">
+          <div className="max-w-4xl mx-auto">
+            {/* Document header */}
+            <DocHeader
+              title={metadata.title}
+              lastUpdated={metadata.lastUpdated}
+              txId={metadata.txId}
+              category={metadata.category}
+            />
 
-          {/* Content area */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
-            <div className="md:col-span-3">
-              {/* Main content */}
-              <div className="prose prose-invert max-w-none p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg">
-                {/* <div className="flex items-center gap-2 mb-4 pb-4 border-b border-secondary/20">
+            {/* Content area */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+              <div className="md:col-span-3">
+                {/* Main content */}
+                <div className="prose prose-invert max-w-none p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg shadow-lg">
+                  {/* <div className="flex items-center gap-2 mb-4 pb-4 border-b border-secondary/20">
                   {metadata.icon}
                   <h1 className="text-2xl font-bold gradient-text m-0">{metadata.title}</h1>
                 </div> */}
-                <MarkdownRenderer filePath={markdownFilePath} />
-              </div>
+                  {/* <MarkdownRenderer filePath={markdownFilePath} /> */}
+                  <MarkdownRenderer
+                    filePath={markdownFilePath}
+                    onMetaExtracted={(meta) =>
+                      setSeoMeta({
+                        title: meta.title ?? "",
+                        description: meta.description ?? "",
+                      })
+                    }
+                  />
 
-              {/* Developer Resources */}
-              {/* <div className="mt-8 p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg">
+                </div>
+
+                {/* Developer Resources */}
+                {/* <div className="mt-8 p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg">
                 <h3 className="text-lg font-bold mb-4 text-secondary">Developer Resources</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a
@@ -233,14 +242,14 @@ const GetStarted = () => {
                   </a>
                 </div>
               </div> */}
-            </div>
+              </div>
 
-            <div className="md:col-span-1">
-              {/* Sidebar content */}
-              <div className="space-y-4 sticky top-4">
-                {/* <PermanenceIndicator status={metadata.status} timestamp={metadata.lastUpdated} confirmations={15} /> */}
+              <div className="md:col-span-1">
+                {/* Sidebar content */}
+                <div className="space-y-4 sticky top-4">
+                  {/* <PermanenceIndicator status={metadata.status} timestamp={metadata.lastUpdated} confirmations={15} /> */}
 
-                {/* {headings.length > 0 && (
+                  {/* {headings.length > 0 && (
                   <div className="rounded-lg border border-secondary/20 overflow-hidden">
                     <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">
                       <h3 className="font-medium text-sm">On This Page</h3>
@@ -262,8 +271,8 @@ const GetStarted = () => {
                   </div>
                 )} */}
 
-                {/* Quick links */}
-                {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
+                  {/* Quick links */}
+                  {/* <div className="rounded-lg border border-secondary/20 overflow-hidden">
                   <div className="bg-card/80 px-3 py-2 border-b border-secondary/20">
                     <h3 className="font-medium text-sm">Quick Links</h3>
                   </div>
@@ -304,12 +313,14 @@ const GetStarted = () => {
                     </ul>
                   </div>
                 </div> */}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
+
   )
 }
 

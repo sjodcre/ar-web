@@ -1,3 +1,8 @@
+---
+title: "Building Applications with Arweave + AO: A Comparative Overview"
+description: "Discover the key differences in application architecture between traditional Web2, Web3 ecosystems, and the innovative Arweave + AO framework, focusing on hosting, storage, compute execution, and more."
+---
+
 ## 🛠️ How Are Applications Built on Arweave + AO Different?  
 
 | **Aspect**            | **Web2 Full-Stack Apps**                          | **Web3 Ecosystems (Ethereum, Solana, IPFS, etc.)**               | **Arweave + AO The Computer**                          |
