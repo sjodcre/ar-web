@@ -9,7 +9,7 @@ import Sidebar from "@/components/Sidebar"
 import { Code, FileCode, Laptop, Wallet } from "lucide-react"
 import { DocCategory } from "@/types"
 import { SeoHead } from "@/components/SeoHead"
-// import { SeoHead } from "@/components/SeoHead"
+import { Paginator } from "@/components/Paginator"
 
 export const topics = [
   {
@@ -107,29 +107,6 @@ const getPageMetadata = (page?: string, subpage?: string) => {
   return metadata
 }
 
-// Helper function to extract headings from markdown content
-// const extractHeadings = (content: string) => {
-//   const headings: { id: string; text: string }[] = []
-//   const regex = /^(#{2,3})\s+(.+)$/gm
-//   let match
-
-//   while ((match = regex.exec(content)) !== null) {
-//     const level = match[1].length
-//     const text = match[2].trim()
-//     const id = text
-//       .toLowerCase()
-//       .replace(/[^\w\s-]/g, "")
-//       .replace(/\s+/g, "-")
-
-//     // Only include h2 and h3 headings
-//     if (level <= 3) {
-//       headings.push({ id, text })
-//     }
-//   }
-
-//   return headings
-// }
-
 const GetStarted = () => {
   const { page, subpage, subsubpage } = useParams<{ page?: string; subpage?: string; subsubpage?: string }>()
   const navigate = useNavigate()
@@ -158,16 +135,28 @@ const GetStarted = () => {
 
   // Get metadata for current page
   const metadata = getPageMetadata(page, subpage)
-  // const location = useLocation();
-  // console.log("current location", location)
-  // const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
 
-  
+  let currentTitle = "Getting Started"
+
+  const currentTopic = topics.find(t => t.path === page)
+  const currentSubtopic = currentTopic?.subtopics.find(st => st.path === subpage)
+  const currentSubsubtopic = currentSubtopic?.subtopics?.find(ss => ss.path === subsubpage)
+
+  if (currentSubsubtopic) {
+    currentTitle = currentSubsubtopic.title
+  } else if (currentSubtopic) {
+    currentTitle = currentSubtopic.title
+  } else if (currentTopic) {
+    currentTitle = currentTopic.title
+  }
+  console.log("currentTitle:", currentTitle)
+
+
 
   return (
     <>
-    <SeoHead
-        title={seoMeta.title || ""}
+      <SeoHead
+        title={seoMeta.title || currentTitle}
         description={seoMeta.description || "Documentation for AO & Arweave"}
         url={currentUrl}
       />
@@ -207,6 +196,14 @@ const GetStarted = () => {
                   />
 
                 </div>
+
+                <Paginator
+                  topics={topics}
+                  page={page}
+                  subpage={subpage}
+                  subsubpage={subsubpage}
+                  basePath="/developers"
+                />
 
                 {/* Developer Resources */}
                 {/* <div className="mt-8 p-6 bg-card/30 backdrop-blur-sm border border-secondary/20 rounded-lg">

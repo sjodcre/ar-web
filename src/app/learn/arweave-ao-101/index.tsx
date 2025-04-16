@@ -5,9 +5,11 @@ import { useLocation, useNavigate, useParams, useSearchParams } from "react-rout
 import MarkdownRenderer from "@/components/MarkdownRenderer"
 import DocHeader from "@/components/test/doc-header"
 // import PermanenceIndicator from "@/components/test/permanence-indicator"
-import { BookOpen, ChevronLeft, ChevronRight, FileText } from "lucide-react"
+import { BookOpen, FileText } from "lucide-react"
 import Sidebar from "@/components/Sidebar"
 import { SeoHead } from "@/components/SeoHead"
+// import { usePagination } from "@/hooks/usePagination"
+import { Paginator } from "@/components/Paginator"
 
 interface Subtopic {
   title: string
@@ -65,7 +67,6 @@ export default function ArweaveAO101() {
   const location = useLocation();
   const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
 
-
   useEffect(() => {
     if (!page) {
       navigate("/learn/arweave-ao-101/arweave/introduction", { replace: true })
@@ -87,108 +88,24 @@ export default function ArweaveAO101() {
   if (subpage) markdownFilePath = `learn/arweave-ao-101/${page}/${subpage}`
   if (subsubpage) markdownFilePath = `learn/arweave-ao-101/${page}/${subpage}/${subsubpage}`
 
-  // Find the current topic index
-  const topicIndex = topics.findIndex((topic) => topic.path === page)
-  const subtopicIndex =
-    topicIndex !== -1 && topics[topicIndex].subtopics
-      ? topics[topicIndex].subtopics.findIndex((sub) => sub.path === subpage)
-      : -1
-
-  const subsubtopicIndex =
-    subtopicIndex !== -1 && topics[topicIndex].subtopics && topics[topicIndex].subtopics[subtopicIndex].subtopics
-      ? topics[topicIndex].subtopics[subtopicIndex].subtopics?.findIndex((subsub) => subsub.path === subsubpage)
-      : -1
-
-  // Compute Previous & Next Paths
-  let prevPath: string | null = null
-  let nextPath: string | null = null
-  let prevTitle: string | null = null
-  let nextTitle: string | null = null
-
-  if (topicIndex !== -1) {
-    const currentTopic = topics[topicIndex]
-
-    if (subtopicIndex !== -1 && currentTopic.subtopics) {
-      const currentSubtopic = currentTopic.subtopics[subtopicIndex]
-
-      if (subsubtopicIndex !== -1 && currentSubtopic.subtopics) {
-        // Inside a sub-subtopic
-        if (subsubtopicIndex > 0) {
-          prevPath = `/learn/arweave-ao-101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex - 1].path}`
-          prevTitle = currentSubtopic.subtopics[subsubtopicIndex - 1].title
-        } else if (subtopicIndex > 0) {
-          prevPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`
-          prevTitle = currentTopic.subtopics[subtopicIndex - 1].title
-        } else if (topicIndex > 0) {
-          const prevTopic = topics[topicIndex - 1]
-          prevPath = prevTopic.subtopics
-            ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-            : `/learn/arweave-ao-101/${prevTopic.path}`
-          prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title
-        }
-
-        if (subsubtopicIndex < currentSubtopic.subtopics.length - 1) {
-          nextPath = `/learn/arweave-ao-101/${page}/${subpage}/${currentSubtopic.subtopics[subsubtopicIndex + 1].path}`
-          nextTitle = currentSubtopic.subtopics[subsubtopicIndex + 1].title
-        } else if (subtopicIndex < currentTopic.subtopics.length - 1) {
-          nextPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`
-          nextTitle = currentTopic.subtopics[subtopicIndex + 1].title
-        } else if (topicIndex < topics.length - 1) {
-          const nextTopic = topics[topicIndex + 1]
-          nextPath = nextTopic.subtopics
-            ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-            : `/learn/arweave-ao-101/${nextTopic.path}`
-          nextTitle = nextTopic.subtopics[0].title
-        }
-      } else {
-        // Inside a subtopic
-        if (subtopicIndex > 0) {
-          prevPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex - 1].path}`
-          prevTitle = currentTopic.subtopics[subtopicIndex - 1].title
-        } else if (topicIndex > 0) {
-          const prevTopic = topics[topicIndex - 1]
-          prevPath = prevTopic.subtopics
-            ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-            : `/learn/arweave-ao-101/${prevTopic.path}`
-          prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title
-        }
-
-        if (subtopicIndex < currentTopic.subtopics.length - 1) {
-          nextPath = `/learn/arweave-ao-101/${page}/${currentTopic.subtopics[subtopicIndex + 1].path}`
-          nextTitle = currentTopic.subtopics[subtopicIndex + 1].title
-        } else if (topicIndex < topics.length - 1) {
-          const nextTopic = topics[topicIndex + 1]
-          nextPath = nextTopic.subtopics
-            ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-            : `/learn/arweave-ao-101/${nextTopic.path}`
-          nextTitle = nextTopic.subtopics[0].title
-        }
-      }
-    } else {
-      // Inside a main topic without a selected subtopic
-      if (topicIndex > 0) {
-        const prevTopic = topics[topicIndex - 1]
-        prevPath = prevTopic.subtopics
-          ? `/learn/arweave-ao-101/${prevTopic.path}/${prevTopic.subtopics[prevTopic.subtopics.length - 1].path}`
-          : `/learn/arweave-ao-101/${prevTopic.path}`
-        prevTitle = prevTopic.subtopics[prevTopic.subtopics.length - 1].title
-      }
-
-      if (topicIndex < topics.length - 1) {
-        const nextTopic = topics[topicIndex + 1]
-        nextPath = nextTopic.subtopics
-          ? `/learn/arweave-ao-101/${nextTopic.path}/${nextTopic.subtopics[0].path}`
-          : `/learn/arweave-ao-101/${nextTopic.path}`
-        nextTitle = nextTopic.subtopics[0].title
-      }
-    }
-  }
 
   // Get current page title
   let currentTitle = "Arweave & AO 101"
-  if (topicIndex !== -1 && subtopicIndex !== -1) {
-    currentTitle = topics[topicIndex].subtopics[subtopicIndex].title
+  const currentTopic = topics.find(t => t.path === page)
+  const currentSubtopic = currentTopic?.subtopics.find(st => st.path === subpage)
+  const currentSubsubtopic = currentSubtopic?.subtopics?.find(ss => ss.path === subsubpage)
+
+  if (currentSubsubtopic) {
+    currentTitle = currentSubsubtopic.title
+  } else if (currentSubtopic) {
+    currentTitle = currentSubtopic.title
+  } else if (currentTopic) {
+    currentTitle = currentTopic.title
   }
+  console.log("currentTitle:", currentTitle)
+  // if (topicIndex !== -1 && subtopicIndex !== -1) {
+  //   currentTitle = topics[topicIndex].subtopics[subtopicIndex].title
+  // }
 
   // Mock transaction ID and timestamp for demonstration
   const txId = "bNMNDK3sFRP5vSJELdYQhA-cQwvwSKJ_xdWrwKm2xCU"
@@ -271,39 +188,13 @@ export default function ArweaveAO101() {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between mt-6 w-full">
-                  {/* Previous Button */}
-                  <button
-                    onClick={() => prevPath && navigate(prevPath)}
-                    disabled={!prevPath}
-                    className={`p-3 rounded-md flex items-center gap-2 transition-colors ${prevPath
-                      ? "bg-card hover:bg-secondary/10 border border-secondary/20 cursor-pointer"
-                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                      }`}
-                  >
-                    <ChevronLeft className="h-5 w-5" />
-                    <div className="flex flex-col items-start text-left">
-                      <span className="text-xs text-muted-foreground">Previous</span>
-                      <span className="font-medium">{prevTitle || "None"}</span>
-                    </div>
-                  </button>
-
-                  {/* Next Button */}
-                  <button
-                    onClick={() => nextPath && navigate(nextPath)}
-                    disabled={!nextPath}
-                    className={`p-3 rounded-md flex items-center gap-2 transition-colors ${nextPath
-                      ? "bg-card hover:bg-secondary/10 border border-secondary/20"
-                      : "opacity-50 cursor-not-allowed bg-card/50 border border-muted"
-                      }`}
-                  >
-                    <div className="flex flex-col items-end text-right">
-                      <span className="text-xs text-muted-foreground">Next</span>
-                      <span className="font-medium">{nextTitle || "None"}</span>
-                    </div>
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
-                </div>
+                <Paginator
+                  topics={topics}
+                  page={page}
+                  subpage={subpage}
+                  subsubpage={subsubpage}
+                  basePath="/learn/arweave-ao-101" // or "/learn/atomic-assets"
+                />
               </div>
 
               {/* <div className="md:col-span-1"> */}
