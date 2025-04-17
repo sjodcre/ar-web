@@ -101,7 +101,7 @@ export default function AOComputerTokenomics() {
     description: "",
   })
   const location = useLocation()
-  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`
+  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`
   const markdownFilePath = "learn/tokenomics/ao"
 
   const toggleVersion = () => {

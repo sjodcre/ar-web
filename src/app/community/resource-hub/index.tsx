@@ -18,8 +18,8 @@ const CommunityPage: FC = () => {
       <SeoHead
         title="Arweave and AOtheComputer/AO Community Resources Hub"
         description="Compilation of currently active Arweave and AOtheComputer channels."
-        image="https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
-        url="https://ar-web_arlink.arweave.net/community/resource-hub"
+        image="https://sjodcre-ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
+        url="https://sjodcre-ar-web_arlink.arweave.net/community/resource-hub"
       />
       <div className="min-h-screen bg-background">
         {/* Background patterns */}

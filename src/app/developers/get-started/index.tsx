@@ -115,7 +115,7 @@ const GetStarted = () => {
     description: "",
   })
   const location = useLocation();
-  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
 
   // const [markdownMeta, setMarkdownMeta] = useState<Record<string, any>>({});
 

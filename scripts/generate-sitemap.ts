@@ -166,7 +166,7 @@ import { topics as atomicTopics } from "../src/app/learn/atomic-assets";
 import { topics as blockchainTopics } from "../src/app/learn/arweave-ao-101";
 import { navItems } from "../src/components/navbar";
 
-const DOMAIN = "https://ar-web_arlink.arweave.net/";
+const DOMAIN = "https://sjodcre-ar-web_arlink.arweave.net/";
 
 type Topic = {
   title: string;

@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/quick-start</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/quick-start</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/installation/arweave</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/installation/arweave</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/installation/aos</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/installation/aos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/deploy-first-app</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/deploy-first-app</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/wallets/create-wallet</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/wallets/create-wallet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/get-started/wallets/fund-wallet</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/get-started/wallets/fund-wallet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/crud/application</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/crud/application</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/crud/deploy</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/crud/deploy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/concepts/handlers</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/concepts/handlers</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/developers/concepts/sign-transaction</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/developers/concepts/sign-transaction</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/atomic-assets/introduction-atomic-assets/atomic-assets</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/atomic-assets/introduction-atomic-assets/atomic-assets</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/atomic-assets/introduction-atomic-assets/udl-in-depth</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/atomic-assets/introduction-atomic-assets/udl-in-depth</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/introduction-bazar</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/introduction-bazar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/funding-wallet</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/funding-wallet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/atomic-assets/ucm-bazar/creating-your-own-atomic-assets</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/introduction</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/introduction</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/permaweb</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/permaweb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/scalability</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/scalability</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/introduction</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/introduction</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/core-architecture</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/core-architecture</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/scalability</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/ao/scalability</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/web2</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/web2</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/web3</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/web3</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/applications</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/why-arweave-ao/applications</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/fees</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/fees</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/glossary</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/glossary</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/tokenomics/arweave</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/tokenomics/arweave</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/learn/tokenomics/ao</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/learn/tokenomics/ao</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/community/news</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/community/news</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ar-web_arlink.arweave.net/community/resource-hub</loc>
+    <loc>https://sjodcre-ar-web_arlink.arweave.net/community/resource-hub</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

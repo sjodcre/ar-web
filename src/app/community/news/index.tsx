@@ -85,8 +85,8 @@ export default function News() {
       <SeoHead
                 title="Arweave and AOtheComputer/AO news channel"
                 description="Compiled news channel related to Arweave amd AOtheComputer/AO"
-                image="https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
-                url="https://ar-web_arlink.arweave.net/community/news"
+                image="https://sjodcre-ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
+                url="https://sjodcre-ar-web_arlink.arweave.net/community/news"
             />
       <div className="min-h-screen bg-background">
         <div className="relative">

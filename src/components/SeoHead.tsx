@@ -1,5 +1,5 @@
 // components/SeoHead.tsx
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 // import helmetAsync from 'react-helmet-async';
 // const { Helmet } = helmetAsync;
 
@@ -14,7 +14,7 @@ interface SeoProps {
 export function SeoHead({
   title,
   description,
-  image = 'https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp',
+  image = 'https://sjodcre-ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp',
   url = '',
   twitterHandle = '@Dev4L4fe',
 }: SeoProps) {

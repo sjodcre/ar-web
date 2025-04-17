@@ -67,7 +67,7 @@ export default function ArweaveTokenomics() {
     description: "",
   })
   const location = useLocation()
-  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`
+  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`
   const markdownFilePath = "learn/tokenomics/arweave"
 
   const toggleVersion = () => {

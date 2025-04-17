@@ -65,7 +65,7 @@ export default function ArweaveAO101() {
     description: "",
   })
   const location = useLocation();
-  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
 
   useEffect(() => {
     if (!page) {

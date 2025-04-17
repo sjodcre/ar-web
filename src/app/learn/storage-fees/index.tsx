@@ -66,8 +66,8 @@ export default function StorageFeesPage() {
             <SeoHead
                 title="Arweave Data Storage Fees"
                 description="The current price to store data on Arweave, as it varies with the price and demand."
-                image="https://ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
-                url="https://ar-web_arlink.arweave.net/learn/fees"
+                image="https://sjodcre-ar-web_arlink.arweave.net/images-webp/arweave-light-seal-1200x630.webp"
+                url="https://sjodcre-ar-web_arlink.arweave.net/learn/fees"
             />
             <div className="max-w-3xl mx-auto py-20 px-6 text-center">
                 <h1 className="text-3xl font-bold mb-6 text-secondary">📦 Arweave Storage Fees</h1>

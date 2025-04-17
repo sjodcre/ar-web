@@ -67,7 +67,7 @@ export default function AtomicAssets() {
     description: "",
   })
   const location = useLocation();
-  const currentUrl = `https://ar-web_arlink.arweave.net${location.pathname}`;
+  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
   // console.log("currenturl", currentUrl)
   useEffect(() => {
     if (!page) {
