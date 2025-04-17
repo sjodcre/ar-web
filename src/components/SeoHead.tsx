@@ -1,5 +1,5 @@
 // components/SeoHead.tsx
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 // import helmetAsync from 'react-helmet-async';
 // const { Helmet } = helmetAsync;
 
