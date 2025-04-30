@@ -1,50 +1,104 @@
-# React + TypeScript + Vite
+```markdown
+# ArWeb Documentation Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ArWeb** is a developer-focused documentation site for the Arweave and Actor-Oriented (AO) ecosystems. 
 
-Currently, two official plugins are available:
+- **Arweave**: A decentralized permanent storage network ([docs](https://docs.arweave.org))
+- **AO (Actor-Oriented Computer)**: A decentralized, parallel computing platform built on Arweave ([AO site](https://ao.arweave.dev))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project pulls Markdown files from the `public/content/` folder and renders them using Next.js App Router (in `src/app/`).
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/sjodcre/ar-web.git
+cd ar-web
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Visit [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📁 Project Structure
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- `public/content/` — All markdown files (docs)
+- `src/app/` — Next.js App Router, page layouts, content loader
+
+## ✍️ Writing Docs
+
+Add `.md` files under `public/content/<section>/`. They are rendered as pages:
+
+- `/arweave/overview.md` → `/arweave/overview`
+- `/ao/getting-started.md` → `/ao/getting-started`
+
+Each section has its own `README.md` for guidelines.
+
+## 🤝 Contributing
+
+1. Fork and clone this repo
+2. Add markdown files or improve code
+3. Submit a pull request
+
+## 🔗 Resources
+
+- [Arweave Docs](https://docs.arweave.org)
+- [AO Cookbook](https://cookbook_ao.g8way.io/)
+- [Ar.IO](https://ar.io)
 ```
+```
+
+### Example `public/content/arweave/README.md`
+
+```markdown
+# Arweave Documentation
+
+This folder holds Markdown files related to **Arweave** topics. These include:
+
+- Introductions to Arweave
+- SDK usage
+- Mining and storage logic
+
+Each `.md` file is rendered into a page under `/arweave/` on the site.
+
+## Example
+
+- `overview.md` → `/arweave/overview`
+- `sdk-guide.md` → `/arweave/sdk-guide`
+
+Use standard Markdown formatting. You may include frontmatter if needed.
+```
+
+### Example `public/content/ao/README.md`
+
+```markdown
+# AO Documentation (Actor-Oriented Computer)
+
+Markdown files in this folder cover topics about **AO**:
+
+- What AO is
+- Writing Lua handlers
+- Using AOS CLI
+- Parallel computation on Arweave
+
+Each file is rendered to `/ao/<filename>`.
+
+## Example
+
+- `getting-started.md` → `/ao/getting-started`
+- `concepts.md` → `/ao/concepts`
+```
+
+### Example `src/app/README.md`
+
+```markdown
+# App Logic — Next.js
+
+This folder contains all app logic using Next.js App Router.
+
+- Each folder like `app/arweave/` maps to a URL path `/arweave/`
+- Dynamic routes are used to load markdown files
+- Layouts are defined globally in `layout.tsx`
+
+You generally won’t need to touch this unless you want to change themes, routing logic, or layouts.
+
+Markdown content is loaded from `public/content/<section>/<slug>.md`
