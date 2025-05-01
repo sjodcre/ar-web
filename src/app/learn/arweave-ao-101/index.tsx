@@ -73,7 +73,7 @@ export default function ArweaveAO101() {
   useEffect(() => {
     if (!page) {
       navigate("/learn/arweave-ao-101/arweave/introduction", { replace: true })
-      return null;
+      // return null;
     }
   }, [page, navigate])
 
