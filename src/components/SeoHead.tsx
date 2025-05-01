@@ -18,12 +18,17 @@ export function SeoHead({
   url = '',
   twitterHandle = '@Dev4L4fe',
 }: SeoProps) {
+
+  const canonicalUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
 
-      {url && <link rel="canonical" href={url} />}
+      {/* {url && <link rel="canonical" href={url} />} */}
+      <link rel="canonical" href={canonicalUrl} />
+
 
 
       <meta property="og:title" content={title} />

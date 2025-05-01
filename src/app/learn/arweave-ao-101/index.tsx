@@ -65,11 +65,15 @@ export default function ArweaveAO101() {
     description: "",
   })
   const location = useLocation();
-  const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
+  // const currentUrl = `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
+  const canonicalUrl = location.pathname === "/"
+  ? "https://sjodcre-ar-web_arlink.arweave.net/learn/arweave-ao-101/arweave/introduction"
+  : `https://sjodcre-ar-web_arlink.arweave.net${location.pathname}`;
 
   useEffect(() => {
     if (!page) {
       navigate("/learn/arweave-ao-101/arweave/introduction", { replace: true })
+      return null;
     }
   }, [page, navigate])
 
@@ -102,7 +106,9 @@ export default function ArweaveAO101() {
   } else if (currentTopic) {
     currentTitle = currentTopic.title
   }
-  console.log("currentTitle:", currentTitle)
+  // console.log("currentTitle:", currentTitle)
+  // console.log("current Url:", currentUrl)
+
   // if (topicIndex !== -1 && subtopicIndex !== -1) {
   //   currentTitle = topics[topicIndex].subtopics[subtopicIndex].title
   // }
@@ -122,7 +128,7 @@ export default function ArweaveAO101() {
       <SeoHead
         title={seoMeta.title || currentTitle}
         description={seoMeta.description || "Documentation for AO & Arweave"}
-        url={currentUrl}
+        url={canonicalUrl}
       />
       <div className="flex min-h-screen bg-background">
         {/* Sidebar - using your existing Sidebar component */}
