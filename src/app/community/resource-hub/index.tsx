@@ -40,9 +40,9 @@ const CommunityPage: FC = () => {
 
           <div className="max-w-7xl mx-auto relative">
             <div className="text-center">
-              <div className="inline-block mb-4 px-4 py-1 rounded-full bg-foreground/10 backdrop-blur-sm border border-foreground/20">
+              {/* <div className="inline-block mb-4 px-4 py-1 rounded-full bg-foreground/10 backdrop-blur-sm border border-foreground/20">
                 <span className="text-sm font-medium text-foreground/90">Join the permanent revolution</span>
-              </div>
+              </div> */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 drop-shadow-sm">
                 Join Our{" "}
                 <span className="text-secondary bg-clip-text bg-gradient-to-r from-secondary via-highlight to-accent">
