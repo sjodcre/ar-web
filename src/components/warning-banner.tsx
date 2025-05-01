@@ -1,6 +1,13 @@
-export default function WarningBanner() {
-  const lastUpdated = "April 15, 2025" // Set manually
+import { lastUpdated } from "@/constants/meta";
 
+
+export default function WarningBanner() {
+  // const lastUpdated = "April 15, 2025" // Set manually
+  const formattedDate = new Date(lastUpdated).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <div className="flex justify-center mt-4 mb-8">
       <div className="relative overflow-hidden px-6 py-4 rounded-lg max-w-3xl text-center">
@@ -21,7 +28,7 @@ export default function WarningBanner() {
           This site will try to <span className="text-highlight font-semibold">KEEP UP WITH THE LATEST UPDATES</span> as
           best as possible.
           <br />
-          <span className="block mt-3 text-secondary font-mono font-bold">Last updated: {lastUpdated}</span>
+          <span className="block mt-3 text-secondary font-mono font-bold">Last updated: {formattedDate}</span>
         </p>
       </div>
     </div>

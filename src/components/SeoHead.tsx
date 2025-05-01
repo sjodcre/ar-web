@@ -2,6 +2,8 @@
 import { Helmet } from 'react-helmet-async';
 // import helmetAsync from 'react-helmet-async';
 // const { Helmet } = helmetAsync;
+import { lastUpdated } from "@/constants/meta";
+
 
 interface SeoProps {
   title: string;
@@ -20,6 +22,29 @@ export function SeoHead({
 }: SeoProps) {
 
   const canonicalUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+
+  const authorName = "Arweave AO Fanatic"
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": title,
+    "description": description,
+    "url": canonicalUrl,
+    "dateModified": lastUpdated,
+    "author": {
+      "@type": "Organization",
+      "name": authorName,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arweave",
+      "logo": {
+        "@type": "ImageObject",
+        "url": image,
+      }
+    }
+  };
 
   return (
     <Helmet>
@@ -42,6 +67,9 @@ export function SeoHead({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content={twitterHandle} />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
     </Helmet>
   );
 }
