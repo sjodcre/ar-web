@@ -1,6 +1,6 @@
 ---
 title: "The Permaweb: A Decentralized and Immutable Web"
-description: "Explore the permaweb, a groundbreaking concept built on Arweave that ensures permanent data storage and empowers developers to create decentralized applications."
+description: "Discover the permaweb, a revolutionary Arweave-based concept enabling permanent data storage and decentralized application development."
 ---
 
 The **permaweb** is a revolutionary concept **built on top of Arweave**, creating a **decentralized and immutable web**. 

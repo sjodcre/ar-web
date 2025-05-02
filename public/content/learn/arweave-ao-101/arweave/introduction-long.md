@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Arweave: The Future of Permanent Data Storage"
-description: "Discover how Arweave revolutionizes data storage with its decentralized protocol, offering a unique 'pay once, store forever' model that ensures data immutability and accessibility."
+description: "Discover how Arweave's decentralized protocol revolutionizes data storage with its unique 'pay once, store forever' model for permanent data preservation."
 ---
 
 Arweave is a groundbreaking **decentralized storage protocol** designed to provide **permanent data storage solutions**. 
@@ -12,7 +12,7 @@ At the core of Arweave's architecture is the **blockweave**, an innovative data 
 
 - Traditional blockchains form a linear sequence.
 - Arweave's **blockweave links each block to both the previous block and a randomly selected earlier block**.
-- This enhances **data redundancy** and plays a key role in the network’s **Proof of Access (PoA)** consensus mechanism.
+- This enhances **data redundancy** and plays a key role in the network's **Proof of Access (PoA)** consensus mechanism.
 
 ## **Economic Model**
 When users upload data, they **pay a one-time fee in AR tokens**:

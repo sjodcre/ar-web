@@ -1,6 +1,30 @@
 {
     "rewrites": [
       { "source": "/(.*)", "destination": "/" }
-    ]
+    ],
+    "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ar-web-mauve.vercel.app"
+        }
+      ],
+      "destination": "https://ar-web-mauve.vercel.app/:1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "http://ar-web-mauve.vercel.app"
+        }
+      ],
+      "destination": "https://ar-web-mauve.vercel.app/:1",
+      "permanent": true
+    }
+  ]
   }
   

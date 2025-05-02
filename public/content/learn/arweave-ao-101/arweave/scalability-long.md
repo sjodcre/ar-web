@@ -1,6 +1,6 @@
 ---
 title: "Scalability Innovations in Arweave: Overcoming Blockchain Challenges"
-description: "Explore how Arweave addresses scalability issues in blockchain-based storage through unique innovations like uniform data storage, transaction bundling, and recursive bundling."
+description: "Discover how Arweave's unique innovations like uniform storage, transaction bundling, and recursive bundling enable infinite scalability in blockchain storage."
 ---
 
 <!-- # **Scalability and Technical Innovations in Arweave** -->
@@ -26,7 +26,7 @@ When too many transactions are submitted, **recursive bundling** is used:
 - Enables **theoretical infinite scalability**.
 
 ## **4. Long-Term Sustainability**
-Arweave’s **storage model assumes costs will decrease over time**, making it:
+Arweave's **storage model assumes costs will decrease over time**, making it:
 - **Cost-effective at scale**.
 - **More efficient than traditional cloud storage solutions**.
 
