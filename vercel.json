@@ -8,10 +8,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.ar-web-mauve.vercel.app"
+          "value": "sjodcre-ar-web_arlink.arweave.net"
         }
       ],
-      "destination": "https://ar-web-mauve.vercel.app/:1",
+      "destination": "https://sjodcre-ar-web_arlink.arweave.net/:1",
       "permanent": true
     },
     {
@@ -19,10 +19,10 @@
       "has": [
         {
           "type": "host",
-          "value": "http://ar-web-mauve.vercel.app"
+          "value": "http://sjodcre-ar-web_arlink.arweave.net"
         }
       ],
-      "destination": "https://ar-web-mauve.vercel.app/:1",
+      "destination": "https://sjodcre-ar-web_arlink.arweave.net/:1",
       "permanent": true
     }
   ]
