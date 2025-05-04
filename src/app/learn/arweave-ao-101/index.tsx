@@ -31,6 +31,8 @@ export const topics: Topic[] = [
       { title: "Introduction to Arweave", path: "introduction" },
       { title: "The Permaweb and Its Applications", path: "permaweb" },
       { title: "Scalability and Technical Innovations", path: "scalability" },
+      { title: "Arweave's Journey", path: "journey" },
+
     ],
   },
   {
