@@ -10,6 +10,7 @@ import Sidebar from "@/components/Sidebar"
 import { SeoHead } from "@/components/SeoHead"
 // import { usePagination } from "@/hooks/usePagination"
 import { Paginator } from "@/components/Paginator"
+import ExplanationCard from "@/components/ExplanationCard"
 
 interface Subtopic {
   title: string
@@ -152,6 +153,10 @@ export default function ArweaveAO101() {
           <div className="max-w-4xl mx-auto">
             {/* Document header */}
             <DocHeader title={currentTitle} lastUpdated={lastUpdated} txId={txId} category={category} />
+
+            {/* Explanation card */}
+
+            <ExplanationCard/>
 
             {/* Content area */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
