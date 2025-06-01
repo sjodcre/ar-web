@@ -29,8 +29,9 @@ export default function News() {
       setIsLoading(true)
       try {
         // Fetch from backend instead of scraping in the frontend
-        // const response = await axios.get(`http://localhost:3001/api/communitylabs/news`) //local test
-        const response = await axios.get(`https://ao-arweave.com/api/communitylabs/news`)
+        // const response = await axios.get(`http://localhost:3001/api/permawebjournal/news`) //local test
+        const response = await axios.get(`https://ao-arweave.com/api/permawebjournal/news`) //local test
+        // const response = await axios.get(`https://ao-arweave.com/api/communitylabs/news`)
 
         setNewsItems(response.data.newsItems)
       } catch (error) {
